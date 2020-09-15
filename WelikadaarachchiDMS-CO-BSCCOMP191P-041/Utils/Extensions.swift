@@ -6,6 +6,7 @@
 //  Copyright © 2020 Mahima Sithuruwan. All rights reserved.
 //
 
+
 import UIKit
 import MapKit
 
@@ -124,7 +125,7 @@ extension UITextField {
         let tf = UITextField()
         tf.borderStyle = .none
         tf.font = UIFont.systemFont(ofSize: 16)
-        tf.textColor = .white
+        tf.textColor = .black
         tf.keyboardAppearance = .dark
         tf.isSecureTextEntry = isSecureTextEntry
         tf.attributedPlaceholder = NSAttributedString(string: placeholder, attributes: [NSAttributedString.Key.foregroundColor : UIColor.lightGray])
@@ -165,6 +166,14 @@ extension MKMapView {
         annotation.coordinate = coordinate
         addAnnotation(annotation)
         selectAnnotation(annotation, animated: true)
+    }
+}
+
+extension UIButton{
+    func addTextSpacing(_ letterSpacing: CGFloat){
+        let attributedString = NSMutableAttributedString(string: (self.titleLabel?.text!)!)
+        attributedString.addAttribute(NSAttributedString.Key.kern, value: letterSpacing, range: NSRange(location: 0, length: (self.titleLabel?.text!.count)!))
+        self.setAttributedTitle(attributedString, for: .normal)
     }
 }
 
@@ -212,4 +221,6 @@ extension UIViewController {
             }
         }
     }
+    
+    
 }

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -18,6 +18,25 @@
 		3E43419F250A9F56008D0B46 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E43419E250A9F56008D0B46 /* HomeViewController.swift */; };
 		3E4341A1250A9F77008D0B46 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4341A0250A9F77008D0B46 /* LoginViewController.swift */; };
 		3E4341A3250A9F97008D0B46 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4341A2250A9F97008D0B46 /* RegisterViewController.swift */; };
+		3E5024F8250EB6D30030D8BB /* UpdateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5024F7250EB6D30030D8BB /* UpdateViewController.swift */; };
+		3E5024FA250EB72F0030D8BB /* SurveyCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5024F9250EB72F0030D8BB /* SurveyCVCell.swift */; };
+		3E5024FC250EB78E0030D8BB /* SplashOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5024FB250EB78E0030D8BB /* SplashOneViewController.swift */; };
+		3E5024FE250EB7CC0030D8BB /* SafeActionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5024FD250EB7CC0030D8BB /* SafeActionsViewController.swift */; };
+		3E502500250EB8120030D8BB /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5024FF250EB8120030D8BB /* ResultViewController.swift */; };
+		3E558FD72510ECC800B8F32E /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E558FD62510ECC800B8F32E /* HomePageViewController.swift */; };
+		3E558FD92510ECE700B8F32E /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E558FD82510ECE700B8F32E /* SettingsViewController.swift */; };
+		3E558FDB2510ED0700B8F32E /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E558FDA2510ED0700B8F32E /* ProfileViewController.swift */; };
+		3E558FDD2510EDD200B8F32E /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E558FDC2510EDD200B8F32E /* ContactViewController.swift */; };
+		3E61A70E250B66E8006EBC9F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3E61A70D250B66E8006EBC9F /* GoogleService-Info.plist */; };
+		3E61A710250B6F34006EBC9F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E61A70F250B6F34006EBC9F /* User.swift */; };
+		3E61A712250B6F58006EBC9F /* UserAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E61A711250B6F58006EBC9F /* UserAnnotation.swift */; };
+		3E61A714250B71BF006EBC9F /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E61A713250B71BF006EBC9F /* MainTabBarController.swift */; };
+		3E61A716250B71E4006EBC9F /* SplashScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E61A715250B71E4006EBC9F /* SplashScreenViewController.swift */; };
+		3E61A718250B7214006EBC9F /* SurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E61A717250B7214006EBC9F /* SurveyViewController.swift */; };
+		3E61A71A250B723F006EBC9F /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E61A719250B723F006EBC9F /* WelcomeViewController.swift */; };
+		3E61A71C250B739D006EBC9F /* LocationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E61A71B250B739D006EBC9F /* LocationHandler.swift */; };
+		3E61A71E250B73DD006EBC9F /* service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E61A71D250B73DD006EBC9F /* service.swift */; };
+		B4BCADE9D46B36F77738D21B /* Pods_WelikadaarachchiDMS_CO_BSCCOMP191P_041.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0738C28E3B16BE84E58DDE8 /* Pods_WelikadaarachchiDMS_CO_BSCCOMP191P_041.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +74,27 @@
 		3E43419E250A9F56008D0B46 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		3E4341A0250A9F77008D0B46 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3E4341A2250A9F97008D0B46 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		3E5024F7250EB6D30030D8BB /* UpdateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateViewController.swift; sourceTree = "<group>"; };
+		3E5024F9250EB72F0030D8BB /* SurveyCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyCVCell.swift; sourceTree = "<group>"; };
+		3E5024FB250EB78E0030D8BB /* SplashOneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashOneViewController.swift; sourceTree = "<group>"; };
+		3E5024FD250EB7CC0030D8BB /* SafeActionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeActionsViewController.swift; sourceTree = "<group>"; };
+		3E5024FF250EB8120030D8BB /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		3E558FD62510ECC800B8F32E /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
+		3E558FD82510ECE700B8F32E /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		3E558FDA2510ED0700B8F32E /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		3E558FDC2510EDD200B8F32E /* ContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
+		3E61A70D250B66E8006EBC9F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3E61A70F250B6F34006EBC9F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		3E61A711250B6F58006EBC9F /* UserAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAnnotation.swift; sourceTree = "<group>"; };
+		3E61A713250B71BF006EBC9F /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		3E61A715250B71E4006EBC9F /* SplashScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenViewController.swift; sourceTree = "<group>"; };
+		3E61A717250B7214006EBC9F /* SurveyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyViewController.swift; sourceTree = "<group>"; };
+		3E61A719250B723F006EBC9F /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		3E61A71B250B739D006EBC9F /* LocationHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationHandler.swift; sourceTree = "<group>"; };
+		3E61A71D250B73DD006EBC9F /* service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = service.swift; sourceTree = "<group>"; };
+		998E144E86B439186BF8C871 /* Pods-WelikadaarachchiDMS-CO-BSCCOMP191P-041.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WelikadaarachchiDMS-CO-BSCCOMP191P-041.debug.xcconfig"; path = "Target Support Files/Pods-WelikadaarachchiDMS-CO-BSCCOMP191P-041/Pods-WelikadaarachchiDMS-CO-BSCCOMP191P-041.debug.xcconfig"; sourceTree = "<group>"; };
+		AD052702B29AE8FAFE284CCD /* Pods-WelikadaarachchiDMS-CO-BSCCOMP191P-041.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WelikadaarachchiDMS-CO-BSCCOMP191P-041.release.xcconfig"; path = "Target Support Files/Pods-WelikadaarachchiDMS-CO-BSCCOMP191P-041/Pods-WelikadaarachchiDMS-CO-BSCCOMP191P-041.release.xcconfig"; sourceTree = "<group>"; };
+		E0738C28E3B16BE84E58DDE8 /* Pods_WelikadaarachchiDMS_CO_BSCCOMP191P_041.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WelikadaarachchiDMS_CO_BSCCOMP191P_041.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4BCADE9D46B36F77738D21B /* Pods_WelikadaarachchiDMS_CO_BSCCOMP191P_041.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,10 +126,13 @@
 		3E434150250A9BEA008D0B46 = {
 			isa = PBXGroup;
 			children = (
+				3E434192250A9D88008D0B46 /* Model */,
 				3E43415B250A9BEA008D0B46 /* WelikadaarachchiDMS-CO-BSCCOMP191P-041 */,
 				3E434175250A9BEE008D0B46 /* WelikadaarachchiDMS-CO-BSCCOMP191P-041Tests */,
 				3E434180250A9BEE008D0B46 /* WelikadaarachchiDMS-CO-BSCCOMP191P-041UITests */,
 				3E43415A250A9BEA008D0B46 /* Products */,
+				F8A14D219D4601B53AEE1D21 /* Pods */,
+				EB26EBCB9BD8998897AB62D5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -108,13 +152,13 @@
 				3E434195250A9DA0008D0B46 /* Utils */,
 				3E434194250A9D96008D0B46 /* Services */,
 				3E434193250A9D8E008D0B46 /* Views */,
-				3E434192250A9D88008D0B46 /* Model */,
 				3E434191250A9D70008D0B46 /* Controller */,
 				3E43415C250A9BEA008D0B46 /* AppDelegate.swift */,
 				3E434168250A9BED008D0B46 /* Assets.xcassets */,
 				3E43416A250A9BED008D0B46 /* LaunchScreen.storyboard */,
 				3E43416D250A9BED008D0B46 /* Info.plist */,
 				3E434165250A9BEA008D0B46 /* WelikadaarachchiDMS_CO_BSCCOMP191P_041.xcdatamodeld */,
+				3E61A70D250B66E8006EBC9F /* GoogleService-Info.plist */,
 			);
 			path = "WelikadaarachchiDMS-CO-BSCCOMP191P-041";
 			sourceTree = "<group>";
@@ -143,6 +187,19 @@
 				3E43419E250A9F56008D0B46 /* HomeViewController.swift */,
 				3E4341A0250A9F77008D0B46 /* LoginViewController.swift */,
 				3E4341A2250A9F97008D0B46 /* RegisterViewController.swift */,
+				3E61A713250B71BF006EBC9F /* MainTabBarController.swift */,
+				3E61A715250B71E4006EBC9F /* SplashScreenViewController.swift */,
+				3E61A717250B7214006EBC9F /* SurveyViewController.swift */,
+				3E61A719250B723F006EBC9F /* WelcomeViewController.swift */,
+				3E5024F7250EB6D30030D8BB /* UpdateViewController.swift */,
+				3E5024F9250EB72F0030D8BB /* SurveyCVCell.swift */,
+				3E5024FB250EB78E0030D8BB /* SplashOneViewController.swift */,
+				3E5024FD250EB7CC0030D8BB /* SafeActionsViewController.swift */,
+				3E5024FF250EB8120030D8BB /* ResultViewController.swift */,
+				3E558FD62510ECC800B8F32E /* HomePageViewController.swift */,
+				3E558FD82510ECE700B8F32E /* SettingsViewController.swift */,
+				3E558FDA2510ED0700B8F32E /* ProfileViewController.swift */,
+				3E558FDC2510EDD200B8F32E /* ContactViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -150,6 +207,8 @@
 		3E434192250A9D88008D0B46 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				3E61A70F250B6F34006EBC9F /* User.swift */,
+				3E61A711250B6F58006EBC9F /* UserAnnotation.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -165,6 +224,7 @@
 		3E434194250A9D96008D0B46 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				3E61A71D250B73DD006EBC9F /* service.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -173,8 +233,26 @@
 			isa = PBXGroup;
 			children = (
 				3E43419C250A9F25008D0B46 /* Extensions.swift */,
+				3E61A71B250B739D006EBC9F /* LocationHandler.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		EB26EBCB9BD8998897AB62D5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E0738C28E3B16BE84E58DDE8 /* Pods_WelikadaarachchiDMS_CO_BSCCOMP191P_041.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F8A14D219D4601B53AEE1D21 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				998E144E86B439186BF8C871 /* Pods-WelikadaarachchiDMS-CO-BSCCOMP191P-041.debug.xcconfig */,
+				AD052702B29AE8FAFE284CCD /* Pods-WelikadaarachchiDMS-CO-BSCCOMP191P-041.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -184,9 +262,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3E434186250A9BEE008D0B46 /* Build configuration list for PBXNativeTarget "WelikadaarachchiDMS-CO-BSCCOMP191P-041" */;
 			buildPhases = (
+				9FB8C80CFFD1A4AFDB918510 /* [CP] Check Pods Manifest.lock */,
 				3E434155250A9BEA008D0B46 /* Sources */,
 				3E434156250A9BEA008D0B46 /* Frameworks */,
 				3E434157250A9BEA008D0B46 /* Resources */,
+				0F8D781498B25805A729EA4D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -283,6 +363,7 @@
 			files = (
 				3E43416C250A9BED008D0B46 /* LaunchScreen.storyboard in Resources */,
 				3E434169250A9BED008D0B46 /* Assets.xcassets in Resources */,
+				3E61A70E250B66E8006EBC9F /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,6 +383,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0F8D781498B25805A729EA4D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WelikadaarachchiDMS-CO-BSCCOMP191P-041/Pods-WelikadaarachchiDMS-CO-BSCCOMP191P-041-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WelikadaarachchiDMS-CO-BSCCOMP191P-041/Pods-WelikadaarachchiDMS-CO-BSCCOMP191P-041-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WelikadaarachchiDMS-CO-BSCCOMP191P-041/Pods-WelikadaarachchiDMS-CO-BSCCOMP191P-041-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9FB8C80CFFD1A4AFDB918510 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WelikadaarachchiDMS-CO-BSCCOMP191P-041-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3E434155250A9BEA008D0B46 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -309,10 +432,27 @@
 			files = (
 				3E4341A1250A9F77008D0B46 /* LoginViewController.swift in Sources */,
 				3E43419D250A9F25008D0B46 /* Extensions.swift in Sources */,
+				3E5024FC250EB78E0030D8BB /* SplashOneViewController.swift in Sources */,
+				3E61A714250B71BF006EBC9F /* MainTabBarController.swift in Sources */,
 				3E4341A3250A9F97008D0B46 /* RegisterViewController.swift in Sources */,
+				3E61A71E250B73DD006EBC9F /* service.swift in Sources */,
+				3E61A712250B6F58006EBC9F /* UserAnnotation.swift in Sources */,
+				3E61A71C250B739D006EBC9F /* LocationHandler.swift in Sources */,
+				3E558FD72510ECC800B8F32E /* HomePageViewController.swift in Sources */,
+				3E5024F8250EB6D30030D8BB /* UpdateViewController.swift in Sources */,
+				3E61A716250B71E4006EBC9F /* SplashScreenViewController.swift in Sources */,
+				3E5024FA250EB72F0030D8BB /* SurveyCVCell.swift in Sources */,
+				3E61A71A250B723F006EBC9F /* WelcomeViewController.swift in Sources */,
+				3E558FD92510ECE700B8F32E /* SettingsViewController.swift in Sources */,
 				3E43415D250A9BEA008D0B46 /* AppDelegate.swift in Sources */,
+				3E558FDB2510ED0700B8F32E /* ProfileViewController.swift in Sources */,
+				3E5024FE250EB7CC0030D8BB /* SafeActionsViewController.swift in Sources */,
+				3E558FDD2510EDD200B8F32E /* ContactViewController.swift in Sources */,
+				3E61A710250B6F34006EBC9F /* User.swift in Sources */,
+				3E502500250EB8120030D8BB /* ResultViewController.swift in Sources */,
 				3E43419B250A9EFE008D0B46 /* AuthUIBtn.swift in Sources */,
 				3E434167250A9BEA008D0B46 /* WelikadaarachchiDMS_CO_BSCCOMP191P_041.xcdatamodeld in Sources */,
+				3E61A718250B7214006EBC9F /* SurveyViewController.swift in Sources */,
 				3E43419F250A9F56008D0B46 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -476,6 +616,7 @@
 		};
 		3E434187250A9BEE008D0B46 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 998E144E86B439186BF8C871 /* Pods-WelikadaarachchiDMS-CO-BSCCOMP191P-041.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -493,6 +634,7 @@
 		};
 		3E434188250A9BEE008D0B46 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AD052702B29AE8FAFE284CCD /* Pods-WelikadaarachchiDMS-CO-BSCCOMP191P-041.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

@@ -1,0 +1,6 @@
+framework module Pods_WelikadaarachchiDMS_CO_BSCCOMP191P_041 {
+  umbrella header "Pods-WelikadaarachchiDMS-CO-BSCCOMP191P-041-umbrella.h"
+
+  export *
+  module * { export * }
+}

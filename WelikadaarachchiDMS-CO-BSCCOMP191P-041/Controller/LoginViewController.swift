@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class LoginViewController: UIViewController {
     
@@ -65,17 +66,41 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //NawBar
+        view.backgroundColor = UIColor.white
+        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationItem.title = "Videos"
+        
         configureUI()
     }
     
-    // MARK: - Selectors
     
-    @objc func handleSignIn() {
-        //guard let email = emailTextFiled.text else { return }
-        //guard let password = passwordTextFiled.text else { return }
-        
+    // MARK: - Selectors
        
-    }
+       @objc func handleSignIn() {
+           guard let email = emailTextFiled.text else { return }
+           guard let password = passwordTextFiled.text else { return }
+           
+           Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
+               if let error = error {
+                   print("DEBUG: Faild to log user with error \(error.localizedDescription)")
+                   return
+               }
+               
+               let keyWindow = UIApplication.shared.connectedScenes
+               .filter({$0.activationState == .foregroundActive})
+               .map({$0 as? UIWindowScene})
+               .compactMap({$0})
+               .first?.windows
+               .filter({$0.isKeyWindow}).first
+               
+             guard let controller = keyWindow?.rootViewController as? MainTabBarController else { return }
+               controller.setupTabBar()
+
+               
+               self.dismiss(animated: true, completion: nil)
+           }
+       }
     
     @objc func handleShowRegister() {
         let vc = RegisterViewController()
