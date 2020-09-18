@@ -5,7 +5,6 @@
 //  Created by Mahima Sithuruwan on 9/15/20.
 //  Copyright © 2020 Mahima Sithuruwan. All rights reserved.
 //
-
 import UIKit
 import FirebaseAuth
 
@@ -146,7 +145,8 @@ class SettingsViewController: UIViewController {
     }
     
     @objc func showProfile() {
-        let vc = ProfileViewController()
+        //let vc = ProfileViewController()
+         let vc = TestprofileViewController()
         vc.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(vc, animated: true)
     }

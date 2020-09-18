@@ -5,7 +5,6 @@
 //  Created by HASHAN on 9/11/20.
 //  Copyright © 2020 NIBM-COBSCCOMP191P-021. All rights reserved.
 //
-
 import UIKit
 
 struct Question {

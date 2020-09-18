@@ -24,11 +24,11 @@ class MainTabBarController: UITabBarController {
         
         let plusController = UINavigationController(rootViewController: UpdateViewController())
         plusController.tabBarItem.image = UIImage(systemName: "plus")
-        plusController.tabBarItem.title = "plus"
+        plusController.tabBarItem.title = "Plus"
         
         let settinngController = UINavigationController(rootViewController: SplashOneViewController())
         settinngController.tabBarItem.image = UIImage(systemName: "gear")
-        settinngController.tabBarItem.title = "setting"
+        settinngController.tabBarItem.title = "Setting"
 
         viewControllers = [homeController, plusController, settinngController]
     }

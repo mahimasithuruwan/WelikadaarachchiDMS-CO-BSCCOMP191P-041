@@ -12,9 +12,10 @@ import GeoFire
 
 let DB_REF = Database.database().reference()
 let REF_USERS = DB_REF.child("users")
-let REF_USERS_LOCATIONS = DB_REF.child("driver-locations")
+let REF_USER_LOCATIONS = DB_REF.child("driver-locations")
 let REF_TRIPS = DB_REF.child("trips")
 
+// MARK: - SharedService
 struct Service {
     static let shared = Service()
     
@@ -27,32 +28,17 @@ struct Service {
         }
     }
     
-//    func fetchDriversLocation(location: CLLocation, completion: @escaping(User) -> Void) {
-//           let geoFire = GeoFire(firebaseRef: REF_USERS_LOCATIONS)
-//
-//           REF_USERS_LOCATIONS.observe(.value) { (snapshot) in
-//               geoFire.query(at: location, withRadius: 50).observe(.keyEntered, with: { (uid, location) in
-//                   self.fetchUserData(uid: uid) { (user) in
-//                       var driver = user
-//                       driver.location = location
-//                       completion(driver)
-//                   }
-//               })
-//           }
-//       }
-    
-//    func uploadTrip(_ pickupCoordinates: CLLocationCoordinate2D, _ destinationCoordinates: CLLocationCoordinate2D, completion: @escaping(Error?, DatabaseReference) -> Void) {
-//        guard let uid = Auth.auth().currentUser?.uid else { return }
-//
-//        let pickupArray = [pickupCoordinates.latitude, pickupCoordinates.longitude]
-//        let destinationArray = [destinationCoordinates.latitude, destinationCoordinates.longitude]
-//
-//        let values = ["pickupCoordinates": pickupArray,
-//        "destinationCoordinates": destinationArray,
-//        "state": TripState.requested.rawValue] as [String : Any]
-//
-//        REF_TRIPS.child(uid).updateChildValues(values, withCompletionBlock: completion)
-//    }
-    
-    
+    func fetchUsersLocation(location: CLLocation, completion: @escaping(User) -> Void) {
+        let geoFire = GeoFire(firebaseRef: REF_USER_LOCATIONS)
+        
+        REF_USER_LOCATIONS.observe(.value) { (snapshot) in
+            geoFire.query(at: location, withRadius: 50).observe(.keyEntered, with: { (uid, location) in
+                self.fetchUserData(uid: uid) { (user) in
+                    var driver = user
+                    driver.location = location
+                    completion(driver)
+                }
+            })
+        }
+    }
 }

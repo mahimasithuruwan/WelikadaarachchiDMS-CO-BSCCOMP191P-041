@@ -130,8 +130,10 @@ class RegisterViewController: UIViewController {
                .first?.windows
                .filter({$0.isKeyWindow}).first
 
-               guard let controller = keyWindow?.rootViewController as? HomeViewController else { return }
-               controller.configure()
+//               guard let controller = keyWindow?.rootViewController as? HomeViewController else { return }
+             //  controller.configure()
+            guard let controller = keyWindow?.rootViewController as? MainTabBarController else { return }
+            controller.setupTabBar()
 
                self.dismiss(animated: true, completion: nil)
            }
@@ -193,7 +195,7 @@ class RegisterViewController: UIViewController {
                        }
             
               
-                   let geoFire = GeoFire(firebaseRef: REF_USERS_LOCATIONS)
+                   let geoFire = GeoFire(firebaseRef: REF_USER_LOCATIONS)
 
                    guard let location = self.location else { return }
 
