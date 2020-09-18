@@ -7,10 +7,14 @@
 //
 
 import XCTest
-@testable import WelikadaarachchiDMS_CO_BSCCOMP191P_041
+@testable import WelikadaarachchiDMS_CO_BSCCOMP191P_041Tests
 
 class WelikadaarachchiDMS_CO_BSCCOMP191P_041Tests: XCTestCase {
 
+    func testLogIn(){
+        
+    }
+    
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }

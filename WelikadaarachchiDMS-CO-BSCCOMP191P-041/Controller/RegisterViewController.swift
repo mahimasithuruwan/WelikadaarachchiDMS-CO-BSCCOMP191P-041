@@ -18,7 +18,7 @@ class RegisterViewController: UIViewController {
 
        private let titleLabel: UILabel = {
            let label = UILabel()
-           label.text = "COVID-19"
+           label.text = "NIBM"
            label.font = UIFont(name: "Avenir-Light", size: 36)
            label.textColor = UIColor(white: 1, alpha: 0.8)
            
@@ -43,13 +43,6 @@ class RegisterViewController: UIViewController {
         view.heightAnchor.constraint(equalToConstant: 50).isActive = true
         return view
       }()
-    
-//      private lazy var roleContainerView: UIView = {
-//          let view = UIView().inputContainerView(image: #imageLiteral(resourceName: "ic_lock_outline_white_2x"), textField: roleTextFiled)
-//          view.heightAnchor.constraint(equalToConstant: 50).isActive = true
-//          return view
-//      }()
-       
     
     private lazy var accountTypeContainerView: UIView = {
         let view = UIView().inputContainerView(image: #imageLiteral(resourceName: "ic_account_box_white_2x"), segentedControl: accountTypeSegmentedControl)
@@ -145,7 +138,7 @@ class RegisterViewController: UIViewController {
        }
        
        func configureUI() {
-        view.backgroundColor = .whiteBackground
+        view.backgroundColor = .black
            
            view.addSubview(titleLabel)
            titleLabel.anchor(top: view.safeAreaLayoutGuide.topAnchor)
@@ -169,10 +162,15 @@ class RegisterViewController: UIViewController {
        
        @objc func handleSignUp() {
            guard let firstname = firstNameTextFiled.text else { return }
+        print("AAAAAAAAa\(firstname)")
            guard let lastname = lastTextFiled.text else { return }
+        print("AAAAAAAAa\(lastname)")
            guard let email = emailTextFiled.text else { return }
+        print("AAAAAAAAa\(email)")
            let accountType = accountTypeSegmentedControl.selectedSegmentIndex
+        print("AAAAAAAAa\(accountType)")
            guard let password = passwordTextFiled.text else { return }
+        print("AAAAAAAAa\(password)")
          
            
            Auth.auth().createUser(withEmail: email, password: password) { (result, error) in

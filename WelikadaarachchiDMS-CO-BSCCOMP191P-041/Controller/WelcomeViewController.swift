@@ -14,20 +14,20 @@ class WelcomeViewController: UIViewController {
     private let titleLabel: UILabel = {
         let label = UILabel()
         //label.textColor = UIColor.black
-        label.text = "CORONA"
+        label.text = "NIBM"
         label.font = UIFont(name: "Avenir-Light", size: 36)
-        //label.textColor = .black
+        label.textColor = .white
         
         return label
     }()
     
     private lazy var WelcomeImgView: UIImageView = {
         let imageview = UIImageView()
-        imageview.frame = CGRect(x: 0, y: 0, width: 100, height:100)
+        imageview.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
         imageview.image = UIImage(named:"corona_virus_logo")
         imageview.layer.masksToBounds = true
-        
-       // view.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        imageview.contentMode = .scaleAspectFit
+       //view.heightAnchor.constraint(equalToConstant: 50).isActive = true
         return imageview
         
     }()
@@ -44,7 +44,7 @@ class WelcomeViewController: UIViewController {
     
     private let loginPageButton: UIButton = {
         let button = UIButton(type: .system)
-        let buttonTitle = NSMutableAttributedString(string: "Already have an account?", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 16), NSAttributedString.Key.foregroundColor: UIColor.black])
+        let buttonTitle = NSMutableAttributedString(string: "Already have an account?", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 16), NSAttributedString.Key.foregroundColor: UIColor.white])
         button.addTarget(self, action: #selector(showLoginPage), for: .touchUpInside)
         button.setAttributedTitle(buttonTitle, for: .normal)
         
@@ -94,7 +94,7 @@ class WelcomeViewController: UIViewController {
     func configUI(){
         configNavBar()
         
-        view.backgroundColor = .white
+        view.backgroundColor = .black
         view.addSubview(titleLabel)
         titleLabel.anchor(top: view.safeAreaLayoutGuide.topAnchor, paddingTop: 20)
         titleLabel.centerX(inView: view)

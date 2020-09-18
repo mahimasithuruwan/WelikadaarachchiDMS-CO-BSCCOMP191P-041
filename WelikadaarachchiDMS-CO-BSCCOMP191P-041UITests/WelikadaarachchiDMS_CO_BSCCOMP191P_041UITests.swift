@@ -22,12 +22,68 @@ class WelikadaarachchiDMS_CO_BSCCOMP191P_041UITests: XCTestCase {
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
-
-    func testExample() throws {
-        // UI tests must launch the application that they test.
+    
+    func testInvalidLogin_CredentialsAlertShown() {
         let app = XCUIApplication()
         app.launch()
+        app.buttons["Already have an account?"].tap()
+        app.textFields["Email"].tap()
+        app.secureTextFields["Password"].tap()
+        app.buttons["Login"].tap()
+        
+        let alertDialog = app.alerts["Missing Credentials"]
+        
+        XCTAssertTrue(alertDialog.exists)
+        
+        alertDialog.buttons["Ok"].tap()
+    }
+    
+    func testExample() throws {
+        // UI tests must launch the application that they test.
+        
+        let validEmail = "852@gmail.com"
+        let validPassword = "852852"
+        
+        let app = XCUIApplication()
+        app.launch()
+        
+        app.buttons["Already have an account?"].tap()
+        
+        let emailTextField = app.textFields["Email"]
+        XCTAssertTrue(emailTextField.exists)
 
+        app.textFields["Email"].tap()
+        
+        emailTextField.typeText(validEmail)
+        
+        let passwordSecureTextField = app.secureTextFields["Password"]
+        XCTAssertTrue(passwordSecureTextField.exists)
+        
+        passwordSecureTextField.tap()
+        passwordSecureTextField.typeText(validPassword)
+        
+        app.buttons["Log In"].tap()
+        
+        let map = app.maps["mapView"]
+               XCTAssertTrue(map.exists)
+        
+        
+// //XCTAssertTrue(app.maps["mapView"].exists)
+//        let downloadCell = app.tables.staticTexts["My Downloads"]
+//
+//               let exists = NSPredicate(format: "exists == 1")
+//
+//               expectation(for: exists, evaluatedWith: downloadCell, handler: nil)
+//               waitForExpectations(timeout: 5, handler: nil)
+        
+      //  let downloadCell =  app.textViews.staticTexts["settings"]
+            
+       // let exists = NSPredicate(format: map.value != )
+
+      //  expectation(for: exists, evaluatedWith: downloadCell, handler: nil)
+      //         waitForExpectations(timeout: 15, handler: XCTAssertTrue(map.exists))
+        
+        
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }

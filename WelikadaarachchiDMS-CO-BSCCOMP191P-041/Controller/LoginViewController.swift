@@ -6,6 +6,7 @@
 //  Copyright © 2020 Mahima Sithuruwan. All rights reserved.
 //
 
+
 import UIKit
 import FirebaseAuth
 
@@ -14,7 +15,7 @@ class LoginViewController: UIViewController {
     // MARK: - Properties
     private let titleLabel: UILabel = {
         let label = UILabel()
-        label.text = "NTAXI"
+        label.text = "NIBM"
         label.font = UIFont(name: "Avenir-Light", size: 36)
         label.textColor = UIColor(white: 1, alpha: 0.8)
         
@@ -34,11 +35,15 @@ class LoginViewController: UIViewController {
     }()
     
     private let emailTextFiled: UITextField = {
-        return UITextField().textField(withPlaceholder: "Email", isSecureTextEntry: false)
+        let email = UITextField().textField(withPlaceholder: "Email", isSecureTextEntry: false)
+        email.textColor = .white
+        return email
     }()
     
     private let passwordTextFiled: UITextField = {
-        return UITextField().textField(withPlaceholder: "Password", isSecureTextEntry: true)
+        let passward = UITextField().textField(withPlaceholder: "Password", isSecureTextEntry: true)
+        passward.textColor = .white
+        return passward
     }()
     
     private let loginButton: AuthUIBtn = {
@@ -80,9 +85,26 @@ class LoginViewController: UIViewController {
        @objc func handleSignIn() {
            guard let email = emailTextFiled.text else { return }
            guard let password = passwordTextFiled.text else { return }
-           
+
+        if(email.count==0){
+            let ac = UIAlertController(title: "Log In", message: "Please enter email", preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "Ok", style: .cancel))
+            self.present(ac, animated: true)
+            return;
+        }
+        
+        if(password.count==0){
+                let ac = UIAlertController(title: "Log In", message: "Please enter passward", preferredStyle: .alert)
+                ac.addAction(UIAlertAction(title: "Ok", style: .cancel))
+                self.present(ac, animated: true)
+                return;
+        }
+        
            Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
                if let error = error {
+                   let ac = UIAlertController(title: "Log In", message: "\(error.localizedDescription)", preferredStyle: .alert)
+                ac.addAction(UIAlertAction(title: "Ok", style: .cancel))
+                   self.present(ac, animated: true)
                    print("DEBUG: Faild to log user with error \(error.localizedDescription)")
                    return
                }
@@ -113,7 +135,7 @@ class LoginViewController: UIViewController {
         
         configureNavigationBar()
         
-        view.backgroundColor = .whiteBackground
+        view.backgroundColor = .black
         
         view.addSubview(titleLabel)
         titleLabel.anchor(top: view.safeAreaLayoutGuide.topAnchor)
