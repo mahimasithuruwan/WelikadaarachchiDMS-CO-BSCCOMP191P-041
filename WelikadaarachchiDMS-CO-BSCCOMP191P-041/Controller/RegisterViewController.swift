@@ -58,16 +58,22 @@ class RegisterViewController: UIViewController {
     
     
        private let firstNameTextFiled: UITextField = {
-          return UITextField().textField(withPlaceholder: "First Name", isSecureTextEntry: false)
+         let firstName = UITextField().textField(withPlaceholder: "First Name", isSecureTextEntry: false)
+         firstName.textColor = .white
+         return firstName
        }()
       
        private let lastTextFiled: UITextField = {
-           return UITextField().textField(withPlaceholder: "Last Name", isSecureTextEntry: false)
+         let lastName =  UITextField().textField(withPlaceholder: "Last Name", isSecureTextEntry: false)
+         lastName.textColor = .white
+         return lastName
        }()
         
        private let emailTextFiled: UITextField = {
-              return UITextField().textField(withPlaceholder: "Email", isSecureTextEntry: false)
-          }()
+         let email = UITextField().textField(withPlaceholder: "Email", isSecureTextEntry: false)
+         email.textColor = .white
+         return email
+       }()
     
      
        private let accountTypeSegmentedControl: UISegmentedControl = {
@@ -80,7 +86,9 @@ class RegisterViewController: UIViewController {
        }()
        
        private let passwordTextFiled: UITextField = {
-           return UITextField().textField(withPlaceholder: "Password", isSecureTextEntry: true)
+           let passward = UITextField().textField(withPlaceholder: "Password", isSecureTextEntry: true)
+           passward.textColor = .white
+           return passward
        }()
     
        private let signUpButton: AuthUIBtn = {
@@ -164,20 +172,45 @@ class RegisterViewController: UIViewController {
        
        @objc func handleSignUp() {
            guard let firstname = firstNameTextFiled.text else { return }
-        print("AAAAAAAAa\(firstname)")
            guard let lastname = lastTextFiled.text else { return }
-        print("AAAAAAAAa\(lastname)")
            guard let email = emailTextFiled.text else { return }
-        print("AAAAAAAAa\(email)")
            let accountType = accountTypeSegmentedControl.selectedSegmentIndex
-        print("AAAAAAAAa\(accountType)")
            guard let password = passwordTextFiled.text else { return }
-        print("AAAAAAAAa\(password)")
-         
+       
+        
+         if(firstname.count==0){
+             let ac = UIAlertController(title: "Sign Up", message: "Please enter first name", preferredStyle: .alert)
+             ac.addAction(UIAlertAction(title: "Ok", style: .cancel))
+             self.present(ac, animated: true)
+             return;
+          }
+                      
+         if(lastname.count==0){
+             let ac = UIAlertController(title: "Sign Up", message: "Please enter last name", preferredStyle: .alert)
+             ac.addAction(UIAlertAction(title: "Ok", style: .cancel))
+             self.present(ac, animated: true)
+             return;
+          }
+          if(email.count==0){
+             let ac = UIAlertController(title: "Sign Up", message: "Please enter email", preferredStyle: .alert)
+             ac.addAction(UIAlertAction(title: "Ok", style: .cancel))
+             self.present(ac, animated: true)
+             return;
+          }
+               
+          if(password.count==0){
+             let ac = UIAlertController(title: "Sign Up", message: "Please enter passward", preferredStyle: .alert)
+             ac.addAction(UIAlertAction(title: "Ok", style: .cancel))
+             self.present(ac, animated: true)
+             return;
+          }
            
            Auth.auth().createUser(withEmail: email, password: password) { (result, error) in
                if let error = error {
-                   print("Faild to register user with error \(error)")
+                let ac = UIAlertController(title: "Sign Up", message: "\(error.localizedDescription)", preferredStyle: .alert)
+                ac.addAction(UIAlertAction(title: "Ok", style: .cancel))
+                self.present(ac, animated: true)
+                print("Faild to register user with error \(error.localizedDescription)")
                    return
                }
 
