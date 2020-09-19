@@ -68,6 +68,15 @@ class LoginViewController: UIViewController {
         return button
     }()
     
+    private let loginPageButton: UIButton = {
+        let button = UIButton(type: .system)
+        let buttonTitle = NSMutableAttributedString(string: "Already have an account?", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 16), NSAttributedString.Key.foregroundColor: UIColor.white])
+        button.addTarget(self, action: #selector(handleShowRegister), for: .touchUpInside)
+        button.setAttributedTitle(buttonTitle, for: .normal)
+        
+        return button
+    }()
+    
     // MARK: - Lifecycale
     
     override func viewDidLoad() {

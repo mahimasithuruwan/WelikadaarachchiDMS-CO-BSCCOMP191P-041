@@ -13,7 +13,7 @@ class WelikadaarachchiDMS_CO_BSCCOMP191P_041Tests: XCTestCase {
 
     func testingLogIn(){
         let login = testLogIn()
-        let result = login.validateEmail(email: "njnj")
+        login.validateEmail(email: "njnj")
         
     }
     

@@ -14,20 +14,20 @@ class ResultViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.hidesBackButton = true
-        self.view.backgroundColor = .white
+        self.view.backgroundColor = .black
         setupViews()
     }
     
     func showRating() {
         var rating = ""
-        var color = UIColor.black
+        var color = UIColor.white
         guard let percent = result else { return }
         if percent < 5 {
             rating = "VERY LOW"
             color = UIColor.green
         } else if percent <= 25 {
             rating = "LOW"
-            color = UIColor.darkGray
+            color = UIColor.white
         }  else if percent <= 50 {
             rating = "MEDIUM"
             color = UIColor.yellow
@@ -79,7 +79,7 @@ class ResultViewController: UIViewController {
     let lblTitle: UILabel = {
         let lbl=UILabel()
         lbl.text="Risk Level"
-        lbl.textColor=UIColor.darkGray
+        lbl.textColor=UIColor.white
         lbl.textAlignment = .center
         lbl.font = UIFont.systemFont(ofSize: 42)
         lbl.numberOfLines=2
@@ -90,7 +90,7 @@ class ResultViewController: UIViewController {
     let lblScore: UILabel = {
         let lbl=UILabel()
         lbl.text="0 / 0"
-        lbl.textColor=UIColor.black
+        lbl.textColor=UIColor.white
         lbl.textAlignment = .center
         lbl.font = UIFont.boldSystemFont(ofSize: 24)
         lbl.translatesAutoresizingMaskIntoConstraints=false
@@ -100,7 +100,7 @@ class ResultViewController: UIViewController {
     let lblRating: UILabel = {
         let lbl=UILabel()
         lbl.text="LOW"
-        lbl.textColor=UIColor.black
+        lbl.textColor=UIColor.white
         lbl.textAlignment = .center
         lbl.font = UIFont.boldSystemFont(ofSize: 24)
         lbl.translatesAutoresizingMaskIntoConstraints=false
@@ -111,7 +111,7 @@ class ResultViewController: UIViewController {
         let btn = UIButton()
         btn.setTitle("Go Back", for: .normal)
         btn.setTitleColor(.white, for: .normal)
-        btn.backgroundColor = .black
+        btn.backgroundColor = .darkGray
         btn.layer.cornerRadius = 5
         btn.clipsToBounds = true
         btn.translatesAutoresizingMaskIntoConstraints = false

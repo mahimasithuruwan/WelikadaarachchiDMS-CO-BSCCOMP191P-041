@@ -51,22 +51,22 @@ class WelcomeViewController: UIViewController {
         return button
     }()
     
-    private let termsAndConBtn: UIButton = {
-        let button = UIButton(type: .system)
-        let attributedText = NSMutableAttributedString(string: "By signing up, you agree with the ", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 14), NSAttributedString.Key.foregroundColor: UIColor.gray])
-        
-        attributedText.append(NSAttributedString(string: "Terms of Service", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 14), NSAttributedString.Key.foregroundColor: UIColor.mainBlueTint]))
-        attributedText.append(NSAttributedString(string: " and ", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 14), NSAttributedString.Key.foregroundColor: UIColor.gray]))
-        attributedText.append(NSAttributedString(string: "Privacy Policy.", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 14), NSAttributedString.Key.foregroundColor: UIColor.mainBlueTint]))
-        
-        button.addTarget(self, action: #selector(showRegPage), for: .touchUpInside)
-        button.setAttributedTitle(attributedText, for: .normal)
-        button.titleLabel?.lineBreakMode = NSLineBreakMode.byWordWrapping
-        button.titleLabel?.textAlignment = NSTextAlignment.center
-        
-        return button
-    }()
-    
+//    private let termsAndConBtn: UIButton = {
+//        let button = UIButton(type: .system)
+//        let attributedText = NSMutableAttributedString(string: "By signing up, you agree with the ", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 14), NSAttributedString.Key.foregroundColor: UIColor.gray])
+//        
+//        attributedText.append(NSAttributedString(string: "Terms of Service", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 14), NSAttributedString.Key.foregroundColor: UIColor.mainBlueTint]))
+//        attributedText.append(NSAttributedString(string: " and ", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 14), NSAttributedString.Key.foregroundColor: UIColor.gray]))
+//        attributedText.append(NSAttributedString(string: "Privacy Policy.", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 14), NSAttributedString.Key.foregroundColor: UIColor.mainBlueTint]))
+//        
+//        button.addTarget(self, action: #selector(showRegPage), for: .touchUpInside)
+//        button.setAttributedTitle(attributedText, for: .normal)
+//        button.titleLabel?.lineBreakMode = NSLineBreakMode.byWordWrapping
+//        button.titleLabel?.textAlignment = NSTextAlignment.center
+//        
+//        return button
+//    }()
+//    
     
     
     

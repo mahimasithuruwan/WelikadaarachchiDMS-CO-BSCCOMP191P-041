@@ -32,7 +32,7 @@ class SplashFourViewController: UIViewController {
     private lazy var WelcomeImgView: UIImageView = {
         let imageview = UIImageView()
         imageview.frame = CGRect(x: 0, y: 0, width: 439, height:500)
-        imageview.image = UIImage(named:"safe-action-4")
+        imageview.image = UIImage(named:"safe-action-3")
         imageview.layer.masksToBounds = true
         
         // view.heightAnchor.constraint(equalToConstant: 50).isActive = true
@@ -40,16 +40,16 @@ class SplashFourViewController: UIViewController {
         
     }()
     // pagination
-    private lazy var NextImgView: UIImageView = {
-        let imageview = UIImageView()
-        imageview.frame = CGRect(x: 0, y: 0, width: 439, height:500)
-        imageview.image = UIImage(named:"dotted-four")
-        imageview.layer.masksToBounds = true
-        
-        return imageview
-        
-    }()
-    
+//    'private lazy var NextImgView: UIImageView = {
+//        let imageview = UIImageView()
+//        imageview.frame = CGRect(x: 0, y: 0, width: 439, height:500)
+//        imageview.image = UIImage(named:"dotted-four")
+//        imageview.layer.masksToBounds = true
+//
+//        return imageview
+//        '
+//    }()
+//
     
     private let warningLabel: UILabel = {
         let warningLabel = UILabel()
@@ -129,7 +129,7 @@ class SplashFourViewController: UIViewController {
         titleLabel.centerX(inView: view)
         
         view.addSubview(WelcomeImgView)
-        WelcomeImgView.anchor(top: titleLabel.bottomAnchor, paddingTop: 30, width: 350, height: 200)
+        WelcomeImgView.anchor(top: titleLabel.bottomAnchor, paddingTop: 50, width: 350, height: 300)
         WelcomeImgView.centerX(inView: view)
         
         // view.backgroundColor = .white
@@ -143,9 +143,9 @@ class SplashFourViewController: UIViewController {
         questionOneLabel.centerX(inView: view)
         
         //pagination
-        view.addSubview(NextImgView)
-        NextImgView.anchor(top: titleLabel.bottomAnchor, paddingTop: 450, width: 100, height: 35)
-        NextImgView.centerX(inView: view)
+//        view.addSubview(NextImgView)
+//        NextImgView.anchor(top: titleLabel.bottomAnchor, paddingTop: 450, width: 100, height: 35)
+//        NextImgView.centerX(inView: view)
         
         //view.backgroundColor = .white
         //view.addSubview(nextButton)

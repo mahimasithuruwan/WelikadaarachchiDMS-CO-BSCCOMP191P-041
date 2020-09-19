@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "safe-action-2.jpg",
+      "filename" : "avoid.jpeg",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "avoid-1.jpeg",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "avoid-2.jpeg",
       "idiom" : "universal",
       "scale" : "3x"
     }

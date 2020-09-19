@@ -27,7 +27,7 @@ class SurveyCVCell: UICollectionViewCell {
             imgView.image = UIImage(named: unwrappedQue.imgName)
             lblQue.text = unwrappedQue.questionText
             btnYes.setTitle("YES", for: .normal)
-            btnNo.setTitle("NO", for: .normal)
+            btnNo.setTitle("NOPE", for: .normal)
             
             if unwrappedQue.isAnswered {
                 if unwrappedQue.accept == true {
@@ -99,7 +99,7 @@ class SurveyCVCell: UICollectionViewCell {
         let btn = UIButton()
         btn.setTitle("Go Back", for: .normal)
         btn.setTitleColor(.white, for: .normal)
-        btn.backgroundColor = .black
+        btn.backgroundColor = .white
         btn.layer.cornerRadius = 5
         btn.clipsToBounds = true
         btn.translatesAutoresizingMaskIntoConstraints = false

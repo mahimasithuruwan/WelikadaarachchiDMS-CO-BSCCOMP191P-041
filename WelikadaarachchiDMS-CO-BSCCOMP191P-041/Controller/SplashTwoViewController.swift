@@ -33,7 +33,7 @@ class SplashTwoViewController: UIViewController {
     
     private lazy var WelcomeImgView: UIImageView = {
         let imageview = UIImageView()
-        imageview.frame = CGRect(x: 0, y: 0, width: 439, height:500)
+        imageview.frame = CGRect(x: 0, y: 0, width: 450, height:600)
         imageview.image = UIImage(named:"safe-action-2")
         imageview.layer.masksToBounds = true
         
@@ -42,15 +42,15 @@ class SplashTwoViewController: UIViewController {
         
     }()
     // pagination
-    private lazy var NextImgView: UIImageView = {
-        let imageview = UIImageView()
-        imageview.frame = CGRect(x: 0, y: 0, width: 439, height:500)
-        imageview.image = UIImage(named:"dotted-two")
-        imageview.layer.masksToBounds = true
-        
-        return imageview
-        
-    }()
+//    private lazy var NextImgView: UIImageView = {
+//        let imageview = UIImageView()
+//        imageview.frame = CGRect(x: 0, y: 0, width: 439, height:500)
+//        imageview.image = UIImage(named:"dotted-two")
+//        imageview.layer.masksToBounds = true
+//
+//        return imageview
+//
+//    }()
     
     
     private let warningLabel: UILabel = {
@@ -112,7 +112,7 @@ class SplashTwoViewController: UIViewController {
     }
     
     @objc func handleNext() {
-        let vc = SplashThreeViewController()
+        let vc = SplashFourViewController()
         navigationController?.pushViewController(vc, animated: false)
     }
     
@@ -131,7 +131,7 @@ class SplashTwoViewController: UIViewController {
         titleLabel.centerX(inView: view)
         
         view.addSubview(WelcomeImgView)
-        WelcomeImgView.anchor(top: titleLabel.bottomAnchor, paddingTop: 30, width: 350, height: 200)
+        WelcomeImgView.anchor(top: titleLabel.bottomAnchor, paddingTop: 50, width: 350, height: 250)
         WelcomeImgView.centerX(inView: view)
         
         // view.backgroundColor = .white
@@ -145,9 +145,9 @@ class SplashTwoViewController: UIViewController {
         questionOneLabel.centerX(inView: view)
         
         //pagination
-        view.addSubview(NextImgView)
-        NextImgView.anchor(top: titleLabel.bottomAnchor, paddingTop: 450, width: 100, height: 35)
-        NextImgView.centerX(inView: view)
+//        view.addSubview(NextImgView)
+//        NextImgView.anchor(top: titleLabel.bottomAnchor, paddingTop: 450, width: 100, height: 35)
+//        NextImgView.centerX(inView: view)
         
         //view.backgroundColor = .white
         //view.addSubview(nextButton)

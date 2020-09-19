@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "corona-logo.png",
+      "filename" : "crowd.jpeg",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "corona-logo-1.png",
+      "filename" : "crowd-1.jpeg",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "corona-logo-2.png",
+      "filename" : "crowd-2.jpeg",
       "idiom" : "universal",
       "scale" : "3x"
     }

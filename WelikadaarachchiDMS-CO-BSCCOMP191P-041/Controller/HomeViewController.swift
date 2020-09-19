@@ -44,7 +44,7 @@ class HomeViewController: UIViewController {
         tile.backgroundColor = .black
         
         let avatar = UIImageView()
-        avatar.image = UIImage(named: "corona-logo")
+        avatar.image = UIImage(named: "corona_virus_logo")
         tile.addSubview(avatar)
         avatar.anchor(left: tile.leftAnchor, paddingLeft: 30, width: 125, height: 125)
         avatar.centerY(inView: tile)
@@ -252,7 +252,7 @@ class HomeViewController: UIViewController {
             
             
            //signOut()
-            view.backgroundColor = .darkGray
+            view.backgroundColor = .black
         }
         
     // MARK: - API
@@ -265,7 +265,7 @@ class HomeViewController: UIViewController {
                   self.present(nav, animated: true, completion: nil)
               }
           } else {
-              faceID()
+             // faceID()
               configure()
           }
       }
@@ -429,7 +429,7 @@ extension HomeViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         if let annotation = annotation as? UserAnnotation {
             let view = MKAnnotationView(annotation: annotation, reuseIdentifier: annotationIdentifier)
-            view.set(image: UIImage(systemName: "mappin.circle.fill")!, with: .orange)
+            view.set(image: UIImage(systemName: "mappin.circle.fill")!, with: .blue)
             
             return view
         }

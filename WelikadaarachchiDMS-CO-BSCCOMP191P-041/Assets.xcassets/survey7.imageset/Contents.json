@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "safe-action-2.jpg",
+      "filename" : "survey7.jpeg",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "survey7-1.jpeg",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "survey7-2.jpeg",
       "idiom" : "universal",
       "scale" : "3x"
     }
