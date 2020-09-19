@@ -18,6 +18,8 @@
 		3E43419F250A9F56008D0B46 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E43419E250A9F56008D0B46 /* HomeViewController.swift */; };
 		3E4341A1250A9F77008D0B46 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4341A0250A9F77008D0B46 /* LoginViewController.swift */; };
 		3E4341A3250A9F97008D0B46 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4341A2250A9F97008D0B46 /* RegisterViewController.swift */; };
+		3E4FB53C2516A293003C134C /* PastResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4FB53B2516A293003C134C /* PastResultsViewController.swift */; };
+		3E4FB53E2516A73D003C134C /* SurveyResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4FB53D2516A73D003C134C /* SurveyResult.swift */; };
 		3E5024F8250EB6D30030D8BB /* UpdateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5024F7250EB6D30030D8BB /* UpdateViewController.swift */; };
 		3E5024FA250EB72F0030D8BB /* SurveyCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5024F9250EB72F0030D8BB /* SurveyCVCell.swift */; };
 		3E5024FC250EB78E0030D8BB /* SplashOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5024FB250EB78E0030D8BB /* SplashOneViewController.swift */; };
@@ -82,6 +84,8 @@
 		3E43419E250A9F56008D0B46 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		3E4341A0250A9F77008D0B46 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3E4341A2250A9F97008D0B46 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		3E4FB53B2516A293003C134C /* PastResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastResultsViewController.swift; sourceTree = "<group>"; };
+		3E4FB53D2516A73D003C134C /* SurveyResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyResult.swift; sourceTree = "<group>"; };
 		3E5024F7250EB6D30030D8BB /* UpdateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateViewController.swift; sourceTree = "<group>"; };
 		3E5024F9250EB72F0030D8BB /* SurveyCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyCVCell.swift; sourceTree = "<group>"; };
 		3E5024FB250EB78E0030D8BB /* SplashOneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashOneViewController.swift; sourceTree = "<group>"; };
@@ -224,6 +228,7 @@
 				3E5B12482515E91A00C34F21 /* NotificationsVC.swift */,
 				3E5B124A2515E93A00C34F21 /* CreateNotificVC.swift */,
 				3E5B124E2515E9CA00C34F21 /* FullMapViewController.swift */,
+				3E4FB53B2516A293003C134C /* PastResultsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -261,6 +266,7 @@
 				3E61A71B250B739D006EBC9F /* LocationHandler.swift */,
 				3E5B12422515E80100C34F21 /* Contact.swift */,
 				3E5B12442515E84000C34F21 /* ContactAPI.swift */,
+				3E4FB53D2516A73D003C134C /* SurveyResult.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -469,7 +475,9 @@
 				3E5B12512515E9FF00C34F21 /* SplashTwoViewController.swift in Sources */,
 				3E4341A1250A9F77008D0B46 /* LoginViewController.swift in Sources */,
 				3E43419D250A9F25008D0B46 /* Extensions.swift in Sources */,
+				3E4FB53C2516A293003C134C /* PastResultsViewController.swift in Sources */,
 				3E5B12492515E91A00C34F21 /* NotificationsVC.swift in Sources */,
+				3E4FB53E2516A73D003C134C /* SurveyResult.swift in Sources */,
 				3E5024FC250EB78E0030D8BB /* SplashOneViewController.swift in Sources */,
 				3E61A714250B71BF006EBC9F /* MainTabBarController.swift in Sources */,
 				3E4341A3250A9F97008D0B46 /* RegisterViewController.swift in Sources */,

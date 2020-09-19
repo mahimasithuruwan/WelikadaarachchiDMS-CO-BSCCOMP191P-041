@@ -129,7 +129,7 @@ class SplashFourViewController: UIViewController {
         titleLabel.centerX(inView: view)
         
         view.addSubview(WelcomeImgView)
-        WelcomeImgView.anchor(top: titleLabel.bottomAnchor, paddingTop: 50, width: 350, height: 300)
+        WelcomeImgView.anchor(top: titleLabel.bottomAnchor, paddingTop: 50, width: 350, height: 250)
         WelcomeImgView.centerX(inView: view)
         
         // view.backgroundColor = .white

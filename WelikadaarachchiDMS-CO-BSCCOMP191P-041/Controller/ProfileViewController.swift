@@ -7,11 +7,12 @@
 //
 
 import UIKit
+import CoreData
 
 class ProfileViewController: UIViewController {
     
     // MARK: - Properties
-    
+    var people: [NSManagedObject] = []
     var safeArea: UILayoutGuide!
     
     private let backButton: UIButton = {
@@ -66,7 +67,7 @@ class ProfileViewController: UIViewController {
     }()
     
     private let nameTextFiled: UITextField = {
-        return UITextField().textField(withPlaceholder: "name", isSecureTextEntry: false)
+        return UITextField().textField(withPlaceholder: "Name", isSecureTextEntry: false)
     }()
     
     private lazy var indexContainerView: UIView = {
@@ -76,19 +77,27 @@ class ProfileViewController: UIViewController {
     }()
     
     private let indexTextFiled: UITextField = {
-        return UITextField().textField(withPlaceholder: "index", isSecureTextEntry: false)
+        return UITextField().textField(withPlaceholder: "Index", isSecureTextEntry: false)
     }()
     
-    private lazy var countryContainerView: UIView = {
-        let view = UIView().inputContainerView(image: #imageLiteral(resourceName: "ic_mail_outline_white_2x"), textField: countryTextFiled )
+    private lazy var addressContainerView: UIView = {
+        let view = UIView().inputContainerView(image: #imageLiteral(resourceName: "ic_mail_outline_white_2x"), textField: addressTextFiled )
         view.heightAnchor.constraint(equalToConstant: 50).isActive = true
         return view
     }()
     
-    private let countryTextFiled: UITextField = {
-        return UITextField().textField(withPlaceholder: "Country", isSecureTextEntry: false)
+
+    private let addressTextFiled: UITextField = {
+        return UITextField().textField(withPlaceholder: "Address", isSecureTextEntry: false)
     }()
     
+    private let saveButton: AuthUIBtn = {
+        let button = AuthUIBtn(type: .system)
+        button.setTitle("Save", for: .normal)
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
+        //button.addTarget(self, action: #selector(saveData), for: .touchUpInside)
+        return button
+    }()
     
     //img
     
@@ -120,7 +129,7 @@ class ProfileViewController: UIViewController {
         WelcomeImgView.anchor(top: titleLbl.bottomAnchor, paddingTop: 100, width: 150, height: 160)
         WelcomeImgView.centerX(inView: view)
         
-        let stack = UIStackView(arrangedSubviews: [profileContainerView,indexContainerView,countryContainerView])
+        let stack = UIStackView(arrangedSubviews: [profileContainerView,indexContainerView,addressContainerView,saveButton])
         stack.axis = .vertical
         stack.distribution = .fillEqually
         stack.spacing = 20

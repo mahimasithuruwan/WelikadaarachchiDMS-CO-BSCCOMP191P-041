@@ -6,10 +6,12 @@
 //  Copyright © 2020 Mahima Sithuruwan. All rights reserved.
 
 import UIKit
+import CoreData
 
 class ResultViewController: UIViewController {
     
     var result: Int?
+    var people: [NSManagedObject] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,6 +42,52 @@ class ResultViewController: UIViewController {
         }
         lblRating.text = "\(rating)"
         lblRating.textColor=color
+        saveData(rates: rating)
+    }
+    
+    @objc func saveData(rates: String) {
+        
+        let rate = rates;
+        
+        guard let appDelegate =
+            UIApplication.shared.delegate as? AppDelegate else {
+                return
+        }
+        
+        // 1
+        let managedContext =
+            appDelegate.persistentContainer.viewContext
+        
+        // 2
+        let entity =
+            NSEntityDescription.entity(forEntityName: "SurveyResult",
+                                       in: managedContext)!
+        
+        let sResult = NSManagedObject(entity: entity,
+                                     insertInto: managedContext)
+        
+        // 3
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        let myString = formatter.string(from: Date())
+        let yourDate = formatter.date(from: myString)
+        formatter.dateFormat = "dd-MMM-yyyy"
+        let myStringafd = formatter.string(from: yourDate!)
+        
+        sResult.setValue(rate, forKeyPath: "result")
+        sResult.setValue(myStringafd, forKeyPath: "date")
+        // 4
+        do {
+            try managedContext.save()
+           let a = sResult.value(forKeyPath: "result") as? String
+            print("chvhjvhjvhj\(String(describing: a))")
+            let c = a?.count
+            print("chvhjvhjbjbjjjvjvhj\(String(describing: c))")
+//            let b = sResult.value(forKeyPath: "result") as? String
+//            print("chvhjvhjvhj\(String(describing: b))")
+        } catch let error as NSError {
+            print("Could not save. \(error), \(error.userInfo)")
+        }
     }
     
     @objc func btnGoBackAction() {

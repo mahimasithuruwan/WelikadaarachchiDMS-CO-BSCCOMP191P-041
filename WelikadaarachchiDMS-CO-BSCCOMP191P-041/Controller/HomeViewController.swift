@@ -66,7 +66,7 @@ class HomeViewController: UIViewController {
         let safeActions = UIButton()
         let imgConfig = UIImage.SymbolConfiguration(pointSize: 0, weight: .medium, scale: .small)
         safeActions.setTitle("Safe Actions ", for: .normal)
-        safeActions.setTitleColor(.darkGray, for: .normal)
+        safeActions.setTitleColor(.green, for: .normal)
         safeActions.setImage(UIImage(systemName: "chevron.left", withConfiguration: imgConfig), for: .normal)
         safeActions.tintColor = .darkGray
         safeActions.titleLabel?.font = UIFont.systemFont(ofSize: 14)
@@ -294,7 +294,7 @@ class HomeViewController: UIViewController {
         
         @objc func showNotific() {
             print("notific")
-            let vc = NotificationsVC()
+            let vc = PastResultsViewController()
             vc.hidesBottomBarWhenPushed = true
             self.navigationController?.pushViewController(vc, animated: true)
         }
