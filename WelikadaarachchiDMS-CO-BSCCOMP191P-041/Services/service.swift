@@ -12,8 +12,8 @@ import GeoFire
 
 let DB_REF = Database.database().reference()
 let REF_USERS = DB_REF.child("users")
-let REF_USER_LOCATIONS = DB_REF.child("driver-locations")
-let REF_TRIPS = DB_REF.child("trips")
+let REF_USER_LOCATIONS = DB_REF.child("user-locations")
+let REF_NOTIFICATIONS = DB_REF.child("notifications")
 
 // MARK: - SharedService
 struct Service {

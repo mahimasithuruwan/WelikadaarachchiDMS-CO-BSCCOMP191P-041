@@ -22,7 +22,7 @@ class UpdateViewController: UIViewController {
         let label = UILabel()
         label.text = "CREATE+"
         label.font = UIFont(name: "Avenir-Light", size: 30)
-        label.textColor = .black
+        label.textColor = .white
         return label
     }()
     
@@ -155,12 +155,9 @@ class UpdateViewController: UIViewController {
     // MARK: - Selectors
     
     @objc func showNotifications() {
-        print(user?.role ?? "")
-//        let nav = UINavigationController(rootViewController: SafeActionsViewController())
-//        nav.modalPresentationStyle = .fullScreen
-//        self.present(nav, animated: true, completion: nil)
-//        setView(view: notificTile, hidden: true)
-
+        let vc = CreateNotificVC()
+        vc.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     @objc func showNewSurvey() {
@@ -189,7 +186,7 @@ class UpdateViewController: UIViewController {
             self.view.endEditing(true)
             let values = [
                 "temperature": temp
-            ] as [String : Any]
+                ] as [String : Any]
             self.uploadUserTemperature(uid: currentUid, values: values)
             self.tempTF.text = ""
         }
@@ -209,7 +206,7 @@ class UpdateViewController: UIViewController {
     
     func configUI() {
         configNavBar()
-        view.backgroundColor = .systemGray6
+        view.backgroundColor = .black
         
         view.addSubview(titleLabel)
         titleLabel.anchor(top: view.safeAreaLayoutGuide.topAnchor, paddingTop: 20)
@@ -220,7 +217,7 @@ class UpdateViewController: UIViewController {
         
         scrollView.addSubview(notificTile)
         
-        if (user?.role ?? "") as String == "Admin" {
+        if (user?.role ?? "") as String == "1" {
             notificTile.anchor(top: scrollView.topAnchor, left: view.leftAnchor, right: view.rightAnchor, paddingTop: 20, paddingLeft: 16, paddingRight: 16, height: 70)
         }
         

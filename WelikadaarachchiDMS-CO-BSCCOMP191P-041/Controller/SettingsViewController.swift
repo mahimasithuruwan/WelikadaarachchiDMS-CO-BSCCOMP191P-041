@@ -5,6 +5,7 @@
 //  Created by Mahima Sithuruwan on 9/15/20.
 //  Copyright © 2020 Mahima Sithuruwan. All rights reserved.
 //
+
 import UIKit
 import FirebaseAuth
 
@@ -19,6 +20,7 @@ class SettingsViewController: UIViewController {
         label.text = "Settings"
         label.font = UIFont(name: "Avenir-Light", size: 30)
         label.textColor = .black
+        
         return label
     }()
     
@@ -103,7 +105,7 @@ class SettingsViewController: UIViewController {
         tile.addSubview(arrow)
         arrow.anchor(right: tile.rightAnchor, paddingRight: 20, width: 14, height: 24)
         arrow.centerY(inView: tile)
-                
+        
         tile.addTarget(self, action: #selector(handleShare), for: .touchUpInside)
         
         return tile
@@ -131,7 +133,7 @@ class SettingsViewController: UIViewController {
         button.addTarget(self, action: #selector(handleLogout), for: .touchUpInside)
         return button
     }()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         safeArea = view.layoutMarginsGuide
@@ -141,12 +143,12 @@ class SettingsViewController: UIViewController {
     // MARK: - Selectors
     
     @objc func handleLogout() {
-       signOut()
+        signOut()
     }
     
     @objc func showProfile() {
         //let vc = ProfileViewController()
-         let vc = TestprofileViewController()
+        let vc = ProfileViewController()
         vc.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(vc, animated: true)
     }
@@ -158,7 +160,7 @@ class SettingsViewController: UIViewController {
     }
     
     @objc func handleShare() {
-       print("Share!")
+        print("Share!")
     }
     
     // MARK: - Helper Function
@@ -204,5 +206,5 @@ class SettingsViewController: UIViewController {
             print("DEBUG: sign out error!")
         }
     }
-
+    
 }

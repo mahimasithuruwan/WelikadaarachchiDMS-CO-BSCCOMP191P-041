@@ -1,14 +1,15 @@
 //
-//  SplashOneViewController.swift
+//  SplashTwoViewController.swift
 //  WelikadaarachchiDMS-CO-BSCCOMP191P-041
 //
-//  Created by Mahima Sithuruwan on 9/13/20.
+//  Created by Mahima Sithuruwan on 9/19/20.
 //  Copyright © 2020 Mahima Sithuruwan. All rights reserved.
+//
 
 
 import UIKit
 
-class SplashOneViewController: UIViewController {
+class SplashTwoViewController: UIViewController {
     
     // MARK: - Properties
     
@@ -33,7 +34,7 @@ class SplashOneViewController: UIViewController {
     private lazy var WelcomeImgView: UIImageView = {
         let imageview = UIImageView()
         imageview.frame = CGRect(x: 0, y: 0, width: 439, height:500)
-        imageview.image = UIImage(named:"wash-hands")
+        imageview.image = UIImage(named:"safe-action-2")
         imageview.layer.masksToBounds = true
         
         // view.heightAnchor.constraint(equalToConstant: 50).isActive = true
@@ -44,7 +45,7 @@ class SplashOneViewController: UIViewController {
     private lazy var NextImgView: UIImageView = {
         let imageview = UIImageView()
         imageview.frame = CGRect(x: 0, y: 0, width: 439, height:500)
-        imageview.image = UIImage(named:"dotted-one")
+        imageview.image = UIImage(named:"dotted-two")
         imageview.layer.masksToBounds = true
         
         return imageview
@@ -111,7 +112,7 @@ class SplashOneViewController: UIViewController {
     }
     
     @objc func handleNext() {
-        let vc = SplashTwoViewController()
+        let vc = SplashThreeViewController()
         navigationController?.pushViewController(vc, animated: false)
     }
     
@@ -121,8 +122,6 @@ class SplashOneViewController: UIViewController {
         configNavBar()
         
         view.backgroundColor = .white
-        
-        
         view.addSubview(backButton)
         backButton.anchor(top: view.safeAreaLayoutGuide.topAnchor, left: view.leftAnchor, paddingTop: 10, paddingLeft: 16, width: 40, height: 40)
         
@@ -132,7 +131,7 @@ class SplashOneViewController: UIViewController {
         titleLabel.centerX(inView: view)
         
         view.addSubview(WelcomeImgView)
-        WelcomeImgView.anchor(top: titleLabel.bottomAnchor, paddingTop: 30, width: 300, height: 270)
+        WelcomeImgView.anchor(top: titleLabel.bottomAnchor, paddingTop: 30, width: 350, height: 200)
         WelcomeImgView.centerX(inView: view)
         
         // view.backgroundColor = .white
@@ -178,7 +177,6 @@ class SplashOneViewController: UIViewController {
         navigationController?.navigationBar.isHidden = true
         navigationController?.navigationBar.barStyle = .default
     }
-    
     
     
     

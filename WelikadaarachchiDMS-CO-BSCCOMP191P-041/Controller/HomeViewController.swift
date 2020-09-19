@@ -23,8 +23,6 @@ class HomeViewController: UIViewController {
     private let locationManager = LocationHandler.shared.locationManager
     private var route: MKRoute?
     var safeArea: UILayoutGuide!
-    var i=1
-    var checkLog = false
     
     private var user: User? {
           didSet {
@@ -46,7 +44,7 @@ class HomeViewController: UIViewController {
         tile.backgroundColor = .black
         
         let avatar = UIImageView()
-        avatar.image = UIImage(named: "COVID19")
+        avatar.image = UIImage(named: "corona-logo")
         tile.addSubview(avatar)
         avatar.anchor(left: tile.leftAnchor, paddingLeft: 30, width: 125, height: 125)
         avatar.centerY(inView: tile)
@@ -267,7 +265,7 @@ class HomeViewController: UIViewController {
                   self.present(nav, animated: true, completion: nil)
               }
           } else {
-              //faceID()
+              faceID()
               configure()
           }
       }
@@ -296,16 +294,22 @@ class HomeViewController: UIViewController {
         
         @objc func showNotific() {
             print("notific")
-    //        let vc = SafeActionsViewController()
-    //        vc.hidesBottomBarWhenPushed = true
-    //        self.navigationController?.pushViewController(vc, animated: true)
-        }
-        
-        @objc func showSafeActions() {
-            let vc = SplashOneViewController()
+            let vc = NotificationsVC()
             vc.hidesBottomBarWhenPushed = true
             self.navigationController?.pushViewController(vc, animated: true)
         }
+        
+    @objc func showFullMap() {
+        let vc = FullMapViewController()
+        vc.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @objc func showSafeActions() {
+        let vc = SplashOneViewController()
+        vc.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
     
     
     // MARK: - Helper Function
@@ -314,27 +318,23 @@ class HomeViewController: UIViewController {
         let screensize: CGRect = UIScreen.main.bounds
            
            configNavBar()
-           view.backgroundColor = .systemGray6
-           view.addSubview(mainTile)
-           mainTile.anchor(top: view.topAnchor, left: view.leftAnchor, right: view.rightAnchor, height: 0.26 * screensize.height)
-           view.addSubview(scrollView)
-           scrollView.anchor(top: mainTile.bottomAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, paddingTop: 1.0, paddingLeft: 1.0, paddingBottom: -1.0, paddingRight: -1.0)
-           scrollView.addSubview(notificTile)
-           notificTile.anchor(top: scrollView.topAnchor, left: view.leftAnchor, right: view.rightAnchor, paddingTop: 8, paddingLeft: 16, paddingRight: 16, height: 80)
-           scrollView.addSubview(caseTile)
-           caseTile.anchor(top: notificTile.bottomAnchor, left: view.leftAnchor, right: view.rightAnchor, paddingTop: 8, height: 220)
-           scrollView.addSubview(mapTile)
-           mapTile.anchor(top: caseTile.bottomAnchor, left: view.leftAnchor, right: view.rightAnchor, height: 270)
-          confugireMapView()
-//          configureRideActionView()
-//
-//          view.addSubview(actionButton)
-//          actionButton.anchor(top: view.safeAreaLayoutGuide.topAnchor, left: view.leftAnchor,
-//                              paddingTop: 16, paddingLeft: 20, width: 30, height: 30)
-//
-//
-//          configureTableView()
-        
+        view.backgroundColor = .systemGray6
+        view.addSubview(mainTile)
+        mainTile.anchor(top: view.topAnchor, left: view.leftAnchor, right: view.rightAnchor, height: 0.26 * screensize.height)
+        view.addSubview(scrollView)
+        scrollView.anchor(top: mainTile.bottomAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, paddingTop: 1.0, paddingLeft: 1.0, paddingBottom: -1.0, paddingRight: -1.0)
+        scrollView.addSubview(notificTile)
+        notificTile.anchor(top: scrollView.topAnchor, left: view.leftAnchor, right: view.rightAnchor, paddingTop: 8, paddingLeft: 16, paddingRight: 16, height: 80)
+        scrollView.addSubview(caseTile)
+        caseTile.anchor(top: notificTile.bottomAnchor, left: view.leftAnchor, right: view.rightAnchor, paddingTop: 8, height: 220)
+        scrollView.addSubview(mapTile)
+        mapTile.anchor(top: caseTile.bottomAnchor, left: view.leftAnchor, right: view.rightAnchor, height: 270)
+        confugireMapView()
+        //configureRideActionView()
+        //view.addSubview(actionButton)
+        //actionButton.anchor(top: view.safeAreaLayoutGuide.topAnchor, left: view.leftAnchor,
+        //                    paddingTop: 16, paddingLeft: 20, width: 30, height: 30)
+        //configureTableView()
        
       }
     
@@ -352,6 +352,7 @@ class HomeViewController: UIViewController {
            mapView.userTrackingMode = .follow
            mapView.delegate = self
        }
+    
     func fetchUserData() {
           guard let currentUid = Auth.auth().currentUser?.uid else { return }
           
@@ -428,7 +429,7 @@ extension HomeViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         if let annotation = annotation as? UserAnnotation {
             let view = MKAnnotationView(annotation: annotation, reuseIdentifier: annotationIdentifier)
-            view.set(image: UIImage(systemName: "mappin.circle.fill")!, with: .blue)
+            view.set(image: UIImage(systemName: "mappin.circle.fill")!, with: .orange)
             
             return view
         }
@@ -468,7 +469,7 @@ extension HomeViewController {
 }
 
 extension MKAnnotationView {
-
+    
     public func set(image: UIImage, with color : UIColor) {
         let view = UIImageView(image: image.withRenderingMode(.alwaysTemplate))
         view.tintColor = color

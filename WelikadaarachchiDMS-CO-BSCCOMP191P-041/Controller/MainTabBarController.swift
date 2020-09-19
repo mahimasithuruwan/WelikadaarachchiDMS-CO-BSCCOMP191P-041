@@ -13,7 +13,7 @@ class MainTabBarController: UITabBarController {
         super.viewDidLoad()
 
         //tabBar.barTintColor = UIColor(red: 38/255, green: 196/255, blue: 133/255, alpha:1)
-        tabBar.barTintColor = .black
+        //tabBar.barTintColor = .black
         setupTabBar()
     }
     
@@ -26,7 +26,7 @@ class MainTabBarController: UITabBarController {
         plusController.tabBarItem.image = UIImage(systemName: "plus")
         plusController.tabBarItem.title = "Plus"
         
-        let settinngController = UINavigationController(rootViewController: SplashOneViewController())
+        let settinngController = UINavigationController(rootViewController: SettingsViewController())
         settinngController.tabBarItem.image = UIImage(systemName: "gear")
         settinngController.tabBarItem.title = "Setting"
 

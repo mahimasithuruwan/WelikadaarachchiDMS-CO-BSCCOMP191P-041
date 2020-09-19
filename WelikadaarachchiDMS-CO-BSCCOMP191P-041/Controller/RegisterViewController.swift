@@ -77,7 +77,7 @@ class RegisterViewController: UIViewController {
     
      
        private let accountTypeSegmentedControl: UISegmentedControl = {
-           let sc = UISegmentedControl(items: ["Student","Academic-Staff","Non-Academic"])
+           let sc = UISegmentedControl(items: ["Student","Staff"])
            sc.backgroundColor = .backgroundColor
            sc.tintColor = UIColor(white: 1, alpha: 0.87)
            sc.selectedSegmentIndex = 0
@@ -174,7 +174,7 @@ class RegisterViewController: UIViewController {
            guard let firstname = firstNameTextFiled.text else { return }
            guard let lastname = lastTextFiled.text else { return }
            guard let email = emailTextFiled.text else { return }
-           let accountType = accountTypeSegmentedControl.selectedSegmentIndex
+           let role = accountTypeSegmentedControl.selectedSegmentIndex
            guard let password = passwordTextFiled.text else { return }
        
         
@@ -211,7 +211,13 @@ class RegisterViewController: UIViewController {
              self.present(ac, animated: true)
              return;
           }
-           
+        
+          if(password.count<6){
+            let ac = UIAlertController(title: "Sign Up", message: "Password should contain least 6 charactors", preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "Ok", style: .cancel))
+            self.present(ac, animated: true)
+            return;
+          }
            Auth.auth().createUser(withEmail: email, password: password) { (result, error) in
                if let error = error {
                 let ac = UIAlertController(title: "Sign Up", message: "\(error.localizedDescription)", preferredStyle: .alert)
@@ -227,7 +233,7 @@ class RegisterViewController: UIViewController {
                 "firstname": firstname,
                 "lastname": lastname,
                "email": email,
-               "accountType": accountType
+               "role":  String(role)
                ] as [String : Any]
 
              Database.database().reference().child("users").child(uid).updateChildValues(values) { (error, ref) in

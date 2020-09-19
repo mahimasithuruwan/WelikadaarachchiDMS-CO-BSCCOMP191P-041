@@ -8,7 +8,7 @@
 import UIKit
 
 class ResultViewController: UIViewController {
-
+    
     var result: Int?
     
     override func viewDidLoad() {
@@ -117,5 +117,5 @@ class ResultViewController: UIViewController {
         btn.translatesAutoresizingMaskIntoConstraints = false
         return btn
     }()
-
+    
 }

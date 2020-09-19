@@ -14,7 +14,7 @@ protocol LocationInputViewDelegate {
 }
 
 class LocationInputUIView: UIView {
-
+    
     // MARK: - Properties
     
     var user: User? {
@@ -22,7 +22,7 @@ class LocationInputUIView: UIView {
     }
     
     var delegate: LocationInputViewDelegate?
-
+    
     private let backButton: UIButton = {
         let button = UIButton(type: .system)
         button.setImage(#imageLiteral(resourceName: "baseline_arrow_back_black_36dp").withRenderingMode(.alwaysOriginal), for: .normal)
@@ -95,7 +95,7 @@ class LocationInputUIView: UIView {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
+    
     // MARK: - Selectors
     
     @objc func handleBackTapped() {
@@ -139,7 +139,7 @@ class LocationInputUIView: UIView {
                            paddingLeft: 0, paddingBottom: 4, width: 0.5)
         linkingView.centerX(inView: startLocationIndicatorView)
     }
-
+    
 }
 
 extension LocationInputUIView: UITextFieldDelegate {

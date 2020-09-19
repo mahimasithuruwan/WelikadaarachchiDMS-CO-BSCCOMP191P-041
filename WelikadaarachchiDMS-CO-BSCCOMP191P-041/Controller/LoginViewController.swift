@@ -109,6 +109,13 @@ class LoginViewController: UIViewController {
                 return;
         }
         
+        if(password.count<6){
+            let ac = UIAlertController(title: "Log In", message: "Password should contain least 6 charactors", preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "Ok", style: .cancel))
+            self.present(ac, animated: true)
+            return;
+        }
+        
            Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
                if let error = error {
                    let ac = UIAlertController(title: "Log In", message: "\(error.localizedDescription)", preferredStyle: .alert)
@@ -117,7 +124,6 @@ class LoginViewController: UIViewController {
                    print("DEBUG: Faild to log user with error \(error.localizedDescription)")
                    return
                }
-            self.faceID()
                let keyWindow = UIApplication.shared.connectedScenes
                .filter({$0.activationState == .foregroundActive})
                .map({$0 as? UIWindowScene})
@@ -132,54 +138,6 @@ class LoginViewController: UIViewController {
                self.dismiss(animated: true, completion: nil)
            }
        }
-    
-    // MARK:- FaceID
-    
-    func faceID(){
-        let context = LAContext()
-        var error: NSError?
-        
-        if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) {
-            let reason = "Identify yourself!"
-            
-            context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason) {
-                [weak self] success, authenticationError in
-                
-                DispatchQueue.main.async {
-                    if success {
-                        let ac = UIAlertController(title: "Authentication success", message: "Well Done", preferredStyle: .alert)
-                        ac.addAction(UIAlertAction(title: "Happy", style: .default))
-                        self?.present(ac, animated: true)
-                    } else {
-                        let ac = UIAlertController(title: "Authentication failed", message: "You could not be verified; please try again.", preferredStyle: .alert)
-                        ac.addAction(UIAlertAction(title: "OK", style: .default))
-                        self?.signOut()
-                        //  self?.present(ac, animated: true)
-                        self?.dismiss(animated: true, completion: nil)
-                        
-                    }
-                }
-            }
-        }
-        else {
-            let ac = UIAlertController(title: "Biometry unavailable", message: "Your device is not configured for biometric authentication.", preferredStyle: .alert)
-            ac.addAction(UIAlertAction(title: "OK", style: .default))
-            self.present(ac, animated: true)
-        }
-    }
-    
-    func signOut() {
-        do {
-            try Auth.auth().signOut()
-            DispatchQueue.main.async {
-                let nav = UINavigationController(rootViewController: LoginViewController())
-                nav.modalPresentationStyle = .fullScreen
-                self.present(nav, animated: true, completion: nil)
-            }
-        } catch {
-            print("DEBUG: sign out error")
-        }
-    }
     
     @objc func handleShowRegister() {
         let vc = RegisterViewController()

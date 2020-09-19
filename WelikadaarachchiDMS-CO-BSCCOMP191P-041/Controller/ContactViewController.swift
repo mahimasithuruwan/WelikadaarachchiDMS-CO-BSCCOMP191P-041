@@ -36,7 +36,7 @@ class ContactViewController: UIViewController {
         blank.backgroundColor = .white
         return blank
     }()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         safeArea = view.layoutMarginsGuide
@@ -52,6 +52,7 @@ class ContactViewController: UIViewController {
     func configUI() {
         configNavBar()
         view.backgroundColor = .systemGray6
+        
         view.addSubview(titleLbl)
         titleLbl.anchor(top: safeArea.topAnchor, paddingTop: 20)
         titleLbl.centerX(inView: view)
@@ -65,5 +66,5 @@ class ContactViewController: UIViewController {
         navigationController?.navigationBar.isHidden = true
         navigationController?.navigationBar.barStyle = .default
     }
-
+    
 }

@@ -5,6 +5,7 @@
 //  Created by Mahima Sithuruwan on 9/13/20.
 //  Copyright © 2020 Mahima Sithuruwan. All rights reserved.
 
+
 import UIKit
 
 class SafeActionsViewController: UIViewController {
@@ -36,13 +37,13 @@ class SafeActionsViewController: UIViewController {
         sv.backgroundColor = .white
         return sv
     }()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configUI()
     }
     
-
+    
     private func configUI() {
         configNavBar()
         
@@ -68,7 +69,7 @@ class SafeActionsViewController: UIViewController {
             // title, image, button
             let label = UILabel(frame: CGRect(x:  10, y: 10, width: pageView.frame.size.width-20, height: 80))
             let imageView = UIImageView(frame: CGRect(x:  10, y: 10+120+10, width: pageView.frame.size.width-20, height: pageView.frame.size.height-60-130-15))
-//            let button = UIButton(type: .system)
+            //            let button = UIButton(type: .system)
             let button = UIButton(frame: CGRect(x:  10, y: pageView.frame.size.height-60, width: pageView.frame.size.width-20, height: 50))
             
             label.textAlignment = .center
@@ -82,11 +83,11 @@ class SafeActionsViewController: UIViewController {
             imageView.image = UIImage(named: "welcome_\(x)")
             pageView.addSubview(imageView)
             
-//            let buttonTitle = NSMutableAttributedString(string: "NEXT", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 16), NSAttributedString.Key.foregroundColor: UIColor.gray])
-//            button.setAttributedTitle(buttonTitle, for: .normal)
+            //            let buttonTitle = NSMutableAttributedString(string: "NEXT", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 16), NSAttributedString.Key.foregroundColor: UIColor.gray])
+            //            button.setAttributedTitle(buttonTitle, for: .normal)
             button.setTitle("NEXT", for: .normal)
             if(x == 2) {
-               button.setTitle("DONE!", for: .normal)
+                button.setTitle("DONE!", for: .normal)
             }
             button.setTitleColor(.gray, for: .normal)
             button.addTarget(self, action: #selector(handleTapNext(_:)), for: .touchUpInside)
@@ -98,7 +99,7 @@ class SafeActionsViewController: UIViewController {
         
         scrollView.contentSize = CGSize(width: screensize.width * 3 , height: 0)
         scrollView.isPagingEnabled = true
-         
+        
     }
     
     func configNavBar() {
@@ -118,7 +119,7 @@ class SafeActionsViewController: UIViewController {
     }
     
     @objc func handleGoBack() {
-       navigationController?.popViewController(animated: true)
+        navigationController?.popViewController(animated: true)
     }
-
+    
 }
