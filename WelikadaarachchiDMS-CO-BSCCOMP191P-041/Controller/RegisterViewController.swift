@@ -197,7 +197,14 @@ class RegisterViewController: UIViewController {
              self.present(ac, animated: true)
              return;
           }
-               
+        
+          if(!email.contains("@") || !email.contains(".")){
+             let ac = UIAlertController(title: "Log In", message: "Please enter email correctly",  preferredStyle: .alert)
+             ac.addAction(UIAlertAction(title: "Ok", style: .cancel))
+             self.present(ac, animated: true)
+             return;
+         }
+        
           if(password.count==0){
              let ac = UIAlertController(title: "Sign Up", message: "Please enter passward", preferredStyle: .alert)
              ac.addAction(UIAlertAction(title: "Ok", style: .cancel))

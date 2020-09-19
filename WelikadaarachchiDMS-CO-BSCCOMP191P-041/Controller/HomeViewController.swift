@@ -23,6 +23,8 @@ class HomeViewController: UIViewController {
     private let locationManager = LocationHandler.shared.locationManager
     private var route: MKRoute?
     var safeArea: UILayoutGuide!
+    var i=1
+    var checkLog = false
     
     private var user: User? {
           didSet {
@@ -41,7 +43,7 @@ class HomeViewController: UIViewController {
     
     private let mainTile: UIView = {
         let tile = UIView()
-        tile.backgroundColor = .white
+        tile.backgroundColor = .black
         
         let avatar = UIImageView()
         avatar.image = UIImage(named: "COVID19")
@@ -52,12 +54,14 @@ class HomeViewController: UIViewController {
         let title = UILabel()
         title.text = "All you need is"
         title.font = UIFont(name: "Avenir-Medium", size: 26)
+        title.textColor = .white
         tile.addSubview(title)
         title.anchor(top: avatar.topAnchor, left: avatar.rightAnchor, right: tile.rightAnchor, paddingLeft: 30, paddingRight: 16)
         
         let subTitle = UILabel()
         subTitle.text = "stay at home"
         subTitle.font = UIFont(name: "Avenir-Black", size: 30)
+        subTitle.textColor = .white
         tile.addSubview(subTitle)
         subTitle.anchor(top: title.bottomAnchor, left: avatar.rightAnchor, right: tile.rightAnchor, paddingLeft: 30, paddingRight: 16)
         
@@ -80,7 +84,7 @@ class HomeViewController: UIViewController {
     
     private let notificTile: UIButton = {
         let tile = UIButton()
-        tile.backgroundColor = .white
+        tile.backgroundColor = .black
         tile.layer.cornerRadius = 5
         tile.layer.masksToBounds = true
         
@@ -101,6 +105,7 @@ class HomeViewController: UIViewController {
         
         let title = UILabel()
         title.text = "NIBM is closed until further notice"
+        title.textColor = .white
         tile.addSubview(title)
         title.anchor(top: tile.topAnchor,  left: bell.rightAnchor, right: arrow.leftAnchor, paddingTop: 15, paddingLeft: 12, paddingRight: 12)
         
@@ -118,10 +123,11 @@ class HomeViewController: UIViewController {
     
     private let caseTile: UIView = {
         let tile = UIView()
-        tile.backgroundColor = .white
+        tile.backgroundColor = .black
         
         let title = UILabel()
         title.text = "University Case Update"
+        title.textColor = .white
         tile.addSubview(title)
         title.anchor(top: tile.topAnchor, left: tile.leftAnchor, paddingTop: 20, paddingLeft: 16)
         
@@ -169,6 +175,7 @@ class HomeViewController: UIViewController {
         let infectedCount = UILabel()
         infectedCount.text = "3"
         infectedCount.font = UIFont(name: "Avenir-Medium", size: 48)
+        infectedCount.textColor = .white
         infectedUI.addSubview(infectedCount)
         infectedCount.anchor(top: yellowDot.bottomAnchor, paddingTop: 12)
         infectedCount.centerX(inView: infectedUI)
@@ -176,6 +183,7 @@ class HomeViewController: UIViewController {
         let deathsCount = UILabel()
         deathsCount.text = "0"
         deathsCount.font = UIFont(name: "Avenir-Medium", size: 48)
+        deathsCount.textColor = .white
         deathsUI.addSubview(deathsCount)
         deathsCount.anchor(top: redDot.bottomAnchor, paddingTop: 12)
         deathsCount.centerX(inView: deathsUI)
@@ -183,6 +191,7 @@ class HomeViewController: UIViewController {
         let recoveredCount = UILabel()
         recoveredCount.text = "12"
         recoveredCount.font = UIFont(name: "Avenir-Medium", size: 48)
+        recoveredCount.textColor = .white
         recoveredUI.addSubview(recoveredCount)
         recoveredCount.anchor(top: greenDot.bottomAnchor, paddingTop: 12)
         recoveredCount.centerX(inView: recoveredUI)
@@ -245,10 +254,9 @@ class HomeViewController: UIViewController {
             
             
            //signOut()
-            view.backgroundColor = .white
+            view.backgroundColor = .darkGray
         }
-    
-    
+        
     // MARK: - API
     
     func checkIsUserLoggedIn() {
@@ -420,7 +428,7 @@ extension HomeViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         if let annotation = annotation as? UserAnnotation {
             let view = MKAnnotationView(annotation: annotation, reuseIdentifier: annotationIdentifier)
-            view.set(image: UIImage(systemName: "mappin.circle.fill")!, with: .orange)
+            view.set(image: UIImage(systemName: "mappin.circle.fill")!, with: .blue)
             
             return view
         }

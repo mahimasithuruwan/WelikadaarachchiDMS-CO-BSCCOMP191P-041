@@ -64,8 +64,8 @@ class WelikadaarachchiDMS_CO_BSCCOMP191P_041UITests: XCTestCase {
         
         app.buttons["Log In"].tap()
         
-        let map = app.maps["mapView"]
-               XCTAssertTrue(map.exists)
+      //  let map = app.maps["mapView"]
+      //         XCTAssertTrue(map.exists)
         
         
 // //XCTAssertTrue(app.maps["mapView"].exists)
@@ -76,12 +76,14 @@ class WelikadaarachchiDMS_CO_BSCCOMP191P_041UITests: XCTestCase {
 //               expectation(for: exists, evaluatedWith: downloadCell, handler: nil)
 //               waitForExpectations(timeout: 5, handler: nil)
         
-      //  let downloadCell =  app.textViews.staticTexts["settings"]
+      //  let downloadCell =  app.textViews.staticTexts["All you need is"]
             
-       // let exists = NSPredicate(format: map.value != )
+       // let exists = "All you need is"
 
-      //  expectation(for: exists, evaluatedWith: downloadCell, handler: nil)
-      //         waitForExpectations(timeout: 15, handler: XCTAssertTrue(map.exists))
+      //  XCTAssertTrue(app.textViews.staticTexts["All you need is"].waitForExistence(timeout: 15))
+
+       // expectation(for: exists, evaluatedWith: downloadCell, handler: nil)
+      //        waitForExpectations(timeout: 10, handler: nil)
         
         
         // Use recording to get started writing UI tests.

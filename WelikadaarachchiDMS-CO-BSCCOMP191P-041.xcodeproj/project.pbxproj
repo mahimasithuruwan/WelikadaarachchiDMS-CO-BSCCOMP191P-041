@@ -27,11 +27,11 @@
 		3E558FD92510ECE700B8F32E /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E558FD82510ECE700B8F32E /* SettingsViewController.swift */; };
 		3E558FDB2510ED0700B8F32E /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E558FDA2510ED0700B8F32E /* ProfileViewController.swift */; };
 		3E558FDD2510EDD200B8F32E /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E558FDC2510EDD200B8F32E /* ContactViewController.swift */; };
-		3E571D392513EC9B00E472D0 /* testLogIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E571D382513EC9A00E472D0 /* testLogIn.swift */; };
 		3E5B1229251485DF00C34F21 /* LocationInputUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5B1228251485DF00C34F21 /* LocationInputUIView.swift */; };
 		3E5B122B25148ED300C34F21 /* TestprofileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5B122A25148ED300C34F21 /* TestprofileViewController.swift */; };
 		3E5B122D25148EFA00C34F21 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5B122C25148EFA00C34F21 /* TestViewController.swift */; };
 		3E5B122F25148F1000C34F21 /* DropViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5B122E25148F1000C34F21 /* DropViewController.swift */; };
+		3E5B12412514FDCB00C34F21 /* testLogIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E571D382513EC9A00E472D0 /* testLogIn.swift */; };
 		3E61A70E250B66E8006EBC9F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3E61A70D250B66E8006EBC9F /* GoogleService-Info.plist */; };
 		3E61A710250B6F34006EBC9F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E61A70F250B6F34006EBC9F /* User.swift */; };
 		3E61A712250B6F58006EBC9F /* UserAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E61A711250B6F58006EBC9F /* UserAnnotation.swift */; };
@@ -93,6 +93,8 @@
 		3E5B122A25148ED300C34F21 /* TestprofileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestprofileViewController.swift; sourceTree = "<group>"; };
 		3E5B122C25148EFA00C34F21 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		3E5B122E25148F1000C34F21 /* DropViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropViewController.swift; sourceTree = "<group>"; };
+		3E5B12392514FC4D00C34F21 /* NIBM_COVID19Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NIBM_COVID19Tests.swift; sourceTree = "<group>"; };
+		3E5B123B2514FC4D00C34F21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3E61A70D250B66E8006EBC9F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3E61A70F250B6F34006EBC9F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		3E61A711250B6F58006EBC9F /* UserAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAnnotation.swift; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 				3E43415B250A9BEA008D0B46 /* WelikadaarachchiDMS-CO-BSCCOMP191P-041 */,
 				3E434175250A9BEE008D0B46 /* WelikadaarachchiDMS-CO-BSCCOMP191P-041Tests */,
 				3E434180250A9BEE008D0B46 /* WelikadaarachchiDMS-CO-BSCCOMP191P-041UITests */,
+				3E5B12382514FC4D00C34F21 /* NIBM COVID19Tests */,
 				3E43415A250A9BEA008D0B46 /* Products */,
 				F8A14D219D4601B53AEE1D21 /* Pods */,
 				EB26EBCB9BD8998897AB62D5 /* Frameworks */,
@@ -176,9 +179,9 @@
 		3E434175250A9BEE008D0B46 /* WelikadaarachchiDMS-CO-BSCCOMP191P-041Tests */ = {
 			isa = PBXGroup;
 			children = (
+				3E571D382513EC9A00E472D0 /* testLogIn.swift */,
 				3E434176250A9BEE008D0B46 /* WelikadaarachchiDMS_CO_BSCCOMP191P_041Tests.swift */,
 				3E434178250A9BEE008D0B46 /* Info.plist */,
-				3E571D382513EC9A00E472D0 /* testLogIn.swift */,
 			);
 			path = "WelikadaarachchiDMS-CO-BSCCOMP191P-041Tests";
 			sourceTree = "<group>";
@@ -198,15 +201,15 @@
 				3E43419E250A9F56008D0B46 /* HomeViewController.swift */,
 				3E4341A0250A9F77008D0B46 /* LoginViewController.swift */,
 				3E4341A2250A9F97008D0B46 /* RegisterViewController.swift */,
+				3E61A719250B723F006EBC9F /* WelcomeViewController.swift */,
 				3E61A713250B71BF006EBC9F /* MainTabBarController.swift */,
 				3E61A715250B71E4006EBC9F /* SplashScreenViewController.swift */,
 				3E61A717250B7214006EBC9F /* SurveyViewController.swift */,
-				3E61A719250B723F006EBC9F /* WelcomeViewController.swift */,
-				3E5024F7250EB6D30030D8BB /* UpdateViewController.swift */,
 				3E5024F9250EB72F0030D8BB /* SurveyCVCell.swift */,
+				3E5024FF250EB8120030D8BB /* ResultViewController.swift */,
+				3E5024F7250EB6D30030D8BB /* UpdateViewController.swift */,
 				3E5024FB250EB78E0030D8BB /* SplashOneViewController.swift */,
 				3E5024FD250EB7CC0030D8BB /* SafeActionsViewController.swift */,
-				3E5024FF250EB8120030D8BB /* ResultViewController.swift */,
 				3E558FD62510ECC800B8F32E /* HomePageViewController.swift */,
 				3E558FD82510ECE700B8F32E /* SettingsViewController.swift */,
 				3E558FDA2510ED0700B8F32E /* ProfileViewController.swift */,
@@ -251,6 +254,15 @@
 				3E61A71B250B739D006EBC9F /* LocationHandler.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		3E5B12382514FC4D00C34F21 /* NIBM COVID19Tests */ = {
+			isa = PBXGroup;
+			children = (
+				3E5B12392514FC4D00C34F21 /* NIBM_COVID19Tests.swift */,
+				3E5B123B2514FC4D00C34F21 /* Info.plist */,
+			);
+			path = "NIBM COVID19Tests";
 			sourceTree = "<group>";
 		};
 		EB26EBCB9BD8998897AB62D5 /* Frameworks */ = {
@@ -481,7 +493,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E434177250A9BEE008D0B46 /* WelikadaarachchiDMS_CO_BSCCOMP191P_041Tests.swift in Sources */,
-				3E571D392513EC9B00E472D0 /* testLogIn.swift in Sources */,
+				3E5B12412514FDCB00C34F21 /* testLogIn.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

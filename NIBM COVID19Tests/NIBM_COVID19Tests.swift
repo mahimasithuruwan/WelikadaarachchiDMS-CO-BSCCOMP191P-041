@@ -1,22 +1,17 @@
 //
-//  WelikadaarachchiDMS_CO_BSCCOMP191P_041Tests.swift
-//  WelikadaarachchiDMS-CO-BSCCOMP191P-041Tests
+//  NIBM_COVID19Tests.swift
+//  NIBM COVID19Tests
 //
-//  Created by Mahima Sithuruwan on 9/10/20.
+//  Created by Mahima Sithuruwan on 9/18/20.
 //  Copyright © 2020 Mahima Sithuruwan. All rights reserved.
 //
 
 import XCTest
-//@testable import WelikadaarachchiDMS-CO-BSCCOMP191P-041Tests
 
-class WelikadaarachchiDMS_CO_BSCCOMP191P_041Tests: XCTestCase {
+@testable import WelikadaarachchiDMS-CO-BSCCOMP191P-041
 
-    func testingLogIn(){
-        let login = testLogIn()
-        let result = login.validateEmail(email: "njnj")
-        
-    }
-    
+class NIBM_COVID19Tests: XCTestCase {
+
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
@@ -32,7 +27,7 @@ class WelikadaarachchiDMS_CO_BSCCOMP191P_041Tests: XCTestCase {
 
     func testPerformanceExample() throws {
         // This is an example of a performance test case.
-        self.measure {
+        measure {
             // Put the code you want to measure the time of here.
         }
     }

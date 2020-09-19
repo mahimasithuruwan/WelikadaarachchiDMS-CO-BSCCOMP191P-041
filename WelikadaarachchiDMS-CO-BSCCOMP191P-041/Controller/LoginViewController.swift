@@ -87,7 +87,7 @@ class LoginViewController: UIViewController {
        @objc func handleSignIn() {
            guard let email = emailTextFiled.text else { return }
            guard let password = passwordTextFiled.text else { return }
-
+        
         if(email.count==0){
             let ac = UIAlertController(title: "Log In", message: "Please enter email", preferredStyle: .alert)
             ac.addAction(UIAlertAction(title: "Ok", style: .cancel))
@@ -95,8 +95,15 @@ class LoginViewController: UIViewController {
             return;
         }
         
+        if(!email.contains("@") || !email.contains(".")){
+            let ac = UIAlertController(title: "Log In", message: "Please enter email correctly", preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "Ok", style: .cancel))
+            self.present(ac, animated: true)
+            return;
+        }
+
         if(password.count==0){
-                let ac = UIAlertController(title: "Log In", message: "Please enter passward", preferredStyle: .alert)
+                let ac = UIAlertController(title: "Log In", message: "Please enter password", preferredStyle: .alert)
                 ac.addAction(UIAlertAction(title: "Ok", style: .cancel))
                 self.present(ac, animated: true)
                 return;

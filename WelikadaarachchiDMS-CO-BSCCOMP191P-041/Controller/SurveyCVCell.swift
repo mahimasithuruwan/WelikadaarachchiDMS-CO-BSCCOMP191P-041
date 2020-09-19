@@ -18,6 +18,7 @@ class SurveyCVCell: UICollectionViewCell {
     var btnNo: UIButton!
     var btnsArray = [UIButton]()
     
+  
     weak var delegate: SurveyCVCellDelegate?
     
     var question: Question? {
@@ -26,13 +27,13 @@ class SurveyCVCell: UICollectionViewCell {
             imgView.image = UIImage(named: unwrappedQue.imgName)
             lblQue.text = unwrappedQue.questionText
             btnYes.setTitle("YES", for: .normal)
-            btnNo.setTitle("NOPE", for: .normal)
+            btnNo.setTitle("NO", for: .normal)
             
             if unwrappedQue.isAnswered {
                 if unwrappedQue.accept == true {
-                    btnYes.backgroundColor = .green
+                    btnYes.backgroundColor = .blue
                 } else {
-                    btnNo.backgroundColor = .green
+                    btnNo.backgroundColor = .blue
                 }
             }
         }
@@ -56,6 +57,10 @@ class SurveyCVCell: UICollectionViewCell {
         btnYes.backgroundColor=UIColor.white
         btnNo.backgroundColor=UIColor.white
     }
+    
+//    @objc func btnGoBackAction() {
+//        self.navigationController?.popToRootViewController(animated: true)
+//    }
     
     func setupViews() {
         addSubview(imgView)
@@ -81,7 +86,26 @@ class SurveyCVCell: UICollectionViewCell {
         addSubview(btnNo)
         NSLayoutConstraint.activate([btnNo.topAnchor.constraint(equalTo: btnYes.topAnchor), btnNo.leftAnchor.constraint(equalTo: self.centerXAnchor, constant: 10), btnNo.widthAnchor.constraint(equalToConstant: btnWidth), btnNo.heightAnchor.constraint(equalToConstant: btnHeight)])
         btnNo.addTarget(self, action: #selector(btnOptionAction), for: .touchUpInside)
+        
+//        addSubview(btnGoBack)
+//        btnGoBack.topAnchor.constraint(equalTo: btnYes.bottomAnchor, constant: 40).isActive=true
+//        //btnGoBack.centerXAnchor.constraint(equalTo: btnYes.bottomAnchor).isActive=true
+//        btnGoBack.widthAnchor.constraint(equalToConstant: 150).isActive=true
+//        btnGoBack.heightAnchor.constraint(equalToConstant: 50).isActive=true
+//       // btnGoBack.addTarget(self, action: #selector(btnGoBackAction), for: .touchUpInside)
     }
+    
+    let btnGoBack: UIButton = {
+        let btn = UIButton()
+        btn.setTitle("Go Back", for: .normal)
+        btn.setTitleColor(.white, for: .normal)
+        btn.backgroundColor = .black
+        btn.layer.cornerRadius = 5
+        btn.clipsToBounds = true
+        btn.translatesAutoresizingMaskIntoConstraints = false
+        return btn
+    }()
+    
     
     func getButton(tag: Int) -> UIButton {
         let btn=UIButton()

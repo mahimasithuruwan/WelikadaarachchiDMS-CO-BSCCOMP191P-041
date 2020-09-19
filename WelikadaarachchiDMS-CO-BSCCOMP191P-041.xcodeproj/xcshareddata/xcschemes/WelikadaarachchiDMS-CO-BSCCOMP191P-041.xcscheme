@@ -48,6 +48,16 @@
                ReferencedContainer = "container:WelikadaarachchiDMS-CO-BSCCOMP191P-041.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "3E5B12362514FC4D00C34F21"
+               BuildableName = "NIBM COVID19Tests.xctest"
+               BlueprintName = "NIBM COVID19Tests"
+               ReferencedContainer = "container:WelikadaarachchiDMS-CO-BSCCOMP191P-041.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
