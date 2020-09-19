@@ -26,6 +26,7 @@ class PastResultsViewController: UIViewController, UITableViewDataSource {
     // MARK: - Properties
     
     var contacts: [NSManagedObject] = []
+
   //  let contacts = [SurveyResults] // model
     let contactsTableView = UITableView() // view
     var safeArea: UILayoutGuide!
