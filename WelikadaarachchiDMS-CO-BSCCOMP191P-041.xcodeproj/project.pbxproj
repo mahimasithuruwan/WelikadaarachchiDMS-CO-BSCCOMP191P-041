@@ -17,17 +17,17 @@
 		3E43419D250A9F25008D0B46 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E43419C250A9F25008D0B46 /* Extensions.swift */; };
 		3E43419F250A9F56008D0B46 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E43419E250A9F56008D0B46 /* HomeViewController.swift */; };
 		3E4341A1250A9F77008D0B46 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4341A0250A9F77008D0B46 /* LoginViewController.swift */; };
-		3E4341A3250A9F97008D0B46 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4341A2250A9F97008D0B46 /* RegisterViewController.swift */; };
-		3E4FB53C2516A293003C134C /* PastResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4FB53B2516A293003C134C /* PastResultsViewController.swift */; };
+		3E4341A3250A9F97008D0B46 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4341A2250A9F97008D0B46 /* SignUpViewController.swift */; };
+		3E4FB53C2516A293003C134C /* SurveyPastResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4FB53B2516A293003C134C /* SurveyPastResultsViewController.swift */; };
 		3E4FB53E2516A73D003C134C /* SurveyResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4FB53D2516A73D003C134C /* SurveyResult.swift */; };
-		3E4FB5402516D91C003C134C /* FViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4FB53F2516D91C003C134C /* FViewController.swift */; };
+		3E4FB5402516D91C003C134C /* ForgetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4FB53F2516D91C003C134C /* ForgetPasswordViewController.swift */; };
 		3E4FB54225173746003C134C /* Notific.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4FB54125173746003C134C /* Notific.swift */; };
 		3E4FB544251737F2003C134C /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4FB543251737F2003C134C /* Service.swift */; };
-		3E5024F8250EB6D30030D8BB /* UpdateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5024F7250EB6D30030D8BB /* UpdateViewController.swift */; };
-		3E5024FA250EB72F0030D8BB /* SurveyCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5024F9250EB72F0030D8BB /* SurveyCVCell.swift */; };
-		3E5024FC250EB78E0030D8BB /* SplashOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5024FB250EB78E0030D8BB /* SplashOneViewController.swift */; };
+		3E5024F8250EB6D30030D8BB /* PlusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5024F7250EB6D30030D8BB /* PlusViewController.swift */; };
+		3E5024FA250EB72F0030D8BB /* SurveyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5024F9250EB72F0030D8BB /* SurveyCell.swift */; };
+		3E5024FC250EB78E0030D8BB /* SafeActionsPageOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5024FB250EB78E0030D8BB /* SafeActionsPageOneViewController.swift */; };
 		3E5024FE250EB7CC0030D8BB /* SafeActionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5024FD250EB7CC0030D8BB /* SafeActionsViewController.swift */; };
-		3E502500250EB8120030D8BB /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5024FF250EB8120030D8BB /* ResultViewController.swift */; };
+		3E502500250EB8120030D8BB /* SurveyResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5024FF250EB8120030D8BB /* SurveyResultViewController.swift */; };
 		3E558FD72510ECC800B8F32E /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E558FD62510ECC800B8F32E /* HomePageViewController.swift */; };
 		3E558FD92510ECE700B8F32E /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E558FD82510ECE700B8F32E /* SettingsViewController.swift */; };
 		3E558FDB2510ED0700B8F32E /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E558FDA2510ED0700B8F32E /* ProfileViewController.swift */; };
@@ -35,15 +35,15 @@
 		3E5B1229251485DF00C34F21 /* LocationInputUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5B1228251485DF00C34F21 /* LocationInputUIView.swift */; };
 		3E5B12412514FDCB00C34F21 /* testLogIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E571D382513EC9A00E472D0 /* testLogIn.swift */; };
 		3E5B12432515E80100C34F21 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5B12422515E80100C34F21 /* Contact.swift */; };
-		3E5B12472515E8F400C34F21 /* SplashFourViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5B12462515E8F400C34F21 /* SplashFourViewController.swift */; };
-		3E5B12492515E91A00C34F21 /* NotificationsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5B12482515E91A00C34F21 /* NotificationsVC.swift */; };
-		3E5B124B2515E93A00C34F21 /* CreateNotificVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5B124A2515E93A00C34F21 /* CreateNotificVC.swift */; };
-		3E5B124F2515E9CA00C34F21 /* FullMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5B124E2515E9CA00C34F21 /* FullMapViewController.swift */; };
-		3E5B12512515E9FF00C34F21 /* SplashTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5B12502515E9FF00C34F21 /* SplashTwoViewController.swift */; };
+		3E5B12472515E8F400C34F21 /* SafeActionsPageThreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5B12462515E8F400C34F21 /* SafeActionsPageThreeViewController.swift */; };
+		3E5B12492515E91A00C34F21 /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5B12482515E91A00C34F21 /* NotificationsViewController.swift */; };
+		3E5B124B2515E93A00C34F21 /* CreateNotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5B124A2515E93A00C34F21 /* CreateNotificationViewController.swift */; };
+		3E5B124F2515E9CA00C34F21 /* FullScreenMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5B124E2515E9CA00C34F21 /* FullScreenMapViewController.swift */; };
+		3E5B12512515E9FF00C34F21 /* SafeActionsPageTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5B12502515E9FF00C34F21 /* SafeActionsPageTwoViewController.swift */; };
 		3E61A70E250B66E8006EBC9F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3E61A70D250B66E8006EBC9F /* GoogleService-Info.plist */; };
 		3E61A710250B6F34006EBC9F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E61A70F250B6F34006EBC9F /* User.swift */; };
 		3E61A712250B6F58006EBC9F /* UserAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E61A711250B6F58006EBC9F /* UserAnnotation.swift */; };
-		3E61A714250B71BF006EBC9F /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E61A713250B71BF006EBC9F /* MainTabBarController.swift */; };
+		3E61A714250B71BF006EBC9F /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E61A713250B71BF006EBC9F /* TabBarController.swift */; };
 		3E61A718250B7214006EBC9F /* SurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E61A717250B7214006EBC9F /* SurveyViewController.swift */; };
 		3E61A71A250B723F006EBC9F /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E61A719250B723F006EBC9F /* WelcomeViewController.swift */; };
 		3E61A71C250B739D006EBC9F /* LocationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E61A71B250B739D006EBC9F /* LocationHandler.swift */; };
@@ -84,17 +84,17 @@
 		3E43419C250A9F25008D0B46 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		3E43419E250A9F56008D0B46 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		3E4341A0250A9F77008D0B46 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		3E4341A2250A9F97008D0B46 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
-		3E4FB53B2516A293003C134C /* PastResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastResultsViewController.swift; sourceTree = "<group>"; };
+		3E4341A2250A9F97008D0B46 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		3E4FB53B2516A293003C134C /* SurveyPastResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyPastResultsViewController.swift; sourceTree = "<group>"; };
 		3E4FB53D2516A73D003C134C /* SurveyResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyResult.swift; sourceTree = "<group>"; };
-		3E4FB53F2516D91C003C134C /* FViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FViewController.swift; sourceTree = "<group>"; };
+		3E4FB53F2516D91C003C134C /* ForgetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordViewController.swift; sourceTree = "<group>"; };
 		3E4FB54125173746003C134C /* Notific.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notific.swift; sourceTree = "<group>"; };
 		3E4FB543251737F2003C134C /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
-		3E5024F7250EB6D30030D8BB /* UpdateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateViewController.swift; sourceTree = "<group>"; };
-		3E5024F9250EB72F0030D8BB /* SurveyCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyCVCell.swift; sourceTree = "<group>"; };
-		3E5024FB250EB78E0030D8BB /* SplashOneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashOneViewController.swift; sourceTree = "<group>"; };
+		3E5024F7250EB6D30030D8BB /* PlusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlusViewController.swift; sourceTree = "<group>"; };
+		3E5024F9250EB72F0030D8BB /* SurveyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyCell.swift; sourceTree = "<group>"; };
+		3E5024FB250EB78E0030D8BB /* SafeActionsPageOneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeActionsPageOneViewController.swift; sourceTree = "<group>"; };
 		3E5024FD250EB7CC0030D8BB /* SafeActionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeActionsViewController.swift; sourceTree = "<group>"; };
-		3E5024FF250EB8120030D8BB /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		3E5024FF250EB8120030D8BB /* SurveyResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyResultViewController.swift; sourceTree = "<group>"; };
 		3E558FD62510ECC800B8F32E /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
 		3E558FD82510ECE700B8F32E /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		3E558FDA2510ED0700B8F32E /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -104,15 +104,15 @@
 		3E5B12392514FC4D00C34F21 /* NIBM_COVID19Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NIBM_COVID19Tests.swift; sourceTree = "<group>"; };
 		3E5B123B2514FC4D00C34F21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3E5B12422515E80100C34F21 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
-		3E5B12462515E8F400C34F21 /* SplashFourViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashFourViewController.swift; sourceTree = "<group>"; };
-		3E5B12482515E91A00C34F21 /* NotificationsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsVC.swift; sourceTree = "<group>"; };
-		3E5B124A2515E93A00C34F21 /* CreateNotificVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNotificVC.swift; sourceTree = "<group>"; };
-		3E5B124E2515E9CA00C34F21 /* FullMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullMapViewController.swift; sourceTree = "<group>"; };
-		3E5B12502515E9FF00C34F21 /* SplashTwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashTwoViewController.swift; sourceTree = "<group>"; };
+		3E5B12462515E8F400C34F21 /* SafeActionsPageThreeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeActionsPageThreeViewController.swift; sourceTree = "<group>"; };
+		3E5B12482515E91A00C34F21 /* NotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
+		3E5B124A2515E93A00C34F21 /* CreateNotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNotificationViewController.swift; sourceTree = "<group>"; };
+		3E5B124E2515E9CA00C34F21 /* FullScreenMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenMapViewController.swift; sourceTree = "<group>"; };
+		3E5B12502515E9FF00C34F21 /* SafeActionsPageTwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeActionsPageTwoViewController.swift; sourceTree = "<group>"; };
 		3E61A70D250B66E8006EBC9F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3E61A70F250B6F34006EBC9F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		3E61A711250B6F58006EBC9F /* UserAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAnnotation.swift; sourceTree = "<group>"; };
-		3E61A713250B71BF006EBC9F /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		3E61A713250B71BF006EBC9F /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		3E61A717250B7214006EBC9F /* SurveyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyViewController.swift; sourceTree = "<group>"; };
 		3E61A719250B723F006EBC9F /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		3E61A71B250B739D006EBC9F /* LocationHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationHandler.swift; sourceTree = "<group>"; };
@@ -212,26 +212,26 @@
 			children = (
 				3E43419E250A9F56008D0B46 /* HomeViewController.swift */,
 				3E4341A0250A9F77008D0B46 /* LoginViewController.swift */,
-				3E4341A2250A9F97008D0B46 /* RegisterViewController.swift */,
+				3E4341A2250A9F97008D0B46 /* SignUpViewController.swift */,
 				3E61A719250B723F006EBC9F /* WelcomeViewController.swift */,
-				3E61A713250B71BF006EBC9F /* MainTabBarController.swift */,
+				3E61A713250B71BF006EBC9F /* TabBarController.swift */,
 				3E61A717250B7214006EBC9F /* SurveyViewController.swift */,
-				3E5024F9250EB72F0030D8BB /* SurveyCVCell.swift */,
-				3E5024FF250EB8120030D8BB /* ResultViewController.swift */,
-				3E5024F7250EB6D30030D8BB /* UpdateViewController.swift */,
+				3E5024F9250EB72F0030D8BB /* SurveyCell.swift */,
+				3E5024FF250EB8120030D8BB /* SurveyResultViewController.swift */,
+				3E5024F7250EB6D30030D8BB /* PlusViewController.swift */,
 				3E5024FD250EB7CC0030D8BB /* SafeActionsViewController.swift */,
 				3E558FD62510ECC800B8F32E /* HomePageViewController.swift */,
 				3E558FD82510ECE700B8F32E /* SettingsViewController.swift */,
 				3E558FDA2510ED0700B8F32E /* ProfileViewController.swift */,
 				3E558FDC2510EDD200B8F32E /* ContactViewController.swift */,
-				3E5B12462515E8F400C34F21 /* SplashFourViewController.swift */,
-				3E5B12502515E9FF00C34F21 /* SplashTwoViewController.swift */,
-				3E5024FB250EB78E0030D8BB /* SplashOneViewController.swift */,
-				3E5B12482515E91A00C34F21 /* NotificationsVC.swift */,
-				3E5B124A2515E93A00C34F21 /* CreateNotificVC.swift */,
-				3E5B124E2515E9CA00C34F21 /* FullMapViewController.swift */,
-				3E4FB53B2516A293003C134C /* PastResultsViewController.swift */,
-				3E4FB53F2516D91C003C134C /* FViewController.swift */,
+				3E5B12462515E8F400C34F21 /* SafeActionsPageThreeViewController.swift */,
+				3E5B12502515E9FF00C34F21 /* SafeActionsPageTwoViewController.swift */,
+				3E5024FB250EB78E0030D8BB /* SafeActionsPageOneViewController.swift */,
+				3E5B12482515E91A00C34F21 /* NotificationsViewController.swift */,
+				3E5B124A2515E93A00C34F21 /* CreateNotificationViewController.swift */,
+				3E5B124E2515E9CA00C34F21 /* FullScreenMapViewController.swift */,
+				3E4FB53B2516A293003C134C /* SurveyPastResultsViewController.swift */,
+				3E4FB53F2516D91C003C134C /* ForgetPasswordViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -475,23 +475,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3E5B12512515E9FF00C34F21 /* SplashTwoViewController.swift in Sources */,
+				3E5B12512515E9FF00C34F21 /* SafeActionsPageTwoViewController.swift in Sources */,
 				3E4341A1250A9F77008D0B46 /* LoginViewController.swift in Sources */,
 				3E43419D250A9F25008D0B46 /* Extensions.swift in Sources */,
-				3E4FB53C2516A293003C134C /* PastResultsViewController.swift in Sources */,
-				3E5B12492515E91A00C34F21 /* NotificationsVC.swift in Sources */,
+				3E4FB53C2516A293003C134C /* SurveyPastResultsViewController.swift in Sources */,
+				3E5B12492515E91A00C34F21 /* NotificationsViewController.swift in Sources */,
 				3E4FB53E2516A73D003C134C /* SurveyResult.swift in Sources */,
-				3E5024FC250EB78E0030D8BB /* SplashOneViewController.swift in Sources */,
-				3E61A714250B71BF006EBC9F /* MainTabBarController.swift in Sources */,
-				3E4341A3250A9F97008D0B46 /* RegisterViewController.swift in Sources */,
+				3E5024FC250EB78E0030D8BB /* SafeActionsPageOneViewController.swift in Sources */,
+				3E61A714250B71BF006EBC9F /* TabBarController.swift in Sources */,
+				3E4341A3250A9F97008D0B46 /* SignUpViewController.swift in Sources */,
 				3E61A712250B6F58006EBC9F /* UserAnnotation.swift in Sources */,
 				3E5B12432515E80100C34F21 /* Contact.swift in Sources */,
 				3E5B1229251485DF00C34F21 /* LocationInputUIView.swift in Sources */,
 				3E61A71C250B739D006EBC9F /* LocationHandler.swift in Sources */,
 				3E558FD72510ECC800B8F32E /* HomePageViewController.swift in Sources */,
-				3E5B124B2515E93A00C34F21 /* CreateNotificVC.swift in Sources */,
-				3E5024F8250EB6D30030D8BB /* UpdateViewController.swift in Sources */,
-				3E5024FA250EB72F0030D8BB /* SurveyCVCell.swift in Sources */,
+				3E5B124B2515E93A00C34F21 /* CreateNotificationViewController.swift in Sources */,
+				3E5024F8250EB6D30030D8BB /* PlusViewController.swift in Sources */,
+				3E5024FA250EB72F0030D8BB /* SurveyCell.swift in Sources */,
 				3E61A71A250B723F006EBC9F /* WelcomeViewController.swift in Sources */,
 				3E558FD92510ECE700B8F32E /* SettingsViewController.swift in Sources */,
 				3E43415D250A9BEA008D0B46 /* AppDelegate.swift in Sources */,
@@ -500,10 +500,10 @@
 				3E4FB544251737F2003C134C /* Service.swift in Sources */,
 				3E558FDD2510EDD200B8F32E /* ContactViewController.swift in Sources */,
 				3E61A710250B6F34006EBC9F /* User.swift in Sources */,
-				3E5B12472515E8F400C34F21 /* SplashFourViewController.swift in Sources */,
-				3E502500250EB8120030D8BB /* ResultViewController.swift in Sources */,
-				3E5B124F2515E9CA00C34F21 /* FullMapViewController.swift in Sources */,
-				3E4FB5402516D91C003C134C /* FViewController.swift in Sources */,
+				3E5B12472515E8F400C34F21 /* SafeActionsPageThreeViewController.swift in Sources */,
+				3E502500250EB8120030D8BB /* SurveyResultViewController.swift in Sources */,
+				3E5B124F2515E9CA00C34F21 /* FullScreenMapViewController.swift in Sources */,
+				3E4FB5402516D91C003C134C /* ForgetPasswordViewController.swift in Sources */,
 				3E43419B250A9EFE008D0B46 /* AuthUIBtn.swift in Sources */,
 				3E4FB54225173746003C134C /* Notific.swift in Sources */,
 				3E434167250A9BEA008D0B46 /* WelikadaarachchiDMS_CO_BSCCOMP191P_041.xcdatamodeld in Sources */,

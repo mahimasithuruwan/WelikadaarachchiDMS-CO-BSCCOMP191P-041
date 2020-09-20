@@ -1,5 +1,5 @@
 //
-//  FullMapViewController.swift
+//  FullScreenMapViewController.swift
 //  WelikadaarachchiDMS-CO-BSCCOMP191P-041
 //
 //  Created by Mahima Sithuruwan on 9/19/20.
@@ -13,7 +13,7 @@ import FirebaseAuth
 private let reuseIdentifier = "LocationCell"
 private let annotationIdentifier = "UserAnnotation"
 
-class FullMapViewController: UIViewController {
+class FullScreenMapViewController: UIViewController {
     
     // MARK: - Properties
     
@@ -41,7 +41,7 @@ class FullMapViewController: UIViewController {
         backBtn.centerY(inView: uv)
         
         let titleLbl = UILabel()
-        titleLbl.text = "Danger Zones"
+        titleLbl.text = "Zone"
         titleLbl.font = UIFont(name: "Avenir-Light", size: 26)
         titleLbl.textColor = .black
         titleLbl.adjustsFontSizeToFitWidth = true
@@ -130,7 +130,7 @@ class FullMapViewController: UIViewController {
 
 // MARK: - MKMapViewDelegate
 
-extension FullMapViewController: MKMapViewDelegate {
+extension FullScreenMapViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         if let annotation = annotation as? UserAnnotation {
             let identifier = NSStringFromClass(UserAnnotation.self)
@@ -148,7 +148,7 @@ extension FullMapViewController: MKMapViewDelegate {
 
 // MARK: - LocationServices
 
-extension FullMapViewController {
+extension FullScreenMapViewController {
     
     func enableLocationServices() {
         switch CLLocationManager.authorizationStatus() {

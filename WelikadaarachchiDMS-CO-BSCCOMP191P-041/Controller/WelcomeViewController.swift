@@ -79,7 +79,7 @@ class WelcomeViewController: UIViewController {
     }
     
     @objc func showRegPage() {
-        let vc = RegisterViewController()
+        let vc = SignUpViewController()
         navigationController?.pushViewController(vc, animated: true)
     }
     @objc func showLoginPage() {

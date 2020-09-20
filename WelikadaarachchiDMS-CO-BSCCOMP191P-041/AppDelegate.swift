@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
            FirebaseApp.configure()
            window = UIWindow()
            window?.makeKeyAndVisible()
-           window?.rootViewController = MainTabBarController()
+           window?.rootViewController = TabBarController()
         
         //?.rootViewController = MainTabBarController()
         return true

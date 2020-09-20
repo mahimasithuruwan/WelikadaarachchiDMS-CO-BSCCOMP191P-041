@@ -1,39 +1,36 @@
 //
-//  PastResultsViewController.swift
+//  NotificationsViewController.swift
 //  WelikadaarachchiDMS-CO-BSCCOMP191P-041
 //
 //  Created by Mahima Sithuruwan on 9/19/20.
 //  Copyright © 2020 Mahima Sithuruwan. All rights reserved.
 //
 
-
 import UIKit
-import CoreData
 
-class PastResultsViewController: UIViewController, UITableViewDataSource {
+class NotificationsViewController: UIViewController, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return contacts.count
+        return notifications.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let person = contacts[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "contactCell", for: indexPath)
-        cell.textLabel?.text = ((person.value(forKeyPath: "result") as? String)!+"    : ") + ((person.value(forKeyPath: "date") as? String)!)
+        cell.textLabel?.text = notifications[indexPath.row].title
+        cell.backgroundColor = .updatetilecolor
         return cell
     }
     
     // MARK: - Properties
     
-    var contacts: [NSManagedObject] = []
-
-  //  let contacts = [SurveyResults] // model
+    private var notifications = [Notific]()
     let contactsTableView = UITableView() // view
     var safeArea: UILayoutGuide!
     
     private let topNav: UIView = {
         let uv = UIView()
-        uv.backgroundColor = .systemGray6
+        //uv.backgroundColor = .systemGray6
+        uv.backgroundColor = .updatepagecolor
         
         let backBtn = UIButton()
         let boldConfig = UIImage.SymbolConfiguration(pointSize: .zero, weight: .bold, scale: .large)
@@ -45,7 +42,7 @@ class PastResultsViewController: UIViewController, UITableViewDataSource {
         backBtn.centerY(inView: uv)
         
         let titleLbl = UILabel()
-        titleLbl.text = "Past Results"
+        titleLbl.text = "All News"
         titleLbl.font = UIFont(name: "Avenir-Light", size: 26)
         titleLbl.textColor = .black
         titleLbl.adjustsFontSizeToFitWidth = true
@@ -55,35 +52,11 @@ class PastResultsViewController: UIViewController, UITableViewDataSource {
         
         return uv
     }()
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        //1
-      
-    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         safeArea = view.layoutMarginsGuide
-        guard let appDelegate =
-            UIApplication.shared.delegate as? AppDelegate else {
-                return
-        }
-        
-        let managedContext =
-            appDelegate.persistentContainer.viewContext
-        
-        //2
-        let fetchRequest =
-            NSFetchRequest<NSManagedObject>(entityName: "SurveyResult")
-        
-        //3
-        do {
-            contacts = try managedContext.fetch(fetchRequest)
-            
-            //  contacts = people
-        } catch let error as NSError {
-            print("Could not fetch. \(error), \(error.userInfo)")
-        }
+        self.fetchNotifications()
         contactsTableView.dataSource = self
         contactsTableView.register(UITableViewCell.self, forCellReuseIdentifier: "contactCell")
         self.configUI()
@@ -95,13 +68,23 @@ class PastResultsViewController: UIViewController, UITableViewDataSource {
         self.navigationController?.popToRootViewController(animated: true)
     }
     
+    // MARK: - API
+    
+    func fetchNotifications() {
+        Service.shared.fetchNotifications() { (notific) in
+            self.notifications.append(notific)
+            self.contactsTableView.reloadData()
+        }
+    }
+    
     // MARK: - Helper Functions
     
     func configUI() {
-        view.backgroundColor = .systemGray6
+        // view.backgroundColor = .systemGray6
+        view.backgroundColor = .updatepagecolor
         configNavBar()
         view.addSubview(topNav)
-        topNav.anchor(top: safeArea.topAnchor, left: view.leftAnchor, right: view.rightAnchor, height: view.bounds.height * 0.1)
+        topNav.anchor(top: safeArea.topAnchor, left: view.leftAnchor, right: view.rightAnchor, height: 70)
         view.addSubview(contactsTableView)
         contactsTableView.translatesAutoresizingMaskIntoConstraints = false
         contactsTableView.topAnchor.constraint(equalTo: topNav.bottomAnchor).isActive = true

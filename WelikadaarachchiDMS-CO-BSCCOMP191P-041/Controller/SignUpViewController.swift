@@ -1,5 +1,5 @@
 //
-//  RegisterViewController.swift
+//  SignUpViewController.swift
 //  WelikadaarachchiDMS-CO-BSCCOMP191P-041
 //
 //  Created by Mahima Sithuruwan on 9/10/20.
@@ -10,7 +10,7 @@ import UIKit
 import FirebaseAuth
 import GeoFire
 
-class RegisterViewController: UIViewController {
+class SignUpViewController: UIViewController {
     
      // MARK: - Properties
     
@@ -140,7 +140,7 @@ class RegisterViewController: UIViewController {
 
 //               guard let controller = keyWindow?.rootViewController as? HomeViewController else { return }
              //  controller.configure()
-            guard let controller = keyWindow?.rootViewController as? MainTabBarController else { return }
+            guard let controller = keyWindow?.rootViewController as? TabBarController else { return }
             controller.setupTabBar()
 
                self.dismiss(animated: true, completion: nil)

@@ -1,5 +1,5 @@
 //
-//  ResultViewController.swift
+//  SurveyResultViewController.swift
 //  WelikadaarachchiDMS-CO-BSCCOMP191P-041
 //
 //  Created by Mahima Sithuruwan on 9/13/20.
@@ -9,7 +9,7 @@ import UIKit
 import CoreData
 import FirebaseAuth
 
-class ResultViewController: UIViewController {
+class SurveyResultViewController: UIViewController {
     
     var result: Int?
     var people: [NSManagedObject] = []

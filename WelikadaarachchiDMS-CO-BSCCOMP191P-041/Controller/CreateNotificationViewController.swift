@@ -1,5 +1,5 @@
 //
-//  CreateNotificVC.swift
+//  CreateNotificationViewController.swift
 //  WelikadaarachchiDMS-CO-BSCCOMP191P-041
 //
 //  Created by Mahima Sithuruwan on 9/19/20.
@@ -9,7 +9,7 @@
 import UIKit
 import FirebaseAuth
 
-class CreateNotificVC: UIViewController {
+class CreateNotificationViewController: UIViewController {
     
     // MARK: - Properties
     

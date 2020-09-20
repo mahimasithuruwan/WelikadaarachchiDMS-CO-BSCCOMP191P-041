@@ -1,5 +1,5 @@
 //
-//  SurveyCVCell.swift
+//  SurveyCell.swift
 //  WelikadaarachchiDMS-CO-BSCCOMP191P-041
 //
 //  Created by Mahima Sithuruwan on 9/13/20.
@@ -8,18 +8,18 @@
 
 import UIKit
 
-protocol SurveyCVCellDelegate: class {
+protocol SurveyCellDelegate: class {
     func didChooseAnswer(btnIndex: Int)
 }
 
-class SurveyCVCell: UICollectionViewCell {
+class SurveyCell: UICollectionViewCell {
     
     var btnYes: UIButton!
     var btnNo: UIButton!
     var btnsArray = [UIButton]()
     
   
-    weak var delegate: SurveyCVCellDelegate?
+    weak var delegate: SurveyCellDelegate?
     
     var question: Question? {
         didSet {

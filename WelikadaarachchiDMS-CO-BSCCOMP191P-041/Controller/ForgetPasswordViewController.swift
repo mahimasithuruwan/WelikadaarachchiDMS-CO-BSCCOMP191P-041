@@ -1,5 +1,5 @@
 //
-//  FViewController.swift
+//  ForgetPasswordViewController.swift
 //  WelikadaarachchiDMS-CO-BSCCOMP191P-041
 //
 //  Created by Mahima Sithuruwan on 9/19/20.
@@ -11,7 +11,7 @@ import FirebaseAuth
 import MapKit
 import LocalAuthentication
 
-class FViewController: UIViewController {
+class ForgetPasswordViewController: UIViewController {
     
     // MARK: - Properties
     private let titleLabel: UILabel = {
@@ -97,7 +97,7 @@ class FViewController: UIViewController {
     }
     
     @objc func handleShowRegister() {
-        let vc = RegisterViewController()
+        let vc = SignUpViewController()
         navigationController?.pushViewController(vc, animated: true)
     }
     

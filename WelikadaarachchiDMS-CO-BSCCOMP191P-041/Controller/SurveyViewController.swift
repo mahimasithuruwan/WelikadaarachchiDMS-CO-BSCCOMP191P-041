@@ -1,10 +1,9 @@
 //
 //  SurveyViewController.swift
-//  NIBM COVID19
+//  WelikadaarachchiDMS-CO-BSCCOMP191P-041
 //
-//  Created by HASHAN on 9/11/20.
-//  Copyright © 2020 NIBM-COBSCCOMP191P-021. All rights reserved.
-//
+//  Created by Mahima Sithuruwan on 9/11/20.
+//  Copyright © 2020 Mahima Sithuruwan. All rights reserved.
 
 import UIKit
 
@@ -41,7 +40,7 @@ class SurveyViewController: UIViewController, UICollectionViewDelegate, UICollec
         myCollectionView=UICollectionView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height), collectionViewLayout: layout)
         myCollectionView.delegate=self
         myCollectionView.dataSource=self
-        myCollectionView.register(SurveyCVCell.self, forCellWithReuseIdentifier: "Cell")
+        myCollectionView.register(SurveyCell.self, forCellWithReuseIdentifier: "Cell")
         myCollectionView.showsHorizontalScrollIndicator = false
         myCollectionView.translatesAutoresizingMaskIntoConstraints=false
         myCollectionView.backgroundColor = .white
@@ -64,7 +63,7 @@ class SurveyViewController: UIViewController, UICollectionViewDelegate, UICollec
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell=collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! SurveyCVCell
+        let cell=collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! SurveyCell
         cell.question=questionsArray[indexPath.row]
         cell.delegate=self
         return cell
@@ -86,7 +85,7 @@ class SurveyViewController: UIViewController, UICollectionViewDelegate, UICollec
     
     @objc func btnPrevNextAction(sender: UIButton) {
         if sender == btnNext && currentQuestionNumber == questionsArray.count {
-            let vc = ResultViewController()
+            let vc = SurveyResultViewController()
             let result = score * 100 / questionsArray.count
             vc.result = result
             navigationController?.pushViewController(vc, animated: false)
@@ -197,7 +196,7 @@ class SurveyViewController: UIViewController, UICollectionViewDelegate, UICollec
     }
 }
 
-extension SurveyViewController: SurveyCVCellDelegate {
+extension SurveyViewController: SurveyCellDelegate {
     func didChooseAnswer(btnIndex: Int) {
         let centerIndex = getCenterIndex()
         guard let index = centerIndex else { return }

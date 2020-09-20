@@ -1,5 +1,5 @@
 //
-//  UpdateViewController.swift
+//  PlusViewController.swift
 //  WelikadaarachchiDMS-CO-BSCCOMP191P-041
 //
 //  Created by Mahima Sithuruwan on 9/13/20.
@@ -8,7 +8,7 @@
 import UIKit
 import FirebaseAuth
 
-class UpdateViewController: UIViewController {
+class PlusViewController: UIViewController {
     
     // MARK: - Properties
     
@@ -183,7 +183,7 @@ class UpdateViewController: UIViewController {
     // MARK: - Selectors
     
     @objc func showNotifications() {
-        let vc = CreateNotificVC()
+        let vc = CreateNotificationViewController()
         vc.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(vc, animated: true)
     }
@@ -195,7 +195,7 @@ class UpdateViewController: UIViewController {
     }
     
     @objc func showSurveyResults() {
-        let vc = PastResultsViewController()
+        let vc = SurveyPastResultsViewController()
         vc.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(vc, animated: false)
     }

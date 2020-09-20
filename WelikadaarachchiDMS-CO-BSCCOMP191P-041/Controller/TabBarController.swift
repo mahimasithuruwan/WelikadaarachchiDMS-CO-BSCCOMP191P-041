@@ -1,5 +1,5 @@
 //
-//  MainTabBarController.swift
+//  TabBarController.swift
 //  WelikadaarachchiDMS-CO-BSCCOMP191P-041
 //
 //  Created by Mahima Sithuruwan on 9/11/20.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MainTabBarController: UITabBarController {
+class TabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +22,7 @@ class MainTabBarController: UITabBarController {
         homeController.tabBarItem.image = UIImage(systemName: "house")
         homeController.tabBarItem.title = "Home"
         
-        let plusController = UINavigationController(rootViewController: UpdateViewController())
+        let plusController = UINavigationController(rootViewController: PlusViewController())
         plusController.tabBarItem.image = UIImage(systemName: "plus")
         plusController.tabBarItem.title = "Plus"
         

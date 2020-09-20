@@ -5,7 +5,6 @@
 //  Created by Mahima Sithuruwan on 9/10/20.
 //  Copyright © 2020 Mahima Sithuruwan. All rights reserved.
 
-
 import UIKit
 import MapKit
 import FirebaseAuth
@@ -125,6 +124,7 @@ class HomeViewController: UIViewController {
         moreBtn.setTitle("See More", for: .normal)
         moreBtn.setTitleColor(.systemBlue, for: .normal)
         moreBtn.titleLabel?.font = UIFont(name: "Avenir-Medium", size: 14)
+        moreBtn.addTarget(self, action: #selector(showFullMap), for: .touchUpInside)
         tile.addSubview(moreBtn)
         moreBtn.anchor(top: tile.topAnchor, right: tile.rightAnchor, paddingTop: 14, paddingRight: 16)
         
@@ -298,19 +298,19 @@ class HomeViewController: UIViewController {
     // MARK: - Selectors
     
     @objc func showNotific() {
-        let vc = NotificationsVC()
+        let vc = NotificationsViewController()
         vc.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
     @objc func showFullMap() {
-        let vc = FullMapViewController()
+        let vc = FullScreenMapViewController()
         vc.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
     @objc func showSafeActions() {
-        let vc = SplashOneViewController()
+        let vc = SafeActionsPageOneViewController()
         vc.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(vc, animated: true)
     }

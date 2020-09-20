@@ -141,7 +141,7 @@ class LoginViewController: UIViewController {
                .first?.windows
                .filter({$0.isKeyWindow}).first
                
-             guard let controller = keyWindow?.rootViewController as? MainTabBarController else { return }
+             guard let controller = keyWindow?.rootViewController as? TabBarController else { return }
                controller.setupTabBar()
 
                
@@ -150,12 +150,12 @@ class LoginViewController: UIViewController {
        }
     
     @objc func handleShowRegister() {
-        let vc = RegisterViewController()
+        let vc = SignUpViewController()
         navigationController?.pushViewController(vc, animated: true)
     }
     
     @objc func handleResetPassword() {
-        let vc = FViewController()
+        let vc = ForgetPasswordViewController()
         navigationController?.pushViewController(vc, animated: true)
     }
     
