@@ -31,7 +31,7 @@
 		3E558FD72510ECC800B8F32E /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E558FD62510ECC800B8F32E /* HomePageViewController.swift */; };
 		3E558FD92510ECE700B8F32E /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E558FD82510ECE700B8F32E /* SettingsViewController.swift */; };
 		3E558FDB2510ED0700B8F32E /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E558FDA2510ED0700B8F32E /* ProfileViewController.swift */; };
-		3E558FDD2510EDD200B8F32E /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E558FDC2510EDD200B8F32E /* ContactViewController.swift */; };
+		3E558FDD2510EDD200B8F32E /* ContactUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E558FDC2510EDD200B8F32E /* ContactUsViewController.swift */; };
 		3E5B1229251485DF00C34F21 /* LocationInputUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5B1228251485DF00C34F21 /* LocationInputUIView.swift */; };
 		3E5B12412514FDCB00C34F21 /* testLogIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E571D382513EC9A00E472D0 /* testLogIn.swift */; };
 		3E5B12432515E80100C34F21 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5B12422515E80100C34F21 /* Contact.swift */; };
@@ -98,7 +98,7 @@
 		3E558FD62510ECC800B8F32E /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
 		3E558FD82510ECE700B8F32E /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		3E558FDA2510ED0700B8F32E /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		3E558FDC2510EDD200B8F32E /* ContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
+		3E558FDC2510EDD200B8F32E /* ContactUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUsViewController.swift; sourceTree = "<group>"; };
 		3E571D382513EC9A00E472D0 /* testLogIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testLogIn.swift; sourceTree = "<group>"; };
 		3E5B1228251485DF00C34F21 /* LocationInputUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationInputUIView.swift; sourceTree = "<group>"; };
 		3E5B12392514FC4D00C34F21 /* NIBM_COVID19Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NIBM_COVID19Tests.swift; sourceTree = "<group>"; };
@@ -223,7 +223,7 @@
 				3E558FD62510ECC800B8F32E /* HomePageViewController.swift */,
 				3E558FD82510ECE700B8F32E /* SettingsViewController.swift */,
 				3E558FDA2510ED0700B8F32E /* ProfileViewController.swift */,
-				3E558FDC2510EDD200B8F32E /* ContactViewController.swift */,
+				3E558FDC2510EDD200B8F32E /* ContactUsViewController.swift */,
 				3E5B12462515E8F400C34F21 /* SafeActionsPageThreeViewController.swift */,
 				3E5B12502515E9FF00C34F21 /* SafeActionsPageTwoViewController.swift */,
 				3E5024FB250EB78E0030D8BB /* SafeActionsPageOneViewController.swift */,
@@ -498,7 +498,7 @@
 				3E558FDB2510ED0700B8F32E /* ProfileViewController.swift in Sources */,
 				3E5024FE250EB7CC0030D8BB /* SafeActionsViewController.swift in Sources */,
 				3E4FB544251737F2003C134C /* Service.swift in Sources */,
-				3E558FDD2510EDD200B8F32E /* ContactViewController.swift in Sources */,
+				3E558FDD2510EDD200B8F32E /* ContactUsViewController.swift in Sources */,
 				3E61A710250B6F34006EBC9F /* User.swift in Sources */,
 				3E5B12472515E8F400C34F21 /* SafeActionsPageThreeViewController.swift in Sources */,
 				3E502500250EB8120030D8BB /* SurveyResultViewController.swift in Sources */,

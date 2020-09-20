@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ContactViewController: UIViewController {
+class ContactUsViewController: UIViewController {
     
     // MARK: - Properties
     
@@ -18,22 +18,22 @@ class ContactViewController: UIViewController {
         let button = UIButton(type: .custom)
         let boldConfig = UIImage.SymbolConfiguration(pointSize: .zero, weight: .bold, scale: .large)
         button.setImage(UIImage(systemName: "chevron.left", withConfiguration: boldConfig), for: .normal)
-        button.tintColor = .black
+        button.tintColor = .white
         button.addTarget(self, action: #selector(handleGoBack), for: .touchUpInside)
         return button
     }()
     
     private let titleLbl: UILabel = {
         let label = UILabel()
-        label.text = "Contact Us / About Us"
+        label.text = "Contact Us"
         label.font = UIFont(name: "Avenir-Light", size: 26)
-        label.textColor = .black
+        label.textColor = .white
         return label
     }()
     
     private let blankView: UIView = {
         let blank = UIView()
-        blank.backgroundColor = .white
+        blank.backgroundColor = .black
         return blank
     }()
     
@@ -51,7 +51,7 @@ class ContactViewController: UIViewController {
     
     func configUI() {
         configNavBar()
-        view.backgroundColor = .systemGray6
+        view.backgroundColor = .black
         
         view.addSubview(titleLbl)
         titleLbl.anchor(top: safeArea.topAnchor, paddingTop: 20)

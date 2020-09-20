@@ -31,7 +31,7 @@ class ProfileViewController: UIViewController {
         let button = UIButton(type: .custom)
         let boldConfig = UIImage.SymbolConfiguration(pointSize: .zero, weight: .bold, scale: .large)
         button.setImage(UIImage(systemName: "chevron.left", withConfiguration: boldConfig), for: .normal)
-        button.tintColor = .black
+        button.tintColor = .white
         button.addTarget(self, action: #selector(handleGoBack), for: .touchUpInside)
         return button
     }()
@@ -40,7 +40,7 @@ class ProfileViewController: UIViewController {
         let label = UILabel()
         label.text = "Update Profile"
         label.font = UIFont(name: "Avenir-Light", size: 26)
-        label.textColor = .black
+        label.textColor = .white
         return label
     }()
     
@@ -50,23 +50,14 @@ class ProfileViewController: UIViewController {
         image.layer.cornerRadius = 50;
         image.layer.masksToBounds = true
         image.clipsToBounds = true
+        image.tintColor = .white
         return image
     }()
-    
-    private let bioLbl: UILabel = {
-        let label = UILabel()
-        label.text = "Acme user since Aug 2020 at Matara, Sri Lanka"
-        label.textColor = .black
-        label.textAlignment = .center
-        label.numberOfLines = 2
-        label.font = UIFont.systemFont(ofSize: 14)
-        return label
-    }()
-    
+        
     private let tempLbl: UILabel = {
         let label = UILabel()
         label.text = "0°C"
-        label.textColor = .black
+        label.textColor = .white
         label.textAlignment = .center
         label.font = UIFont.boldSystemFont(ofSize: 24)
         return label
@@ -133,7 +124,7 @@ class ProfileViewController: UIViewController {
     private let updateButton: UIButton = {
         let button = UIButton()
         // button.backgroundColor = .white
-        button.backgroundColor = .updatepagecolor
+        button.backgroundColor = .darkGray
         button.setTitle("UPDATE", for: .normal)
         button.setTitleColor(.black, for: .normal)
         button.titleLabel?.font = UIFont(name: "Avenir-Medium", size: 14)
@@ -142,18 +133,11 @@ class ProfileViewController: UIViewController {
         return button
     }()
     
-    let scrollView: UIScrollView = {
-        let sv = UIScrollView()
-        let screensize: CGRect = UIScreen.main.bounds
-        sv.contentSize = CGSize(width: screensize.width, height: screensize.height)
-        sv.translatesAutoresizingMaskIntoConstraints = false
-        return sv
-    }()
     
     private lazy var mainTile: UIView = {
         let tile = UIView()
         //tile.backgroundColor = .white
-        tile.backgroundColor = .updatetilecolor
+        tile.backgroundColor = .black
         
         tile.addSubview(updateButton)
         updateButton.anchor(left: tile.leftAnchor, bottom: tile.bottomAnchor, right: tile.rightAnchor, height: 60)
@@ -163,26 +147,19 @@ class ProfileViewController: UIViewController {
         tile.addSubview(separatorView)
         separatorView.anchor(left: tile.leftAnchor, bottom: updateButton.topAnchor, right: tile.rightAnchor, paddingLeft: 8, paddingRight: 8, height: 0.75)
         
-        tile.addSubview(scrollView)
-        scrollView.anchor(top: tile.topAnchor, left: tile.leftAnchor, bottom: separatorView.topAnchor, right: tile.rightAnchor)
+        tile.addSubview(avatar)
+        avatar.anchor(top: tile.topAnchor, paddingTop: 30, width: 100, height: 100)
+        avatar.centerX(inView: tile)
         
-        scrollView.addSubview(avatar)
-        avatar.anchor(top: scrollView.topAnchor, paddingTop: 30, width: 100, height: 100)
-        avatar.centerX(inView: scrollView)
-        
-        scrollView.addSubview(bioLbl)
-        bioLbl.anchor(top: avatar.bottomAnchor, left: tile.leftAnchor, right: tile.rightAnchor, paddingTop: 30, paddingLeft: 70, paddingRight: 70)
-        bioLbl.centerX(inView: scrollView)
-        
-        scrollView.addSubview(tempLbl)
-        tempLbl.anchor(top: bioLbl.bottomAnchor, left: tile.leftAnchor, right: tile.rightAnchor, paddingTop: 10, paddingLeft: 70, paddingRight: 70)
-        tempLbl.centerX(inView: scrollView)
+        tile.addSubview(tempLbl)
+        tempLbl.anchor(top: avatar.bottomAnchor, left: tile.leftAnchor, right: tile.rightAnchor, paddingTop: 10, paddingLeft: 70, paddingRight: 70)
+        tempLbl.centerX(inView: tile)
         
         let stack = UIStackView(arrangedSubviews: [firstNameTF, lastNameTF, indexTF, countryTF])
         stack.axis = .vertical
         stack.distribution = .fillProportionally
         stack.spacing = 30
-        scrollView.addSubview(stack)
+        tile.addSubview(stack)
         stack.anchor(top: tempLbl.bottomAnchor, left: tile.leftAnchor, right: tile.rightAnchor, paddingTop: 40, paddingLeft: 16, paddingRight: 16)
         
         return tile
@@ -247,14 +224,14 @@ class ProfileViewController: UIViewController {
     func configUI() {
         configNavBar()
         // view.backgroundColor = .white
-        view.backgroundColor = .updatepagecolor
+        view.backgroundColor = .black
         view.addSubview(titleLbl)
         titleLbl.anchor(top: safeArea.topAnchor, paddingTop: 20)
         titleLbl.centerX(inView: view)
         view.addSubview(backButton)
         backButton.anchor(top: safeArea.topAnchor, left: view.leftAnchor, paddingTop: 20, paddingLeft: 16, width: 38, height: 38)
         view.addSubview(mainTile)
-        mainTile.anchor(top: titleLbl.bottomAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, paddingTop: 20)
+        mainTile.anchor(top: titleLbl.bottomAnchor, left: view.leftAnchor, bottom: safeArea.bottomAnchor, right: view.rightAnchor, paddingTop: 20)
     }
     
     func configNavBar() {

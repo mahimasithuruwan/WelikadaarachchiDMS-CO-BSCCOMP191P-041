@@ -128,13 +128,13 @@ class SurveyViewController: UIViewController, UICollectionViewDelegate, UICollec
         btnPrev.heightAnchor.constraint(equalToConstant: 50).isActive=true
         btnPrev.widthAnchor.constraint(equalTo: self.view.widthAnchor, multiplier: 0.5).isActive=true
         btnPrev.leftAnchor.constraint(equalTo: self.view.leftAnchor).isActive=true
-        btnPrev.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: 0).isActive=true
+        btnPrev.bottomAnchor.constraint(equalTo: safeArea.bottomAnchor, constant: 0).isActive=true
         
         self.view.addSubview(btnNext)
         btnNext.heightAnchor.constraint(equalTo: btnPrev.heightAnchor).isActive=true
         btnNext.widthAnchor.constraint(equalTo: btnPrev.widthAnchor).isActive=true
         btnNext.rightAnchor.constraint(equalTo: self.view.rightAnchor).isActive=true
-        btnNext.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: 0).isActive=true
+        btnNext.bottomAnchor.constraint(equalTo: safeArea.bottomAnchor, constant: 0).isActive=true
         
         
         view.addSubview(backButton)
@@ -145,7 +145,7 @@ class SurveyViewController: UIViewController, UICollectionViewDelegate, UICollec
         let btn=UIButton()
         btn.setTitle("< Previous", for: .normal)
         btn.setTitleColor(.white, for: .normal)
-        btn.backgroundColor = .black
+        btn.backgroundColor = .darkGray
         btn.translatesAutoresizingMaskIntoConstraints=false
         btn.addTarget(self, action: #selector(btnPrevNextAction), for: .touchUpInside)
         return btn
@@ -155,7 +155,7 @@ class SurveyViewController: UIViewController, UICollectionViewDelegate, UICollec
         let btn=UIButton()
         btn.setTitle("Next >", for: .normal)
         btn.setTitleColor(.white, for: .normal)
-        btn.backgroundColor = .black
+        btn.backgroundColor = .darkGray
         btn.translatesAutoresizingMaskIntoConstraints=false
         btn.addTarget(self, action: #selector(btnPrevNextAction), for: .touchUpInside)
         return btn

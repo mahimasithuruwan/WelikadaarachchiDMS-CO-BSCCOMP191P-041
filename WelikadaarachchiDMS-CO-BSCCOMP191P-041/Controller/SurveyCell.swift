@@ -17,7 +17,7 @@ class SurveyCell: UICollectionViewCell {
     var btnYes: UIButton!
     var btnNo: UIButton!
     var btnsArray = [UIButton]()
-    
+    var safeArea: UILayoutGuide!
   
     weak var delegate: SurveyCellDelegate?
     
@@ -79,7 +79,7 @@ class SurveyCell: UICollectionViewCell {
         let btnHeight: CGFloat = 50
         btnYes = getButton(tag: 0)
         addSubview(btnYes)
-        NSLayoutConstraint.activate([btnYes.topAnchor.constraint(equalTo: lblQue.bottomAnchor, constant: 20), btnYes.rightAnchor.constraint(equalTo: self.centerXAnchor, constant: -10), btnYes.widthAnchor.constraint(equalToConstant: btnWidth), btnYes.heightAnchor.constraint(equalToConstant: btnHeight)])
+        NSLayoutConstraint.activate([btnYes.topAnchor.constraint(equalTo: lblQue.bottomAnchor, constant: -40), btnYes.rightAnchor.constraint(equalTo: self.centerXAnchor, constant: -10), btnYes.widthAnchor.constraint(equalToConstant: btnWidth), btnYes.heightAnchor.constraint(equalToConstant: btnHeight)])
         btnYes.addTarget(self, action: #selector(btnOptionAction), for: .touchUpInside)
         
         btnNo = getButton(tag: 1)

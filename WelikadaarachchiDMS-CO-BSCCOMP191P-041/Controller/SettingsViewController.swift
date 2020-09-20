@@ -155,7 +155,7 @@ class SettingsViewController: UIViewController {
     }
     
     @objc func showContact() {
-        let vc = ContactViewController()
+        let vc = ContactUsViewController()
         vc.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(vc, animated: true)
     }
