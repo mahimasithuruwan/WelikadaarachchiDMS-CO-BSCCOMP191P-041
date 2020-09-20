@@ -42,14 +42,14 @@ class HomeViewController: UIViewController {
         
         let title = UILabel()
         title.text = "All you need is"
-        title.font = UIFont(name: "Avenir-Medium", size: 26)
+        title.font = UIFont(name: "Avenir-Medium", size: 22)
         title.textColor = .white
         tile.addSubview(title)
         title.anchor(top: avatar.topAnchor, left: avatar.rightAnchor, right: tile.rightAnchor, paddingLeft: 30, paddingRight: 16)
         
         let subTitle = UILabel()
         subTitle.text = "stay at home"
-        subTitle.font = UIFont(name: "Avenir-Black", size: 30)
+        subTitle.font = UIFont(name: "Avenir-Black", size: 26)
         subTitle.textColor = .white
         tile.addSubview(subTitle)
         subTitle.anchor(top: title.bottomAnchor, left: avatar.rightAnchor, right: tile.rightAnchor, paddingLeft: 30, paddingRight: 16)
@@ -81,7 +81,7 @@ class HomeViewController: UIViewController {
         bell.image = UIImage(systemName: "bell")
         bell.tintColor = .systemYellow
         tile.addSubview(bell)
-        bell.anchor(left: tile.leftAnchor, paddingLeft: 20, width: 32, height: 32)
+        bell.anchor(left: tile.leftAnchor, paddingLeft: 0, width: 32, height: 32)
         bell.centerY(inView: tile)
         
         let arrow = UIImageView()
@@ -89,11 +89,12 @@ class HomeViewController: UIViewController {
         arrow.tintColor = .darkGray
         arrow.layer.masksToBounds = true
         tile.addSubview(arrow)
-        arrow.anchor(right: tile.rightAnchor, paddingRight: 20, width: 14, height: 26)
+        arrow.anchor(right: tile.rightAnchor, paddingRight: 0, width: 14, height: 26)
         arrow.centerY(inView: tile)
         
         let title = UILabel()
         title.text = "NIBM is closed until further notice"
+        title.font = UIFont(name: "Avenir-Medium", size: 17)
         title.textColor = .white
         tile.addSubview(title)
         title.anchor(top: tile.topAnchor,  left: bell.rightAnchor, right: arrow.leftAnchor, paddingTop: 15, paddingLeft: 12, paddingRight: 12)
@@ -326,7 +327,7 @@ class HomeViewController: UIViewController {
         view.addSubview(scrollView)
         scrollView.anchor(top: view.topAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor)
         scrollView.addSubview(mainTile)
-        mainTile.anchor(top: scrollView.topAnchor, left: view.leftAnchor, right: view.rightAnchor, height: 200)
+        mainTile.anchor(top: scrollView.topAnchor, left: view.leftAnchor, right: view.rightAnchor, height: 150)
         scrollView.addSubview(notificTile)
         notificTile.anchor(top: mainTile.bottomAnchor, left: view.leftAnchor, right: view.rightAnchor, paddingTop: 8, paddingLeft: 16, paddingRight: 16, height: 80)
         scrollView.addSubview(caseTile)
@@ -344,7 +345,7 @@ class HomeViewController: UIViewController {
     
     func confugireMapView() {
         mapTile.addSubview(mapView)
-        mapView.frame = CGRect(x: 0, y: 0, width: view.bounds.width, height: 250)
+        mapView.frame = CGRect(x: 0, y: 0, width: view.bounds.width, height: 305)
         
         mapView.showsUserLocation = true
         mapView.userTrackingMode = .follow

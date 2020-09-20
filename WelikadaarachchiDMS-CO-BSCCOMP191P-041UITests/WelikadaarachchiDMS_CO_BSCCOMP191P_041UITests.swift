@@ -29,13 +29,15 @@ class WelikadaarachchiDMS_CO_BSCCOMP191P_041UITests: XCTestCase {
         app.buttons["Already have an account?"].tap()
         app.textFields["Email"].tap()
         app.secureTextFields["Password"].tap()
-        app.buttons["Login"].tap()
-        
-        let alertDialog = app.alerts["Missing Credentials"]
-        
+        app.buttons["Log In"].tap()
+
+        let alertDialog = app.alerts["Log In"]
+
         XCTAssertTrue(alertDialog.exists)
-        
+
         alertDialog.buttons["Ok"].tap()
+        
+        
     }
     
     func testExample() throws {

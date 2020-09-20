@@ -29,21 +29,21 @@ class FullScreenMapViewController: UIViewController {
     
     private let topNav: UIView = {
         let uv = UIView()
-        uv.backgroundColor = .systemGray6
+        uv.backgroundColor = .black
         
         let backBtn = UIButton()
         let boldConfig = UIImage.SymbolConfiguration(pointSize: .zero, weight: .bold, scale: .large)
         backBtn.setImage(UIImage(systemName: "chevron.left", withConfiguration: boldConfig), for: .normal)
-        backBtn.tintColor = .black
+        backBtn.tintColor = .white
         backBtn.addTarget(self, action: #selector(handleGoBack), for: .touchUpInside)
         uv.addSubview(backBtn)
         backBtn.anchor(left: uv.leftAnchor, paddingLeft: 16, width: 38, height: 38)
         backBtn.centerY(inView: uv)
         
         let titleLbl = UILabel()
-        titleLbl.text = "Zone"
+        titleLbl.text = "Danger Areas"
         titleLbl.font = UIFont(name: "Avenir-Light", size: 26)
-        titleLbl.textColor = .black
+        titleLbl.textColor = .white
         titleLbl.adjustsFontSizeToFitWidth = true
         uv.addSubview(titleLbl)
         titleLbl.centerY(inView: uv)
@@ -54,7 +54,7 @@ class FullScreenMapViewController: UIViewController {
     
     private let mapTile: UIView = {
         let tile = UIView()
-        tile.backgroundColor = .white
+        tile.backgroundColor = .black
         return tile
     }()
     
@@ -103,7 +103,7 @@ class FullScreenMapViewController: UIViewController {
     // MARK: - Helper Functions
     
     func configUI() {
-        view.backgroundColor = .systemGray6
+        view.backgroundColor = .black
         configNavBar()
         view.addSubview(topNav)
         topNav.anchor(top: safeArea.topAnchor, left: view.leftAnchor, right: view.rightAnchor, height: view.bounds.height * 0.1)

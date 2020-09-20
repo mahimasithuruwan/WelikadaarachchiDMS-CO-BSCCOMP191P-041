@@ -17,7 +17,7 @@ class NotificationsViewController: UIViewController, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "contactCell", for: indexPath)
         cell.textLabel?.text = notifications[indexPath.row].title
-        cell.backgroundColor = .updatetilecolor
+        //cell.backgroundColor = .updatetilecolor
         return cell
     }
     
@@ -29,13 +29,12 @@ class NotificationsViewController: UIViewController, UITableViewDataSource {
     
     private let topNav: UIView = {
         let uv = UIView()
-        //uv.backgroundColor = .systemGray6
-        uv.backgroundColor = .updatepagecolor
+        uv.backgroundColor = .black
         
         let backBtn = UIButton()
         let boldConfig = UIImage.SymbolConfiguration(pointSize: .zero, weight: .bold, scale: .large)
         backBtn.setImage(UIImage(systemName: "chevron.left", withConfiguration: boldConfig), for: .normal)
-        backBtn.tintColor = .black
+        backBtn.tintColor = .white
         backBtn.addTarget(self, action: #selector(handleGoBack), for: .touchUpInside)
         uv.addSubview(backBtn)
         backBtn.anchor(left: uv.leftAnchor, paddingLeft: 16, width: 38, height: 38)
@@ -44,7 +43,7 @@ class NotificationsViewController: UIViewController, UITableViewDataSource {
         let titleLbl = UILabel()
         titleLbl.text = "All News"
         titleLbl.font = UIFont(name: "Avenir-Light", size: 26)
-        titleLbl.textColor = .black
+        titleLbl.textColor = .white
         titleLbl.adjustsFontSizeToFitWidth = true
         uv.addSubview(titleLbl)
         titleLbl.centerY(inView: uv)
@@ -81,7 +80,7 @@ class NotificationsViewController: UIViewController, UITableViewDataSource {
     
     func configUI() {
         // view.backgroundColor = .systemGray6
-        view.backgroundColor = .updatepagecolor
+        view.backgroundColor = .black
         configNavBar()
         view.addSubview(topNav)
         topNav.anchor(top: safeArea.topAnchor, left: view.leftAnchor, right: view.rightAnchor, height: 70)
