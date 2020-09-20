@@ -19,7 +19,8 @@ extension UIColor {
     static let whiteBackground = rgb(red: 255, green: 250, blue: 240)
     static let mainBlueTint = rgb(red: 17, green: 154, blue: 237)
     
-}
+    static let updatepagecolor = rgb(red: 64, green: 168, blue: 196)
+    static let updatetilecolor = rgb(red: 199, green: 236, blue: 238)}
 
 extension UIView {
     
@@ -180,6 +181,19 @@ extension UIButton{
 }
 
 extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
+}
+
+
+extension UIViewController {
     func shouldPresentLoadingView(_ present: Bool, message: String? = nil) {
         if present {
             let loadingView = UIView()
@@ -223,6 +237,5 @@ extension UIViewController {
             }
         }
     }
-    
     
 }

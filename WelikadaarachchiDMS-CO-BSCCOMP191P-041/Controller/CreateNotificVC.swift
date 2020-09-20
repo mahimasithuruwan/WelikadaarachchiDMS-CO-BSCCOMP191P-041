@@ -17,7 +17,8 @@ class CreateNotificVC: UIViewController {
     
     private let topNav: UIView = {
         let uv = UIView()
-        uv.backgroundColor = .systemGray6
+        //uv.backgroundColor = .systemGray6
+        uv.backgroundColor = .updatepagecolor
         
         let backBtn = UIButton()
         let boldConfig = UIImage.SymbolConfiguration(pointSize: .zero, weight: .bold, scale: .large)
@@ -96,8 +97,8 @@ class CreateNotificVC: UIViewController {
     
     private lazy var formTile: UIView = {
         let tile = UIView()
-        tile.backgroundColor = .white
-       
+        // tile.backgroundColor = .white
+        tile.backgroundColor = .updatetilecolor
         
         let stack = UIStackView(arrangedSubviews: [titleTF, descriptionTF, createBtn])
         stack.axis = .vertical
@@ -111,11 +112,11 @@ class CreateNotificVC: UIViewController {
     }()
     
     // MARK: - Lifecycles
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         safeArea = view.layoutMarginsGuide
         self.configUI()
+        self.hideKeyboardWhenTappedAround()
     }
     
     // MARK: - Selectors
@@ -158,7 +159,8 @@ class CreateNotificVC: UIViewController {
     // MARK: - Helper Functions
     
     func configUI() {
-        view.backgroundColor = .systemGray6
+        // view.backgroundColor = .systemGray6
+        view.backgroundColor = .updatepagecolor
         configNavBar()
         view.addSubview(topNav)
         topNav.anchor(top: safeArea.topAnchor, left: view.leftAnchor, right: view.rightAnchor, height: view.bounds.height * 0.1)

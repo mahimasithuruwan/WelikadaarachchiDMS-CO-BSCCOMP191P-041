@@ -11,24 +11,26 @@ import UIKit
 class NotificationsVC: UIViewController, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return contacts.count
+        return notifications.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "contactCell", for: indexPath)
-        cell.textLabel?.text = contacts[indexPath.row].name
+        cell.textLabel?.text = notifications[indexPath.row].title
+        cell.backgroundColor = .updatetilecolor
         return cell
     }
     
     // MARK: - Properties
     
-    private let contacts = ContactAPI.getContacts() // model
+    private var notifications = [Notific]()
     let contactsTableView = UITableView() // view
     var safeArea: UILayoutGuide!
     
     private let topNav: UIView = {
         let uv = UIView()
-        uv.backgroundColor = .systemGray6
+        //uv.backgroundColor = .systemGray6
+        uv.backgroundColor = .updatepagecolor
         
         let backBtn = UIButton()
         let boldConfig = UIImage.SymbolConfiguration(pointSize: .zero, weight: .bold, scale: .large)
@@ -54,6 +56,7 @@ class NotificationsVC: UIViewController, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         safeArea = view.layoutMarginsGuide
+        self.fetchNotifications()
         contactsTableView.dataSource = self
         contactsTableView.register(UITableViewCell.self, forCellReuseIdentifier: "contactCell")
         self.configUI()
@@ -65,13 +68,23 @@ class NotificationsVC: UIViewController, UITableViewDataSource {
         self.navigationController?.popToRootViewController(animated: true)
     }
     
+    // MARK: - API
+    
+    func fetchNotifications() {
+        Service.shared.fetchNotifications() { (notific) in
+            self.notifications.append(notific)
+            self.contactsTableView.reloadData()
+        }
+    }
+    
     // MARK: - Helper Functions
     
     func configUI() {
-        view.backgroundColor = .systemGray6
+        // view.backgroundColor = .systemGray6
+        view.backgroundColor = .updatepagecolor
         configNavBar()
         view.addSubview(topNav)
-        topNav.anchor(top: safeArea.topAnchor, left: view.leftAnchor, right: view.rightAnchor, height: view.bounds.height * 0.1)
+        topNav.anchor(top: safeArea.topAnchor, left: view.leftAnchor, right: view.rightAnchor, height: 70)
         view.addSubview(contactsTableView)
         contactsTableView.translatesAutoresizingMaskIntoConstraints = false
         contactsTableView.topAnchor.constraint(equalTo: topNav.bottomAnchor).isActive = true

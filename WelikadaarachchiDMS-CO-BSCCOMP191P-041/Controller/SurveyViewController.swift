@@ -17,6 +17,7 @@ struct Question {
 
 class SurveyViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
+    var safeArea: UILayoutGuide!
     var myCollectionView: UICollectionView!
     var questionsArray = [Question]()
     var score: Int = 0
@@ -26,6 +27,7 @@ class SurveyViewController: UIViewController, UICollectionViewDelegate, UICollec
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        safeArea = view.layoutMarginsGuide
         self.title="Survey"
         self.view.backgroundColor = .white
         
@@ -135,6 +137,9 @@ class SurveyViewController: UIViewController, UICollectionViewDelegate, UICollec
         btnNext.rightAnchor.constraint(equalTo: self.view.rightAnchor).isActive=true
         btnNext.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: 0).isActive=true
         
+        
+        view.addSubview(backButton)
+        backButton.anchor(top: safeArea.topAnchor, left: view.leftAnchor, paddingTop: 20, paddingLeft: 16, width: 38,height: 38)
     }
     
     let btnPrev: UIButton = {
@@ -176,6 +181,20 @@ class SurveyViewController: UIViewController, UICollectionViewDelegate, UICollec
         lbl.translatesAutoresizingMaskIntoConstraints=false
         return lbl
     }()
+    
+    private let backButton: UIButton = {
+        let button = UIButton(type: .custom)
+        let boldConfig = UIImage.SymbolConfiguration(pointSize: .zero, weight: .bold, scale: .large)
+        button.setImage(UIImage(systemName: "chevron.left", withConfiguration: boldConfig), for: .normal)
+        button.tintColor = .black
+        button.addTarget(self, action: #selector(handleGoBack), for: .touchUpInside)
+        return button
+    }()
+    
+    @objc func handleGoBack() {
+        self.navigationController?.popToRootViewController(animated: false)
+        
+    }
 }
 
 extension SurveyViewController: SurveyCVCellDelegate {

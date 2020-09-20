@@ -56,6 +56,15 @@ class LoginViewController: UIViewController {
         return button
     }()
     
+    private let resetButton: UIButton = {
+        let button = UIButton(type: .system)
+        let buttonTitle = NSMutableAttributedString(string: "Forget Password?", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 16), NSAttributedString.Key.foregroundColor: UIColor.white])
+        button.addTarget(self, action: #selector(handleResetPassword), for: .touchUpInside)
+        button.setAttributedTitle(buttonTitle, for: .normal)
+        
+        return button
+    }()
+    
     let dontHaveAccountButton: UIButton = {
         let button = UIButton(type: .system)
         let attributedTitle = NSMutableAttributedString(string: "Don't have an account?  ", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 16), NSAttributedString.Key.foregroundColor: UIColor.lightGray])
@@ -67,15 +76,7 @@ class LoginViewController: UIViewController {
         button.setAttributedTitle(attributedTitle, for: .normal)
         return button
     }()
-    
-    private let loginPageButton: UIButton = {
-        let button = UIButton(type: .system)
-        let buttonTitle = NSMutableAttributedString(string: "Already have an account?", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 16), NSAttributedString.Key.foregroundColor: UIColor.white])
-        button.addTarget(self, action: #selector(handleShowRegister), for: .touchUpInside)
-        button.setAttributedTitle(buttonTitle, for: .normal)
-        
-        return button
-    }()
+
     
     // MARK: - Lifecycale
     
@@ -153,6 +154,12 @@ class LoginViewController: UIViewController {
         navigationController?.pushViewController(vc, animated: true)
     }
     
+    @objc func handleResetPassword() {
+        let vc = FViewController()
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    
     // MARK: - Helper Function
     
     func configureUI() {
@@ -165,7 +172,7 @@ class LoginViewController: UIViewController {
         titleLabel.anchor(top: view.safeAreaLayoutGuide.topAnchor)
         titleLabel.centerX(inView: view)
         
-        let stack = UIStackView(arrangedSubviews: [emailContainerView, passwordContainerView, loginButton])
+        let stack = UIStackView(arrangedSubviews: [emailContainerView, passwordContainerView, loginButton, resetButton])
         stack.axis = .vertical
         stack.distribution = .fillEqually
         stack.spacing = 24

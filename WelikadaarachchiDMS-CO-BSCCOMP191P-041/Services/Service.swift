@@ -1,8 +1,8 @@
 //
-//  service.swift
+//  Service.swift
 //  WelikadaarachchiDMS-CO-BSCCOMP191P-041
 //
-//  Created by Mahima Sithuruwan on 9/11/20.
+//  Created by Mahima Sithuruwan on 9/20/20.
 //  Copyright © 2020 Mahima Sithuruwan. All rights reserved.
 //
 
@@ -39,6 +39,14 @@ struct Service {
                     completion(driver)
                 }
             })
+        }
+    }
+    
+    func fetchNotifications(completion: @escaping(Notific) -> Void) {
+        REF_NOTIFICATIONS.observe(.childAdded) { (snapshot) in
+            guard let dictionary = snapshot.value as? [String: Any] else { return }
+            let notific = Notific(id: snapshot.key, dictionary: dictionary)
+            completion(notific)
         }
     }
 }
