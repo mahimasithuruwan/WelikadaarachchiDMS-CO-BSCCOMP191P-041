@@ -50,19 +50,15 @@ class SurveyResultViewController: UIViewController {
     @objc func saveData(rates: String) {
         
         let rate = rates;
-        
         guard let appDelegate =
             UIApplication.shared.delegate as? AppDelegate else {
                 return
         }
-        
         let managedContext =
             appDelegate.persistentContainer.viewContext
-        
         let entity =
             NSEntityDescription.entity(forEntityName: "SurveyResult",
                                        in: managedContext)!
-        
         let sResult = NSManagedObject(entity: entity,
                                      insertInto: managedContext)
         

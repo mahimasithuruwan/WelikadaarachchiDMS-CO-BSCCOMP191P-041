@@ -32,7 +32,6 @@ class SettingsViewController: UIViewController {
         title.text = "Profile"
         title.textColor = .white
         tile.addSubview(title)
-        //title.backgroundColor = .green
         title.anchor(top: tile.topAnchor, left: tile.leftAnchor, bottom: tile.bottomAnchor, paddingLeft: 20)
         title.centerY(inView: tile)
         
@@ -63,7 +62,6 @@ class SettingsViewController: UIViewController {
         title.text = "Contact Us / About Us"
         title.textColor = .white
         tile.addSubview(title)
-        //title.backgroundColor = .green
         title.anchor(top: tile.topAnchor, left: tile.leftAnchor, bottom: tile.bottomAnchor, paddingLeft: 20)
         title.centerY(inView: tile)
         
@@ -94,7 +92,6 @@ class SettingsViewController: UIViewController {
         title.text = "Share with friend"
         title.textColor = .white
         tile.addSubview(title)
-        //title.backgroundColor = .green
         title.anchor(top: tile.topAnchor, left: tile.leftAnchor, bottom: tile.bottomAnchor, paddingLeft: 20)
         title.centerY(inView: tile)
         

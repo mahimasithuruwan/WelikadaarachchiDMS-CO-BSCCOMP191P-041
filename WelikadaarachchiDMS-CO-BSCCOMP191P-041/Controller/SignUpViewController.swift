@@ -137,9 +137,6 @@ class SignUpViewController: UIViewController {
                .compactMap({$0})
                .first?.windows
                .filter({$0.isKeyWindow}).first
-
-//               guard let controller = keyWindow?.rootViewController as? HomeViewController else { return }
-             //  controller.configure()
             guard let controller = keyWindow?.rootViewController as? TabBarController else { return }
             controller.setupTabBar()
 
@@ -178,49 +175,49 @@ class SignUpViewController: UIViewController {
            guard let password = passwordTextFiled.text else { return }
         
         if(firstname.count==0){
-             let ac = UIAlertController(title: "Sign Up", message: "Please enter first name", preferredStyle: .alert)
+             let ac = UIAlertController(title: "Sign Up", message: "Please Enter First Name", preferredStyle: .alert)
              ac.addAction(UIAlertAction(title: "Ok", style: .cancel))
              self.present(ac, animated: true)
              return;
           }
                 
         if firstname.rangeOfCharacter(from: CharacterSet.decimalDigits) != nil {
-            let ac = UIAlertController(title: "Sign Up", message: "Please enter letters only", preferredStyle: .alert)
+            let ac = UIAlertController(title: "Sign Up", message: "Please Enter Letters Only", preferredStyle: .alert)
             ac.addAction(UIAlertAction(title: "Ok", style: .cancel))
             self.present(ac, animated: true)
             return;
         }
                       
          if(lastname.count==0){
-             let ac = UIAlertController(title: "Sign Up", message: "Please enter last name", preferredStyle: .alert)
+             let ac = UIAlertController(title: "Sign Up", message: "Please Enter Last Name", preferredStyle: .alert)
              ac.addAction(UIAlertAction(title: "Ok", style: .cancel))
              self.present(ac, animated: true)
              return;
         }
         
          if lastname.rangeOfCharacter(from: CharacterSet.decimalDigits) != nil {
-            let ac = UIAlertController(title: "Sign Up", message: "Please enter letters only", preferredStyle: .alert)
+            let ac = UIAlertController(title: "Sign Up", message: "Please Enter Letters Only", preferredStyle: .alert)
             ac.addAction(UIAlertAction(title: "Ok", style: .cancel))
             self.present(ac, animated: true)
             return;
         }
         
           if(email.count==0){
-             let ac = UIAlertController(title: "Sign Up", message: "Please enter email", preferredStyle: .alert)
+             let ac = UIAlertController(title: "Sign Up", message: "Please Enter Email", preferredStyle: .alert)
              ac.addAction(UIAlertAction(title: "Ok", style: .cancel))
              self.present(ac, animated: true)
              return;
         }
         
           if(!email.contains("@") || !email.contains(".")){
-             let ac = UIAlertController(title: "Log In", message: "Please enter email correctly",  preferredStyle: .alert)
+             let ac = UIAlertController(title: "Log In", message: "Please Enter Email Correctly",  preferredStyle: .alert)
              ac.addAction(UIAlertAction(title: "Ok", style: .cancel))
              self.present(ac, animated: true)
              return;
          }
         
           if(password.count==0){
-             let ac = UIAlertController(title: "Sign Up", message: "Please enter passward", preferredStyle: .alert)
+             let ac = UIAlertController(title: "Sign Up", message: "Please Enter Passward", preferredStyle: .alert)
              ac.addAction(UIAlertAction(title: "Ok", style: .cancel))
              self.present(ac, animated: true)
              return;

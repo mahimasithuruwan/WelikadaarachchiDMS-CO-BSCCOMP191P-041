@@ -27,7 +27,6 @@ class WelcomeViewController: UIViewController {
         imageview.image = UIImage(named:"corona_virus_logo")
         imageview.layer.masksToBounds = true
         imageview.contentMode = .scaleAspectFit
-       //view.heightAnchor.constraint(equalToConstant: 50).isActive = true
         return imageview
         
     }()
@@ -51,24 +50,6 @@ class WelcomeViewController: UIViewController {
         return button
     }()
     
-//    private let termsAndConBtn: UIButton = {
-//        let button = UIButton(type: .system)
-//        let attributedText = NSMutableAttributedString(string: "By signing up, you agree with the ", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 14), NSAttributedString.Key.foregroundColor: UIColor.gray])
-//        
-//        attributedText.append(NSAttributedString(string: "Terms of Service", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 14), NSAttributedString.Key.foregroundColor: UIColor.mainBlueTint]))
-//        attributedText.append(NSAttributedString(string: " and ", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 14), NSAttributedString.Key.foregroundColor: UIColor.gray]))
-//        attributedText.append(NSAttributedString(string: "Privacy Policy.", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 14), NSAttributedString.Key.foregroundColor: UIColor.mainBlueTint]))
-//        
-//        button.addTarget(self, action: #selector(showRegPage), for: .touchUpInside)
-//        button.setAttributedTitle(attributedText, for: .normal)
-//        button.titleLabel?.lineBreakMode = NSLineBreakMode.byWordWrapping
-//        button.titleLabel?.textAlignment = NSTextAlignment.center
-//        
-//        return button
-//    }()
-//    
-    
-    
     
     // MARK: - Lifecycale
     
@@ -86,8 +67,6 @@ class WelcomeViewController: UIViewController {
           let vc = LoginViewController()
           navigationController?.pushViewController(vc, animated: true)
       }
-        
-         
     
     
      //MARk:- helper Function
@@ -110,13 +89,6 @@ class WelcomeViewController: UIViewController {
 
         view.addSubview(stack)
         stack.anchor(top: WelcomeImgView.bottomAnchor, left: view.leftAnchor, right: view.rightAnchor, paddingTop: 100, paddingLeft: 16, paddingRight: 16)
-
-//        view.addSubview(stack)
-//        stack.anchor(top: WelcomeImgView.bottomAnchor, left: view.leftAnchor, right: view.rightAnchor, paddingRight: 16)
-//
-//        view.addSubview(termsAndConBtn)
-//        termsAndConBtn.centerX(inView: view)
-//        termsAndConBtn.anchor(left: view.leftAnchor, bottom: view.safeAreaLayoutGuide.bottomAnchor, right:  view.rightAnchor, paddingLeft: 16, paddingBottom:16, paddingRight: 16, height: 50)
     }
     
     

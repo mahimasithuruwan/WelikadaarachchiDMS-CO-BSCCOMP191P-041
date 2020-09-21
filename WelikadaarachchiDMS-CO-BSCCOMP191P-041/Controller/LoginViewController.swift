@@ -164,9 +164,7 @@ class LoginViewController: UIViewController {
     func configureUI() {
         
         configureNavigationBar()
-        
         view.backgroundColor = .black
-        
         view.addSubview(titleLabel)
         titleLabel.anchor(top: view.safeAreaLayoutGuide.topAnchor)
         titleLabel.centerX(inView: view)

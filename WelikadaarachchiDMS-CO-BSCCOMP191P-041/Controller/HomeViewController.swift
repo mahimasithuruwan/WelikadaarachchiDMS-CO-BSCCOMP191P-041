@@ -233,7 +233,6 @@ class HomeViewController: UIViewController {
         //sv.contentSize = CGSize(width: screensize.width - 2.0, height: 0.84 * screensize.height)
         sv.contentSize = CGSize(width: screensize.width, height: 770)
         sv.translatesAutoresizingMaskIntoConstraints = false
-        //sv.backgroundColor = .cyan
         return sv
     }()
     
@@ -320,7 +319,6 @@ class HomeViewController: UIViewController {
     // MARK: - Helper Function
     
     func configureUI() {
-        //let screensize: CGRect = UIScreen.main.bounds
         
         configNavBar()
         view.backgroundColor = .systemGray6
@@ -391,7 +389,6 @@ class HomeViewController: UIViewController {
             }
             
             if !usersVisible {
-                // ignore own annotation
                 if user.uid != currentUid {
                     if temp >= 38.0 && result >= 75 {
                         self.mapView.addAnnotation(annotation)
@@ -441,7 +438,6 @@ class HomeViewController: UIViewController {
                         let ac = UIAlertController(title: "Authentication failed", message: "You could not be verified; please try again.", preferredStyle: .alert)
                         ac.addAction(UIAlertAction(title: "OK", style: .default))
                         self?.signOut()
-                        //  self?.present(ac, animated: true)
                         self?.dismiss(animated: true, completion: nil)
                         
                     }

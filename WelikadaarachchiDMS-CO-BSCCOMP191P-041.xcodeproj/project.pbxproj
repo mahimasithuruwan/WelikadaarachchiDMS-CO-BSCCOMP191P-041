@@ -21,14 +21,13 @@
 		3E4FB53C2516A293003C134C /* SurveyPastResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4FB53B2516A293003C134C /* SurveyPastResultsViewController.swift */; };
 		3E4FB53E2516A73D003C134C /* SurveyResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4FB53D2516A73D003C134C /* SurveyResult.swift */; };
 		3E4FB5402516D91C003C134C /* ForgetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4FB53F2516D91C003C134C /* ForgetPasswordViewController.swift */; };
-		3E4FB54225173746003C134C /* Notific.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4FB54125173746003C134C /* Notific.swift */; };
+		3E4FB54225173746003C134C /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4FB54125173746003C134C /* Notification.swift */; };
 		3E4FB544251737F2003C134C /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4FB543251737F2003C134C /* Service.swift */; };
 		3E5024F8250EB6D30030D8BB /* PlusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5024F7250EB6D30030D8BB /* PlusViewController.swift */; };
 		3E5024FA250EB72F0030D8BB /* SurveyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5024F9250EB72F0030D8BB /* SurveyCell.swift */; };
 		3E5024FC250EB78E0030D8BB /* SafeActionsPageOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5024FB250EB78E0030D8BB /* SafeActionsPageOneViewController.swift */; };
 		3E5024FE250EB7CC0030D8BB /* SafeActionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5024FD250EB7CC0030D8BB /* SafeActionsViewController.swift */; };
 		3E502500250EB8120030D8BB /* SurveyResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5024FF250EB8120030D8BB /* SurveyResultViewController.swift */; };
-		3E558FD72510ECC800B8F32E /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E558FD62510ECC800B8F32E /* HomePageViewController.swift */; };
 		3E558FD92510ECE700B8F32E /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E558FD82510ECE700B8F32E /* SettingsViewController.swift */; };
 		3E558FDB2510ED0700B8F32E /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E558FDA2510ED0700B8F32E /* ProfileViewController.swift */; };
 		3E558FDD2510EDD200B8F32E /* ContactUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E558FDC2510EDD200B8F32E /* ContactUsViewController.swift */; };
@@ -47,7 +46,6 @@
 		3E61A718250B7214006EBC9F /* SurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E61A717250B7214006EBC9F /* SurveyViewController.swift */; };
 		3E61A71A250B723F006EBC9F /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E61A719250B723F006EBC9F /* WelcomeViewController.swift */; };
 		3E61A71C250B739D006EBC9F /* LocationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E61A71B250B739D006EBC9F /* LocationHandler.swift */; };
-		3E9682E12518319100BFF19B /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9682E02518319100BFF19B /* test.swift */; };
 		B4BCADE9D46B36F77738D21B /* Pods_WelikadaarachchiDMS_CO_BSCCOMP191P_041.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0738C28E3B16BE84E58DDE8 /* Pods_WelikadaarachchiDMS_CO_BSCCOMP191P_041.framework */; };
 /* End PBXBuildFile section */
 
@@ -89,14 +87,13 @@
 		3E4FB53B2516A293003C134C /* SurveyPastResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyPastResultsViewController.swift; sourceTree = "<group>"; };
 		3E4FB53D2516A73D003C134C /* SurveyResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyResult.swift; sourceTree = "<group>"; };
 		3E4FB53F2516D91C003C134C /* ForgetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordViewController.swift; sourceTree = "<group>"; };
-		3E4FB54125173746003C134C /* Notific.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notific.swift; sourceTree = "<group>"; };
+		3E4FB54125173746003C134C /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		3E4FB543251737F2003C134C /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		3E5024F7250EB6D30030D8BB /* PlusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlusViewController.swift; sourceTree = "<group>"; };
 		3E5024F9250EB72F0030D8BB /* SurveyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyCell.swift; sourceTree = "<group>"; };
 		3E5024FB250EB78E0030D8BB /* SafeActionsPageOneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeActionsPageOneViewController.swift; sourceTree = "<group>"; };
 		3E5024FD250EB7CC0030D8BB /* SafeActionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeActionsViewController.swift; sourceTree = "<group>"; };
 		3E5024FF250EB8120030D8BB /* SurveyResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyResultViewController.swift; sourceTree = "<group>"; };
-		3E558FD62510ECC800B8F32E /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
 		3E558FD82510ECE700B8F32E /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		3E558FDA2510ED0700B8F32E /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		3E558FDC2510EDD200B8F32E /* ContactUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUsViewController.swift; sourceTree = "<group>"; };
@@ -117,7 +114,6 @@
 		3E61A717250B7214006EBC9F /* SurveyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyViewController.swift; sourceTree = "<group>"; };
 		3E61A719250B723F006EBC9F /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		3E61A71B250B739D006EBC9F /* LocationHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationHandler.swift; sourceTree = "<group>"; };
-		3E9682E02518319100BFF19B /* test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
 		998E144E86B439186BF8C871 /* Pods-WelikadaarachchiDMS-CO-BSCCOMP191P-041.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WelikadaarachchiDMS-CO-BSCCOMP191P-041.debug.xcconfig"; path = "Target Support Files/Pods-WelikadaarachchiDMS-CO-BSCCOMP191P-041/Pods-WelikadaarachchiDMS-CO-BSCCOMP191P-041.debug.xcconfig"; sourceTree = "<group>"; };
 		AD052702B29AE8FAFE284CCD /* Pods-WelikadaarachchiDMS-CO-BSCCOMP191P-041.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WelikadaarachchiDMS-CO-BSCCOMP191P-041.release.xcconfig"; path = "Target Support Files/Pods-WelikadaarachchiDMS-CO-BSCCOMP191P-041/Pods-WelikadaarachchiDMS-CO-BSCCOMP191P-041.release.xcconfig"; sourceTree = "<group>"; };
 		E0738C28E3B16BE84E58DDE8 /* Pods_WelikadaarachchiDMS_CO_BSCCOMP191P_041.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WelikadaarachchiDMS_CO_BSCCOMP191P_041.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -215,26 +211,24 @@
 				3E43419E250A9F56008D0B46 /* HomeViewController.swift */,
 				3E4341A0250A9F77008D0B46 /* LoginViewController.swift */,
 				3E4341A2250A9F97008D0B46 /* SignUpViewController.swift */,
+				3E4FB53F2516D91C003C134C /* ForgetPasswordViewController.swift */,
 				3E61A719250B723F006EBC9F /* WelcomeViewController.swift */,
 				3E61A713250B71BF006EBC9F /* TabBarController.swift */,
 				3E61A717250B7214006EBC9F /* SurveyViewController.swift */,
 				3E5024F9250EB72F0030D8BB /* SurveyCell.swift */,
 				3E5024FF250EB8120030D8BB /* SurveyResultViewController.swift */,
+				3E4FB53B2516A293003C134C /* SurveyPastResultsViewController.swift */,
 				3E5024F7250EB6D30030D8BB /* PlusViewController.swift */,
-				3E5024FD250EB7CC0030D8BB /* SafeActionsViewController.swift */,
-				3E558FD62510ECC800B8F32E /* HomePageViewController.swift */,
 				3E558FD82510ECE700B8F32E /* SettingsViewController.swift */,
 				3E558FDA2510ED0700B8F32E /* ProfileViewController.swift */,
 				3E558FDC2510EDD200B8F32E /* ContactUsViewController.swift */,
+				3E5024FD250EB7CC0030D8BB /* SafeActionsViewController.swift */,
 				3E5B12462515E8F400C34F21 /* SafeActionsPageThreeViewController.swift */,
 				3E5B12502515E9FF00C34F21 /* SafeActionsPageTwoViewController.swift */,
 				3E5024FB250EB78E0030D8BB /* SafeActionsPageOneViewController.swift */,
 				3E5B12482515E91A00C34F21 /* NotificationsViewController.swift */,
 				3E5B124A2515E93A00C34F21 /* CreateNotificationViewController.swift */,
 				3E5B124E2515E9CA00C34F21 /* FullScreenMapViewController.swift */,
-				3E4FB53B2516A293003C134C /* SurveyPastResultsViewController.swift */,
-				3E4FB53F2516D91C003C134C /* ForgetPasswordViewController.swift */,
-				3E9682E02518319100BFF19B /* test.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -244,7 +238,7 @@
 			children = (
 				3E61A70F250B6F34006EBC9F /* User.swift */,
 				3E61A711250B6F58006EBC9F /* UserAnnotation.swift */,
-				3E4FB54125173746003C134C /* Notific.swift */,
+				3E4FB54125173746003C134C /* Notification.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -491,8 +485,6 @@
 				3E5B12432515E80100C34F21 /* Contact.swift in Sources */,
 				3E5B1229251485DF00C34F21 /* LocationInputUIView.swift in Sources */,
 				3E61A71C250B739D006EBC9F /* LocationHandler.swift in Sources */,
-				3E9682E12518319100BFF19B /* test.swift in Sources */,
-				3E558FD72510ECC800B8F32E /* HomePageViewController.swift in Sources */,
 				3E5B124B2515E93A00C34F21 /* CreateNotificationViewController.swift in Sources */,
 				3E5024F8250EB6D30030D8BB /* PlusViewController.swift in Sources */,
 				3E5024FA250EB72F0030D8BB /* SurveyCell.swift in Sources */,
@@ -509,7 +501,7 @@
 				3E5B124F2515E9CA00C34F21 /* FullScreenMapViewController.swift in Sources */,
 				3E4FB5402516D91C003C134C /* ForgetPasswordViewController.swift in Sources */,
 				3E43419B250A9EFE008D0B46 /* AuthUIBtn.swift in Sources */,
-				3E4FB54225173746003C134C /* Notific.swift in Sources */,
+				3E4FB54225173746003C134C /* Notification.swift in Sources */,
 				3E434167250A9BEA008D0B46 /* WelikadaarachchiDMS_CO_BSCCOMP191P_041.xcdatamodeld in Sources */,
 				3E61A718250B7214006EBC9F /* SurveyViewController.swift in Sources */,
 				3E43419F250A9F56008D0B46 /* HomeViewController.swift in Sources */,

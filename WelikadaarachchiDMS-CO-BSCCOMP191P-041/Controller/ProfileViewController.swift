@@ -11,7 +11,6 @@ import FirebaseAuth
 
 class ProfileViewController: UIViewController {
     
-    
     // MARK: - Properties
     
     var safeArea: UILayoutGuide!
@@ -123,7 +122,6 @@ class ProfileViewController: UIViewController {
     
     private let updateButton: UIButton = {
         let button = UIButton()
-        // button.backgroundColor = .white
         button.backgroundColor = .darkGray
         button.setTitle("UPDATE", for: .normal)
         button.setTitleColor(.black, for: .normal)
@@ -136,7 +134,6 @@ class ProfileViewController: UIViewController {
     
     private lazy var mainTile: UIView = {
         let tile = UIView()
-        //tile.backgroundColor = .white
         tile.backgroundColor = .black
         
         tile.addSubview(updateButton)
@@ -222,7 +219,6 @@ class ProfileViewController: UIViewController {
     
     func configUI() {
         configNavBar()
-        // view.backgroundColor = .white
         view.backgroundColor = .black
         view.addSubview(titleLbl)
         titleLbl.anchor(top: safeArea.topAnchor, paddingTop: 20)

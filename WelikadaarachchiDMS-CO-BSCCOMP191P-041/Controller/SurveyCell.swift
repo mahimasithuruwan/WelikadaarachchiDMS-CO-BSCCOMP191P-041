@@ -58,10 +58,6 @@ class SurveyCell: UICollectionViewCell {
         btnNo.backgroundColor=UIColor.white
     }
     
-//    @objc func btnGoBackAction() {
-//        self.navigationController?.popToRootViewController(animated: true)
-//    }
-    
     func setupViews() {
         addSubview(imgView)
         imgView.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 100).isActive=true
@@ -86,13 +82,6 @@ class SurveyCell: UICollectionViewCell {
         addSubview(btnNo)
         NSLayoutConstraint.activate([btnNo.topAnchor.constraint(equalTo: btnYes.topAnchor), btnNo.leftAnchor.constraint(equalTo: self.centerXAnchor, constant: 10), btnNo.widthAnchor.constraint(equalToConstant: btnWidth), btnNo.heightAnchor.constraint(equalToConstant: btnHeight)])
         btnNo.addTarget(self, action: #selector(btnOptionAction), for: .touchUpInside)
-        
-//        addSubview(btnGoBack)
-//        btnGoBack.topAnchor.constraint(equalTo: btnYes.bottomAnchor, constant: 40).isActive=true
-//        //btnGoBack.centerXAnchor.constraint(equalTo: btnYes.bottomAnchor).isActive=true
-//        btnGoBack.widthAnchor.constraint(equalToConstant: 150).isActive=true
-//        btnGoBack.heightAnchor.constraint(equalToConstant: 50).isActive=true
-//       // btnGoBack.addTarget(self, action: #selector(btnGoBackAction), for: .touchUpInside)
     }
     
     let btnGoBack: UIButton = {

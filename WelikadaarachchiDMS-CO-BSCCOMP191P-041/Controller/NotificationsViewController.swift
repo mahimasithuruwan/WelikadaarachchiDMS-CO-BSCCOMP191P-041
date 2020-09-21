@@ -17,14 +17,13 @@ class NotificationsViewController: UIViewController, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "contactCell", for: indexPath)
         cell.textLabel?.text = notifications[indexPath.row].title
-        //cell.backgroundColor = .updatetilecolor
         return cell
     }
     
     // MARK: - Properties
     
-    private var notifications = [Notific]()
-    let contactsTableView = UITableView() // view
+    private var notifications = [Notification]()
+    let contactsTableView = UITableView()
     var safeArea: UILayoutGuide!
     
     private let topNav: UIView = {
@@ -79,7 +78,6 @@ class NotificationsViewController: UIViewController, UITableViewDataSource {
     // MARK: - Helper Functions
     
     func configUI() {
-        // view.backgroundColor = .systemGray6
         view.backgroundColor = .black
         configNavBar()
         view.addSubview(topNav)

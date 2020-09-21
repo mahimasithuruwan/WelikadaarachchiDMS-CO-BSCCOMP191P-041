@@ -17,7 +17,6 @@ class CreateNotificationViewController: UIViewController {
     
     private let topNav: UIView = {
         let uv = UIView()
-        //uv.backgroundColor = .systemGray6
         uv.backgroundColor = .black
         
         let backBtn = UIButton()
@@ -88,7 +87,6 @@ class CreateNotificationViewController: UIViewController {
     
     private lazy var formTile: UIView = {
         let tile = UIView()
-        // tile.backgroundColor = .white
         tile.backgroundColor = .black
         
         let stack = UIStackView(arrangedSubviews: [titleTF, descriptionTF, createBtn])

@@ -23,7 +23,6 @@ class FullScreenMapViewController: UIViewController {
     
     private var user: User? {
         didSet {
-            //
         }
     }
     

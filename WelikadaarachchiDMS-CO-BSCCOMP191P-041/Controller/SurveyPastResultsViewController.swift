@@ -6,7 +6,6 @@
 //  Copyright © 2020 Mahima Sithuruwan. All rights reserved.
 //
 
-
 import UIKit
 import CoreData
 
@@ -26,9 +25,7 @@ class SurveyPastResultsViewController: UIViewController, UITableViewDataSource {
     // MARK: - Properties
     
     var contacts: [NSManagedObject] = []
-    
-    //  let contacts = [SurveyResults] // model
-    let contactsTableView = UITableView() // view
+    let contactsTableView = UITableView()
     var safeArea: UILayoutGuide!
     
     private let topNav: UIView = {
@@ -58,8 +55,6 @@ class SurveyPastResultsViewController: UIViewController, UITableViewDataSource {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        //1
-        
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -71,16 +66,11 @@ class SurveyPastResultsViewController: UIViewController, UITableViewDataSource {
         
         let managedContext =
             appDelegate.persistentContainer.viewContext
-        
-        //2
         let fetchRequest =
             NSFetchRequest<NSManagedObject>(entityName: "SurveyResult")
-        
-        //3
         do {
             contacts = try managedContext.fetch(fetchRequest)
             
-            //  contacts = people
         } catch let error as NSError {
             print("Could not fetch. \(error), \(error.userInfo)")
         }

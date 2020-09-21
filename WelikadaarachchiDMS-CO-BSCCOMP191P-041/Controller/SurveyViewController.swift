@@ -205,7 +205,6 @@ extension SurveyViewController: SurveyCellDelegate {
             questionsArray[index.item].accept = true
             score += 1
         } else {
-            //score += 1
         }
         lblScore.text = "Score: \(score) / \(questionsArray.count)"
         myCollectionView.reloadItems(at: [index])
