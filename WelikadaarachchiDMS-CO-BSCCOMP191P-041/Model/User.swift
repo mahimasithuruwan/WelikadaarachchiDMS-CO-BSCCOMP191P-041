@@ -19,7 +19,7 @@ struct User {
     let uid: String
     var surveyResult: Int
     let index: String
-    let country: String
+    let address: String
     
     init(uid: String, dictionary: [String: Any]) {
         self.uid = uid
@@ -30,7 +30,7 @@ struct User {
         self.temperature = dictionary["temperature"] as? String ?? "0"
         self.surveyResult = dictionary["surveyResult"] as? Int ?? 0
         self.index = dictionary["index"] as? String ?? ""
-        self.country = dictionary["country"] as? String ?? ""
+        self.address = dictionary["address"] as? String ?? ""
         
         
     }

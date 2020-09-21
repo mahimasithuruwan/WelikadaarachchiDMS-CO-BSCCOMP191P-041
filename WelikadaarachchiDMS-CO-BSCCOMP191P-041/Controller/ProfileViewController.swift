@@ -22,7 +22,7 @@ class ProfileViewController: UIViewController {
             firstNameTF.text = user!.firstname
             lastNameTF.text = user!.lastname
             indexTF.text = user!.index
-            countryTF.text = user!.country
+            addressTF.text = user!.address
             tempLbl.text = "\(user!.temperature)°C"
         }
     }
@@ -105,11 +105,11 @@ class ProfileViewController: UIViewController {
         return tf
     }()
     
-    private let countryTF: UITextField = {
+    private let addressTF: UITextField = {
         let tf = UITextField()
         tf.borderStyle = .roundedRect
         tf.font = UIFont.systemFont(ofSize: 16)
-        tf.placeholder = "Country"
+        tf.placeholder = "Address"
         tf.autocorrectionType = .no
         tf.autocapitalizationType = .sentences
         tf.layer.borderColor = UIColor.black.cgColor
@@ -155,7 +155,7 @@ class ProfileViewController: UIViewController {
         tempLbl.anchor(top: avatar.bottomAnchor, left: tile.leftAnchor, right: tile.rightAnchor, paddingTop: 10, paddingLeft: 70, paddingRight: 70)
         tempLbl.centerX(inView: tile)
         
-        let stack = UIStackView(arrangedSubviews: [firstNameTF, lastNameTF, indexTF, countryTF])
+        let stack = UIStackView(arrangedSubviews: [firstNameTF, lastNameTF, indexTF, addressTF])
         stack.axis = .vertical
         stack.distribution = .fillProportionally
         stack.spacing = 30
@@ -183,27 +183,26 @@ class ProfileViewController: UIViewController {
         guard let firstName = firstNameTF.text else { return }
         guard let lastName = lastNameTF.text else { return }
         guard let index = indexTF.text else { return }
-        //guard let country = countryTF.text else { return }
-        guard let country = countryTF.text else { return }
+        guard let address = addressTF.text else { return }
         guard let currentUid = Auth.auth().currentUser?.uid else { return }
         
         if firstName.isEmpty {
-            let alert = UIAlertController(title: "First Name is Required!", message: "Please enter your first name", preferredStyle: .alert)
+            let alert = UIAlertController(title: "First Name is Required!", message: "Please enter your lirst Name", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
             self.present(alert, animated: true)
             return
         } else if lastName.isEmpty  {
-            let alert = UIAlertController(title: "Last Name is Required!", message: "Please enter your last name", preferredStyle: .alert)
+            let alert = UIAlertController(title: "Last Name is Required!", message: "Please enter your Last Name", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
             self.present(alert, animated: true)
             return
         } else if index.isEmpty  {
-            let alert = UIAlertController(title: "Index is Required!", message: "Please enter your index", preferredStyle: .alert)
+            let alert = UIAlertController(title: "Index is Required!", message: "Please enter your Index No", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
             self.present(alert, animated: true)
             return
-        } else if country.isEmpty  {
-            let alert = UIAlertController(title: "Country is Required!", message: "Please enter your country", preferredStyle: .alert)
+        } else if address.isEmpty  {
+            let alert = UIAlertController(title: "Address is Required!", message: "Please enter your Address", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
             self.present(alert, animated: true)
             return
@@ -214,7 +213,7 @@ class ProfileViewController: UIViewController {
             "firstName": firstName,
             "lastName": lastName,
             "index": index,
-            "country": country,
+            "address": address,
             "profileDate": [".sv": "timestamp"]
             ] as [String : Any]
         self.uploadUserProfile(uid: currentUid, values: values)

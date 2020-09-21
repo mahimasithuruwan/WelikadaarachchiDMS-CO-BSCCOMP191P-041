@@ -33,13 +33,13 @@ class SignUpViewController: UIViewController {
        }()
     
       private lazy var lastNameContainerView: UIView = {
-              let view = UIView().inputContainerView(image: #imageLiteral(resourceName: "ic_mail_outline_white_2x"), textField: lastTextFiled )
+              let view = UIView().inputContainerView(image: #imageLiteral(resourceName: "ic_person_outline_white_2x"), textField: lastTextFiled )
               view.heightAnchor.constraint(equalToConstant: 50).isActive = true
               return view
           }()
           
       private lazy var emailContainerView: UIView = {
-        let view = UIView().inputContainerView(image: #imageLiteral(resourceName: "ic_person_outline_white_2x"), textField: emailTextFiled )
+        let view = UIView().inputContainerView(image: #imageLiteral(resourceName: "ic_mail_outline_white_2x") , textField: emailTextFiled )
         view.heightAnchor.constraint(equalToConstant: 50).isActive = true
         return view
       }()
@@ -176,27 +176,41 @@ class SignUpViewController: UIViewController {
            guard let email = emailTextFiled.text else { return }
            let role = accountTypeSegmentedControl.selectedSegmentIndex
            guard let password = passwordTextFiled.text else { return }
-       
         
-         if(firstname.count==0){
+        if(firstname.count==0){
              let ac = UIAlertController(title: "Sign Up", message: "Please enter first name", preferredStyle: .alert)
              ac.addAction(UIAlertAction(title: "Ok", style: .cancel))
              self.present(ac, animated: true)
              return;
           }
+                
+        if firstname.rangeOfCharacter(from: CharacterSet.decimalDigits) != nil {
+            let ac = UIAlertController(title: "Sign Up", message: "Please enter letters only", preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "Ok", style: .cancel))
+            self.present(ac, animated: true)
+            return;
+        }
                       
          if(lastname.count==0){
              let ac = UIAlertController(title: "Sign Up", message: "Please enter last name", preferredStyle: .alert)
              ac.addAction(UIAlertAction(title: "Ok", style: .cancel))
              self.present(ac, animated: true)
              return;
-          }
+        }
+        
+         if lastname.rangeOfCharacter(from: CharacterSet.decimalDigits) != nil {
+            let ac = UIAlertController(title: "Sign Up", message: "Please enter letters only", preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "Ok", style: .cancel))
+            self.present(ac, animated: true)
+            return;
+        }
+        
           if(email.count==0){
              let ac = UIAlertController(title: "Sign Up", message: "Please enter email", preferredStyle: .alert)
              ac.addAction(UIAlertAction(title: "Ok", style: .cancel))
              self.present(ac, animated: true)
              return;
-          }
+        }
         
           if(!email.contains("@") || !email.contains(".")){
              let ac = UIAlertController(title: "Log In", message: "Please enter email correctly",  preferredStyle: .alert)
@@ -218,6 +232,8 @@ class SignUpViewController: UIViewController {
             self.present(ac, animated: true)
             return;
           }
+        
+
            Auth.auth().createUser(withEmail: email, password: password) { (result, error) in
                if let error = error {
                 let ac = UIAlertController(title: "Sign Up", message: "\(error.localizedDescription)", preferredStyle: .alert)

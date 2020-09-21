@@ -49,7 +49,7 @@ class SurveyViewController: UIViewController, UICollectionViewDelegate, UICollec
         self.view.addSubview(myCollectionView)
         
         let que1 = Question(imgName: "surveyImg1", questionText: "Are you having any symptoms above?", accept: false, isAnswered: false)
-        let que2 = Question(imgName: "survey-img-2", questionText: "Have you keep the distance between?", accept: false, isAnswered: false)
+        let que2 = Question(imgName: "survey-img-2", questionText: "Haven't you keep the distance between?", accept: false, isAnswered: false)
         let que3 = Question(imgName: "survey7", questionText: "Have you been exposed with crowded places?", accept: false, isAnswered: false)
         let que4 = Question(imgName: "survey8", questionText: "Have you been interact with any sick person recently?", accept: false, isAnswered: false)
         let que5 = Question(imgName: "survey9", questionText: "Have you recently went abroad?", accept: false, isAnswered: false)

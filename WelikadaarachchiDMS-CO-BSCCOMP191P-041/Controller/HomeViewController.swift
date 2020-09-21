@@ -379,7 +379,7 @@ class HomeViewController: UIViewController {
                     guard let userAnno = annotation as? UserAnnotation else { return false }
                     
                     if userAnno.uid == user.uid {
-                        if temp >= 38.0 && result >= 3 {
+                        if temp >= 38.0 && result >= 75 {
                             userAnno.updateAnnotationPosition(withCoordinate: coordinate)
                             self.notifyUser()
                             return true
@@ -393,7 +393,7 @@ class HomeViewController: UIViewController {
             if !usersVisible {
                 // ignore own annotation
                 if user.uid != currentUid {
-                    if temp >= 38.0 && result >= 3 {
+                    if temp >= 38.0 && result >= 75 {
                         self.mapView.addAnnotation(annotation)
                         self.notifyUser()
                     }

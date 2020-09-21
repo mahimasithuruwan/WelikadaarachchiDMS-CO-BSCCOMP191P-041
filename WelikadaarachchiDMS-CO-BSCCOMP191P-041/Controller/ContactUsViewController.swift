@@ -30,10 +30,62 @@ class ContactUsViewController: UIViewController {
         label.textColor = .white
         return label
     }()
+    private let tempLbl: UILabel = {
+        let label = UILabel()
+        label.text = "Call Us"
+        label.textColor = .white
+        label.textAlignment = .center
+        label.font = UIFont.boldSystemFont(ofSize: 24)
+        return label
+    }()
     
-    private let blankView: UIView = {
+    private let temp2Lbl: UILabel = {
+        let label = UILabel()
+        label.text = "011-2258112"
+        label.textColor = .white
+        label.textAlignment = .center
+        label.font = UIFont.boldSystemFont(ofSize: 24)
+        return label
+    }()
+    
+    private let emailLbl: UILabel = {
+        let label = UILabel()
+        label.text = "Email"
+        label.textColor = .white
+        label.textAlignment = .center
+        label.font = UIFont.boldSystemFont(ofSize: 24)
+        return label
+    }()
+    
+    private let email2Lbl: UILabel = {
+        let label = UILabel()
+        label.text = "covid19@nibm.lk"
+        label.textColor = .white
+        label.textAlignment = .center
+        label.font = UIFont.boldSystemFont(ofSize: 24)
+        return label
+    }()
+    
+    private lazy var blankView: UIView = {
         let blank = UIView()
         blank.backgroundColor = .black
+        
+        blank.addSubview(tempLbl)
+        tempLbl.anchor(top: blank.bottomAnchor, left: blank.leftAnchor, right: blank.rightAnchor, paddingTop: 10, paddingLeft: 70, paddingRight: 70)
+        tempLbl.centerX(inView: blank)
+        
+        blank.addSubview(temp2Lbl)
+        temp2Lbl.anchor(top: tempLbl.bottomAnchor, left: blank.leftAnchor, right: blank.rightAnchor, paddingTop: 10, paddingLeft: 70, paddingRight: 70)
+        temp2Lbl.centerX(inView: blank)
+        
+        blank.addSubview(emailLbl)
+        emailLbl.anchor(top: temp2Lbl.bottomAnchor, left: blank.leftAnchor, right: blank.rightAnchor, paddingTop: 10, paddingLeft: 70, paddingRight: 70)
+        emailLbl.centerX(inView: blank)
+        
+        blank.addSubview(email2Lbl)
+        email2Lbl.anchor(top: emailLbl.bottomAnchor, left: blank.leftAnchor, right: blank.rightAnchor, paddingTop: 10, paddingLeft: 70, paddingRight: 70)
+        email2Lbl.centerX(inView: blank)
+        
         return blank
     }()
     
@@ -59,7 +111,7 @@ class ContactUsViewController: UIViewController {
         view.addSubview(backButton)
         backButton.anchor(top: safeArea.topAnchor, left: view.leftAnchor, paddingTop: 20, paddingLeft: 16, width: 38, height: 38)
         view.addSubview(blankView)
-        blankView.anchor(top: titleLbl.bottomAnchor, left: view.leftAnchor, bottom: safeArea.bottomAnchor, right: view.rightAnchor, paddingTop: 20)
+        blankView.anchor(top: titleLbl.bottomAnchor , left: view.leftAnchor, right: view.rightAnchor, paddingTop: 20)
     }
     
     func configNavBar() {

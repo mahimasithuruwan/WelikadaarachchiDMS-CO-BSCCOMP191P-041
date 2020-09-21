@@ -6,7 +6,6 @@
 //  Copyright © 2020 Mahima Sithuruwan. All rights reserved.
 //
 
-
 import UIKit
 import FirebaseAuth
 import MapKit

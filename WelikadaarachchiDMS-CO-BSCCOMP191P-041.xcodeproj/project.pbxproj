@@ -47,6 +47,7 @@
 		3E61A718250B7214006EBC9F /* SurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E61A717250B7214006EBC9F /* SurveyViewController.swift */; };
 		3E61A71A250B723F006EBC9F /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E61A719250B723F006EBC9F /* WelcomeViewController.swift */; };
 		3E61A71C250B739D006EBC9F /* LocationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E61A71B250B739D006EBC9F /* LocationHandler.swift */; };
+		3E9682E12518319100BFF19B /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9682E02518319100BFF19B /* test.swift */; };
 		B4BCADE9D46B36F77738D21B /* Pods_WelikadaarachchiDMS_CO_BSCCOMP191P_041.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0738C28E3B16BE84E58DDE8 /* Pods_WelikadaarachchiDMS_CO_BSCCOMP191P_041.framework */; };
 /* End PBXBuildFile section */
 
@@ -116,6 +117,7 @@
 		3E61A717250B7214006EBC9F /* SurveyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyViewController.swift; sourceTree = "<group>"; };
 		3E61A719250B723F006EBC9F /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		3E61A71B250B739D006EBC9F /* LocationHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationHandler.swift; sourceTree = "<group>"; };
+		3E9682E02518319100BFF19B /* test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
 		998E144E86B439186BF8C871 /* Pods-WelikadaarachchiDMS-CO-BSCCOMP191P-041.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WelikadaarachchiDMS-CO-BSCCOMP191P-041.debug.xcconfig"; path = "Target Support Files/Pods-WelikadaarachchiDMS-CO-BSCCOMP191P-041/Pods-WelikadaarachchiDMS-CO-BSCCOMP191P-041.debug.xcconfig"; sourceTree = "<group>"; };
 		AD052702B29AE8FAFE284CCD /* Pods-WelikadaarachchiDMS-CO-BSCCOMP191P-041.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WelikadaarachchiDMS-CO-BSCCOMP191P-041.release.xcconfig"; path = "Target Support Files/Pods-WelikadaarachchiDMS-CO-BSCCOMP191P-041/Pods-WelikadaarachchiDMS-CO-BSCCOMP191P-041.release.xcconfig"; sourceTree = "<group>"; };
 		E0738C28E3B16BE84E58DDE8 /* Pods_WelikadaarachchiDMS_CO_BSCCOMP191P_041.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WelikadaarachchiDMS_CO_BSCCOMP191P_041.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -232,6 +234,7 @@
 				3E5B124E2515E9CA00C34F21 /* FullScreenMapViewController.swift */,
 				3E4FB53B2516A293003C134C /* SurveyPastResultsViewController.swift */,
 				3E4FB53F2516D91C003C134C /* ForgetPasswordViewController.swift */,
+				3E9682E02518319100BFF19B /* test.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -488,6 +491,7 @@
 				3E5B12432515E80100C34F21 /* Contact.swift in Sources */,
 				3E5B1229251485DF00C34F21 /* LocationInputUIView.swift in Sources */,
 				3E61A71C250B739D006EBC9F /* LocationHandler.swift in Sources */,
+				3E9682E12518319100BFF19B /* test.swift in Sources */,
 				3E558FD72510ECC800B8F32E /* HomePageViewController.swift in Sources */,
 				3E5B124B2515E93A00C34F21 /* CreateNotificationViewController.swift in Sources */,
 				3E5024F8250EB6D30030D8BB /* PlusViewController.swift in Sources */,

@@ -18,9 +18,6 @@ class TabBarController: UITabBarController {
     }
     
     func setupTabBar(){
-        let homeController = UINavigationController(rootViewController: HomeViewController())
-        homeController.tabBarItem.image = UIImage(systemName: "house")
-        homeController.tabBarItem.title = "Home"
         
         let plusController = UINavigationController(rootViewController: PlusViewController())
         plusController.tabBarItem.image = UIImage(systemName: "plus")
@@ -30,6 +27,10 @@ class TabBarController: UITabBarController {
         settinngController.tabBarItem.image = UIImage(systemName: "gear")
         settinngController.tabBarItem.title = "Setting"
 
+        let homeController = UINavigationController(rootViewController: HomeViewController())
+        homeController.tabBarItem.image = UIImage(systemName: "house")
+        homeController.tabBarItem.title = "Home"
+        
         viewControllers = [homeController, plusController, settinngController]
     }
     

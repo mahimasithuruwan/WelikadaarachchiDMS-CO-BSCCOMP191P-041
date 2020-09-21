@@ -42,7 +42,8 @@ class SurveyResultViewController: UIViewController {
             color = UIColor.red
         }
         lblRating.text = "\(rating)"
-        lblRating.textColor=color
+        lblRating.textColor=color        
+        surveyResultUpdate()
         saveData(rates: rating)
     }
     
