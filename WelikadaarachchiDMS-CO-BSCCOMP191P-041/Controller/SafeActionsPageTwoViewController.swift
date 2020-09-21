@@ -23,7 +23,6 @@ class SafeActionsPageTwoViewController: UIViewController {
     private let titleLabel: UILabel = {
         let label = UILabel()
         label.text = "Safe Actions"
-        // label.font = UIFont(name: "Avenir-Light", size: 28)
         label.font=UIFont.systemFont(ofSize: 18, weight: UIFont.Weight.bold)
         label.textColor = .black
         

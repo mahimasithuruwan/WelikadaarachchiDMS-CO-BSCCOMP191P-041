@@ -261,7 +261,7 @@ class HomeViewController: UIViewController {
                 self.present(nav, animated: true, completion: nil)
             }
         } else {
-           // faceID()
+            faceID()
             configure()
         }
     }
